@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vanity sizing</title>
 
-  <!-- Google fonts -->
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,13 +105,13 @@
       }
     }
 
-    /* Header container: full-width, no extra margin/padding at the top */
+   
     .with-video-bg {
       position: relative;
       width: 100%;
       margin: 0;
       padding: 0;
-      /* Optional: set a minimum height if you want a hero-like section */
+      
       min-height: 70vh;
       display: flex;
       justify-content: center;
@@ -120,13 +120,13 @@
       text-shadow: 0px 0px 30px black, 0px 0px 10px rgba(0, 0, 0, 0.5);
     }
 
-    /* Container for the video */
+
     .video-background {
       width: 100%;
       text-align: center;
     }
 
-    /* Video styling: ensure the full video is visible and centered */
+    
     .video-background video {
       object-fit: contain;
       width: 50%;
@@ -135,7 +135,7 @@
       margin: 0 auto;
     }
 
-    /* Container for the Plotly chart with an overlay */
+   
     .plot-container {
       position: relative;
       max-width: 640px;
@@ -147,7 +147,7 @@
       height: auto;
     }
 
-    /* Annotation overlay styling */
+
     #annotation-overlay {
       position: absolute;
       top: 0;
@@ -160,6 +160,64 @@
     .hidden {
       display: none;
     }
+
+    #measuring-tape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #f0f0f0;
+    border-top: 2px solid #333;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#tape {
+    position: relative;
+    height: 100%;
+    width: max-content;
+    padding: 0 100vw;
+}
+
+.tick {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    background: #333;
+}
+
+.tick.large {
+    height: 30px;
+}
+
+.tick.medium {
+    height: 20px;
+}
+
+.tick.small {
+    height: 10px;
+}
+
+.tick-label {
+    position: absolute;
+    bottom: 35px;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+
+#current-measurement {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
   </style>
 </head>
 
@@ -169,7 +227,7 @@
       <video src="titles.mp4" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
     </div>
     <div class="content">
-      <!-- Optional title text can go here -->
+    
       <p class="subhead"></p>
     </div>
   </div>
@@ -193,14 +251,14 @@
     <div class="plot-container">
       <iframe id="plotly-iframe" src="xltops.html" style="width: 100%; height: 600px; border: none;"></iframe>
       <svg id="annotation-overlay">
-        <!-- First arrow and annotation -->
+      
         <g id="path-1" class="hidden" transform="translate(475,0) rotate(28)">
           <path d="M50,100 L150,100 L140,90 M150,100 L140,110" stroke="black" stroke-width="1" fill="none"></path>
         </g>
         <g id="text-1" class="hidden">
           <text x="390" y="105" font-family="Georgia" font-size="14px" fill="black">Ralph Lauren</text>
         </g>
-        <!-- Second arrow and annotation -->
+        
         <g id="path-2" class="hidden" transform="translate(-40,200) rotate(1)">
           <path d="M50,100 L150,100 L140,90 M150,100 L140,110" stroke="black" stroke-width="1" fill="none"></path>
         </g>
@@ -225,12 +283,17 @@
     </div>
   </div>
 
-  <!-- Load D3 and Scrollama libraries -->
+  <div id="measuring-tape">
+    <div id="tape"></div>
+</div>
+<div id="current-measurement">0 cm</div>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
 
   <script>
-    // Updated functions to show/hide both sets of annotation elements
+
     function hideAnnotations() {
       d3.select("#path-1").classed("hidden", true);
       d3.select("#text-1").classed("hidden", true);
@@ -244,8 +307,6 @@
       d3.select("#path-2").classed("hidden", false);
       d3.select("#text-2").classed("hidden", false);
     }
-
-    // For demonstration, we use a simple scroll event that shows the annotations after scrolling 100px.
     window.addEventListener("scroll", function () {
       if (window.scrollY > 100) {
         showAnnotations();
@@ -254,22 +315,40 @@
       }
     });
 
-    // Alternatively, you could use Scrollama with step triggers if you add elements with the class "step".
-    /*
-    const scroller = scrollama();
-    scroller.setup({
-      step: ".step",
-      offset: 0.6,
-      debug: false,
-    })
-    .onStepEnter(({ element, index, direction }) => {
-      showAnnotations();
-    })
-    .onStepExit(({ element, index, direction }) => {
-      hideAnnotations();
-    });
-    window.addEventListener("resize", scroller.resize);
-    */
+    // Add measuring tape script
+const tape = document.getElementById('tape');
+const currentMeasurement = document.getElementById('current-measurement');
+
+// Create measuring tape markings
+for (let i = 0; i <= 1000; i++) {
+    const tick = document.createElement('div');
+    tick.className = 'tick';
+    
+    if (i % 10 === 0) {
+        tick.className += ' large';
+        const label = document.createElement('div');
+        label.className = 'tick-label';
+        label.textContent = i;
+        tick.appendChild(label);
+    } else if (i % 5 === 0) {
+        tick.className += ' medium';
+    } else {
+        tick.className += ' small';
+    }
+    
+    tick.style.left = `${i * 10}px`;
+    tape.appendChild(tick);
+}
+
+// Update measurement on scroll
+window.addEventListener('scroll', () => {
+    const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+    const measurement = Math.round(scrollPercent * 100);
+    currentMeasurement.textContent = `${measurement} cm`;
+    
+    tape.style.transform = `translateX(${-window.scrollY}px)`;
+});
+
   </script>
 </body>
 
