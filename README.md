@@ -11,4 +11,6 @@ My goal was to show the challenges women face because there is so much size vari
 
  3. Size ranges. Some clothing brands listed out sizes as ranges. For example, a size 2 in jeans could be 30-35 inches for waist. This got tricky especially when I was using pandas. So after speaking to my TA and mentor, I decided to make these values floats and find the average of each range. 
 
+## Please note
 
+I asked Claude for assistance to add the measuring tape for aesthetic reasons! All data gathering and analysis was done on my jupyter notebook without AI assistance. 
