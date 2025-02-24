@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vanity sizing</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #FFFCF5;
+      font-size: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    .content {
+      max-width: 640px;
+      margin: auto;
+    }
+
+    .header {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #f05349;
+    }
+
+    .footer {
+      background: #f4f4f4;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 4em;
+      padding: 4em 0;
+    }
+
+    figure {
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      text-align: center;
+      margin-top: 0.5em;
+      color: #666;
+    }
+
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: bold;
+      font-size: 3em;
+      line-height: 1.1;
+    }
+
+    .subhead {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    iframe,
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    ul {
+      margin: 0;
+      padding-bottom: 1em;
+      line-height: 1.6;
+    }
+
+    iframe {
+      padding-bottom: 1.2em;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: #fff880;
+    }
+
+    /* Margin on mobile */
+    @media (max-width: 640px) {
+      body {
+        font-size: 18px;
+      }
+
+      .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+    }
+
+    /* Header container: full-width, no extra margin/padding at the top */
+    .with-video-bg {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      /* Optional: set a minimum height if you want a hero-like section */
+      min-height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0px 0px 30px black, 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Container for the video */
+    .video-background {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Video styling: ensure the full video is visible and centered */
+    .video-background video {
+      object-fit: contain;
+      width: 50%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Container for the Plotly chart with an overlay */
+    .plot-container {
+      position: relative;
+      max-width: 640px;
+      margin: 2em auto;
+    }
+
+    .plot-containers img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Annotation overlay styling */
+    #annotation-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Allows clicks to pass through */
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header with-video-bg">
+    <div class="video-background">
+      <video src="titles.mp4" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
+    </div>
+    <div class="content">
+      <!-- Optional title text can go here -->
+      <p class="subhead"></p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="byline">
+      <p>To slip into a new pair of size double zero jeans felt like an achievement, said Aleena Ahmed, a resident of New Jersey.</p>
+      <p>“I didn't even want to take the tag off,” she said about her American Eagle jeans. “It was like a marker of 'I did it.'”</p>
+      <p>Perhaps it was her slim tall Barbie dolls growing up or the eruption of skinny beauty standard posts titled “Thinspo” on Tumblr, but Ahmed said she would eat less to be thinner. New clothes could monitor the progress.</p>
+      <p>So when the double zero jeans from Old Navy didn't fit, even though the ones from American Eagle did, Ahmed said it tripped her out and made her “feel unattractive.”</p>
+      <p>Different jean sizes fitting Ahmed is an example of vanity sizing, where clothing brands label their clothes smaller than they actually are.</p>
+      <p>After finding a range of brands from sizecharts.com and scraping each of these brand's sizes from their respective websites, I found brands like Guess, Ralph Lauren and Tony Burch had a smaller range of jean sizes compared to Old Navy.</p>
+      <div class="plot-containers">
+        <img src="first_chart.png" alt="Range Annotations">
+      </div>
+      <p>Sizes are often categorized as small, medium, large and extra large, with plus sizes, petite sizes and tall sizes having separate measurements. Jean sizes for the majority of the brands I scraped traditionally follow a size zero to size 16 range, but for the sake of consistency, I am using letter sizing for my analysis.</p>
+      <p>To clarify, identifying sizes through letters or numbers do not impact the data as they are just variables. It is what we categorize as a small or size two that varies.</p>
+      <p>Jean sizes are not the only culprit to vanity sizing. Women's tops require measuring the bust in inches or centimeters. As seen in the interactive chart below, for over 100 brands, a bust measurement for an XL top ranges from 38.5 inches to 47 inches.</p>
+    </div>
+
+    <div class="plot-container">
+      <iframe id="plotly-iframe" src="xltops.html" style="width: 100%; height: 600px; border: none;"></iframe>
+      <svg id="annotation-overlay">
+        <!-- First arrow and annotation -->
+        <g id="path-1" class="hidden" transform="translate(475,0) rotate(28)">
+          <path d="M50,100 L150,100 L140,90 M150,100 L140,110" stroke="black" stroke-width="1" fill="none"></path>
+        </g>
+        <g id="text-1" class="hidden">
+          <text x="390" y="105" font-family="Georgia" font-size="14px" fill="black">Ralph Lauren</text>
+        </g>
+        <!-- Second arrow and annotation -->
+        <g id="path-2" class="hidden" transform="translate(-40,200) rotate(1)">
+          <path d="M50,100 L150,100 L140,90 M150,100 L140,110" stroke="black" stroke-width="1" fill="none"></path>
+        </g>
+        <g id="text-2" class="hidden">
+          <text x="20" y="320" font-family="Georgia" font-size="14px" fill="black">Forever 21</text>
+        </g>
+      </svg>
+    </div>
+
+    <p>According to the Centers for Disease Control and Prevention, the average waist size for women is 38.7 inches. Majority of the brands in this dataset categorize this average waist size as large or even extra large. One-size-all stores like Brandy Melville, who refused to give me their size chart, sell jeans with an average waist size of only 30 inches.</p>
+    <p>Most of the brands having the smaller sizes within the small, medium, and large size categories were popular fast fashion brands like Zara, Forever 21, Fashion Nova and Aeropostale.</p>
+    <p>With no universal size guide, brands design their own to cater to their audience and make consumers feel good picking up clothing as size small, said Patience Billingsley, a graduate of the University of Arkansas, where she conducted research on vanity sizing.</p>
+    <p>Billingsley called vanity sizing unethical and said it is manipulating to tell customers a size they are not.</p>
+    <p>The variety in what constitutes a “small” waist or “large” bust in clothes makes the concept of what our sizes are irrelevant, Ahmed said.</p>
+    <p>For vanity sizing to be so inconsistent but be a persistent thought for Ahmed is what hurts the most, she said.</p>
+    <p>“I want my life to be bigger,” Ahmed told me. “This is the physical body I have and I want my life to be about other things.”</p>
+  </div>
+
+  <div class="footer">
+    <div class="content">
+      <p>Ananya Chetia is a data journalist in NYC. Find the code for this story <a href="https://github.com/jsoma/page-templates/">here.</a></p>
+    </div>
+  </div>
+
+  <!-- Load D3 and Scrollama libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+
+  <script>
+    // Updated functions to show/hide both sets of annotation elements
+    function hideAnnotations() {
+      d3.select("#path-1").classed("hidden", true);
+      d3.select("#text-1").classed("hidden", true);
+      d3.select("#path-2").classed("hidden", true);
+      d3.select("#text-2").classed("hidden", true);
+    }
+
+    function showAnnotations() {
+      d3.select("#path-1").classed("hidden", false);
+      d3.select("#text-1").classed("hidden", false);
+      d3.select("#path-2").classed("hidden", false);
+      d3.select("#text-2").classed("hidden", false);
+    }
+
+    // For demonstration, we use a simple scroll event that shows the annotations after scrolling 100px.
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        showAnnotations();
+      } else {
+        hideAnnotations();
+      }
+    });
+
+    // Alternatively, you could use Scrollama with step triggers if you add elements with the class "step".
+    /*
+    const scroller = scrollama();
+    scroller.setup({
+      step: ".step",
+      offset: 0.6,
+      debug: false,
+    })
+    .onStepEnter(({ element, index, direction }) => {
+      showAnnotations();
+    })
+    .onStepExit(({ element, index, direction }) => {
+      hideAnnotations();
+    });
+    window.addEventListener("resize", scroller.resize);
+    */
+  </script>
+</body>
+
+</html>
