@@ -1,0 +1,25 @@
+# Ignore HTML files
+clothes.html
+index.html
+tops.html
+topics.html
+
+# Ignore notebooks
+collectingdata.ipynb
+filteringandscrapping.ipynb
+
+# Ignore images
+first_chart.png
+j.png
+jeansRplot.png
+ralphl.jpg
+rangewanotations.png
+Rplot03.png
+title.png
+
+# Ignore CSV
+jeansggplot - pacsun (4).csv
+
+# Ignore other file types
+titles.mp4
+tops.R
