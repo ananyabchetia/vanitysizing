@@ -9,7 +9,7 @@ My second data project looked into how major U.S and UK brands all have differen
  ## Steps I took to accomplish this 
 - I scraped sizechart.com to find a list of major U.S and UK brands. I multiscraped the pages and found size charts for each of these brands. I had to double check all the brands to ensure sizechart.com was up to date. It was not. So, I had to go to several clothing store's websites and scrape from there using playwright to speed up the process.
 
-##Helpful links: 
+## Helpful links: 
 
 -I relied on the following links to learn more about vanity sizing. These readings also helped me narrow down which brands to pay close attention to.
 
