@@ -14,6 +14,18 @@ My second data project looked into how major U.S and UK brands all have differen
 - I interviewed an expert on vanity sizing and a source who has experienced this first hand.
 - I gathered advice from my mentors in-class and out of class to gain insight on what data visuals appeal to an audience. 
 
+## Methodology documentation:
+
+Jeans are pants but also bottoms right?. Given that every brand has a different way of labeling clothes, it’s hard to know whether jean sizes are still relevant under the “bottoms” or “pants” size category. I cross checked every brand on this dataset and checked what accounts for measuring jeans. So, even if Banana Republic has a size chart for “pants” we also know that it also accounts for jeans. 
+
+Check out the list below for your own convenience! What counts as what? Do some brands argue that tops are also shirts and blouses? Or, are sweaters also measured the same as sweatshirts?
+
+Brands that have jean sizes, but don’t explicitly say jeans in their size chart: 
+
+- Banana Republic
+- Nautica 
+- Modcloth
+
 ## Helpful links: 
 
 -I relied on the following links to learn more about vanity sizing. These readings also helped me narrow down which brands to pay close attention to.
