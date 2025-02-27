@@ -3,7 +3,8 @@ My second data project looked into how major U.S and UK brands all have differen
 
 ## Goals
 - Show the challenges women face because there is so much size variation in clothing brands.
-- Produce a plotly beeswarm or scatterplot graph. That way, users can hoover over the points and see that each dot represents a brand. 
+- Produce a plotly beeswarm or scatterplot graph. That way, users can hoover over the points and see that each dot represents a brand.
+- Produce a chart similar to the one I found on [The Pudding](https://pudding.cool/projects/vocabulary/index.html)
 
  ## Steps I took to accomplish this 
 - I scraped sizechart.com to find a list of major U.S and UK brands. I multiscraped the pages and found size charts for each of these brands. I had to double check all the brands to ensure sizechart.com was up to date. It was not. So, I had to go to several clothing store's websites and scrape from there using playwright to speed up the process.
