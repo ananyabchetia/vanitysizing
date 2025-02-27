@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vanity sizing</title>
 
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -323,11 +322,11 @@
       }
     });
 
-    // Add measuring tape script
+
 const tape = document.getElementById('tape');
 const currentMeasurement = document.getElementById('current-measurement');
 
-// Create measuring tape markings
+
 for (let i = 0; i <= 1000; i++) {
     const tick = document.createElement('div');
     tick.className = 'tick';
@@ -348,7 +347,7 @@ for (let i = 0; i <= 1000; i++) {
     tape.appendChild(tick);
 }
 
-// Update measurement on scroll
+
 window.addEventListener('scroll', () => {
     const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
     const measurement = Math.round(scrollPercent * 100);
