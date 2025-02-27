@@ -8,6 +8,11 @@ My second data project looked into how major U.S and UK brands all have differen
 
  ## Steps I took to accomplish this 
 - I scraped sizechart.com to find a list of major U.S and UK brands. I multiscraped the pages and found size charts for each of these brands. I had to double check all the brands to ensure sizechart.com was up to date. It was not. So, I had to go to several clothing store's websites and scrape from there using playwright to speed up the process.
+- I charted and annotated via plotly, ggplot2 on RStudio.
+- I used Canva to create my moving gif header. I also used Canva to make my first range chart, specifically, to paste the logos as a the y-axis instead of standard text.
+- I always envisioned creating a scrolly feature on the bottom, specifically a measuring tape, because it matched my topic's theme.
+- I interviewed an expert on vanity sizing and a source who has experienced this first hand.
+- I gathered advice from my mentors in-class and out of class to gain insight on what data visuals appeal to an audience. 
 
 ## Helpful links: 
 
