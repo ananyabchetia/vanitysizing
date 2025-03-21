@@ -15,16 +15,16 @@ My second data project looked into how major U.S and UK brands all have differen
 - I gathered advice from my mentors in-class and out of class to gain insight on what data visuals appeal to an audience. 
 
 ## Methodology documentation:
+For my first chart, I wanted to look at clothes popular for college women and compare it to top high-end brands known for their jeans. I relied on two lists that helped me 
+build my dataset. 
 
-Jeans are pants but also bottoms right?. Given that every brand has a different way of labeling clothes, it’s hard to know whether jean sizes are still relevant under the “bottoms” or “pants” size category. I cross checked every brand on this dataset and checked what accounts for measuring jeans. So, even if Banana Republic has a size chart for “pants” we also know that it also accounts for jeans. 
+   -https://www.hercampus.com/style/best-favorite-affordable-jeans-college-women/
+      a. This link gave me a comprehensive list of popular, affordable brands college women go to buy jeans. 
 
-Check out the list below for your own convenience! What counts as what? Do some brands argue that tops are also shirts and blouses? Or, are sweaters also measured the same as sweatshirts?
+   -https://www.nytimes.com/wirecutter/reviews/best-womens-jeans/
+      a. This link gave a comprehensive list of popular, high-end brands that provide jeans for women. 
 
-Brands that have jean sizes, but don’t explicitly say jeans in their size chart: 
-
-- Banana Republic
-- Nautica 
-- Modcloth
+   I merged these list and made a dataset that looked what each brand constitutes as a extra small, small, medium, large and extra large. 
 
 ## Helpful links: 
 
@@ -45,7 +45,3 @@ Brands that have jean sizes, but don’t explicitly say jeans in their size char
     ![Alt text](horror.png)
 
  4. Size ranges. Some clothing brands listed out sizes as ranges. For example, a size 2 in jeans could be 30-35 inches for waist. This got tricky especially when I was using pandas. So after speaking to my TA and mentor, I decided to make these values floats and find the average of each range. 
-
-## Please note
-
- I previously relied on a youtube video to make the scrolly feature you see. However, to replace my boring red scrolly feature with a measuring tape, I asked Claude for basic instructions. All data gathering,analysis and plotting was done on my jupyter notebook without AI assistance. 
