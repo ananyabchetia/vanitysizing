@@ -254,280 +254,194 @@ a
       <p>So when the double zero jeans from Old Navy didn't fit, even though the ones from American Eagle did, Ahmed said it tripped her out and made her “feel unattractive.”</p>
       <p> Different jean sizes fitting Ahmed is an example of vanity sizing, where clothing brands label their clothes smaller than they actually are. This means there's no consistency across brands when it comes to what the measurements for each size actually are.</p> 
       <p>High-end brands like AMO, AYR and Agolde had a smaller range of hip sizes from XS to XL compared to fast fashion brands like Old Navy or Ambercrombie & Fitch. </p>
-      <style media="screen,print">
-        /* Default: Hide all artboards */
-        #g-template-full,
-        #g-template-medium,
-        #g-template-mobile {
-          display: none;
-        }
-        
-        /* Mobile devices: Show mobile version */
-        @media (max-width: 489px) {
-          #g-template-mobile {
-            display: block;
-          }
-        }
-        
-        /* Tablets: Show medium version */
-        @media (min-width: 490px) and (max-width: 699px) {
-          #g-template-medium {
-            display: block;
-          }
-        }
-        
-        /* Desktops: Show full version */
-        @media (min-width: 700px) {
-          #g-template-full {
-            display: block;
-          }
-        }
-        
-          #g-template-box ,
+
+      <!DOCTYPE html>
+      <html lang="en">
+      
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fashion Size Chart</title>
+        <style>
+          /* Your original styles with responsive modifications */
+          #g-template-box,
           #g-template-box .g-artboard {
-            margin:0 auto;
+            margin: 0 auto;
           }
+      
           #g-template-box p {
-            margin:0;
+            margin: 0;
           }
+      
           #g-template-box .g-aiAbs {
-            position:absolute;
+            position: absolute;
           }
+      
           #g-template-box .g-aiImg {
-            position:absolute;
-            top:0;
-            display:block;
-            width:100% !important;
+            position: absolute;
+            top: 0;
+            display: block;
+            width: 100% !important;
           }
+      
           #g-template-box .g-aiSymbol {
             position: absolute;
             box-sizing: border-box;
           }
-          #g-template-box .g-aiPointText p { white-space: nowrap; }
+      
+          #g-template-box .g-aiPointText p {
+            white-space: nowrap;
+          }
+      
+          /* Hide all artboards by default */
+          .g-artboard {
+            display: none;
+          }
+      
+          /* Show only the full artboard and make it responsive */
           #g-template-full {
-            position:relative;
-            overflow:hidden;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 100% !important;
+            max-width: 700px;
+            height: auto;
           }
+      
           #g-template-full p {
-            font-family:Skia;
-            font-weight:regular;
-            line-height:16px;
-            height:auto;
-            opacity:1;
-            letter-spacing:0em;
-            font-size:13px;
-            text-align:left;
-            color:rgb(0,0,0);
-            text-transform:none;
-            padding-bottom:0;
-            padding-top:0;
-            mix-blend-mode:normal;
-            font-style:normal;
-            position:static;
+            font-family: Skia, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: regular;
+            line-height: 17px;
+            height: auto;
+            opacity: 1;
+            letter-spacing: 0em;
+            font-size: 14px;
+            text-align: left;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            padding-bottom: 0;
+            padding-top: 0;
+            mix-blend-mode: normal;
+            font-style: normal;
+            position: static;
           }
+      
           #g-template-full .g-pstyle0 {
-            font-weight:700;
-            line-height:36px;
-            font-size:30px;
-            color:rgb(55,26,86);
+            font-weight: 700;
+            line-height: 29px;
+            height: 29px;
+            font-size: 24px;
           }
+      
           #g-template-full .g-pstyle1 {
-            font-weight:400;
-            line-height:24px;
-            height:24px;
-            font-size:20px;
-            color:rgb(61,27,86);
+            font-weight: 400;
+            line-height: 22px;
+            height: 22px;
+            font-size: 18px;
           }
+      
           #g-template-full .g-pstyle2 {
-            font-weight:400;
-            line-height:22px;
-            font-size:18px;
+            font-weight: 400;
+            line-height: 22px;
+            font-size: 18px;
           }
+      
           #g-template-full .g-pstyle3 {
-            font-weight:400;
-            height:16px;
+            font-weight: 400;
+            height: 17px;
           }
+      
           #g-template-full .g-pstyle4 {
-            font-weight:400;
-            line-height:12px;
-            height:12px;
-            font-size:10px;
+            font-weight: 400;
+            line-height: 13px;
+            height: 13px;
+            font-size: 11px;
           }
-          #g-template-full .g-cstyle0 {
-            font-size:13px;
+      
+          /* Mobile responsive adjustments */
+          @media (max-width: 768px) {
+            #g-template-full {
+              max-width: 100%;
+              padding: 10px;
+            }
+      
+            #g-template-full .g-pstyle0 {
+              font-size: 20px;
+              line-height: 24px;
+              height: auto;
+            }
+      
+            #g-template-full .g-pstyle1 {
+              font-size: 16px;
+              line-height: 20px;
+              height: auto;
+            }
+      
+            #g-template-full .g-pstyle2 {
+              font-size: 16px;
+              line-height: 20px;
+            }
+      
+            #g-template-full .g-pstyle3 {
+              font-size: 13px;
+              height: auto;
+            }
+      
+            #g-template-full p {
+              font-size: 12px;
+              white-space: normal;
+            }
           }
-          #g-template-medium {
-            position:relative;
-            overflow:hidden;
+      
+          @media (max-width: 480px) {
+            #g-template-full .g-pstyle0 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+      
+            #g-template-full .g-pstyle1 {
+              font-size: 14px;
+              line-height: 18px;
+            }
+      
+            #g-template-full .g-pstyle2 {
+              font-size: 14px;
+              line-height: 18px;
+            }
+      
+            #g-template-full .g-pstyle3 {
+              font-size: 12px;
+            }
+      
+            #g-template-full .g-pstyle4 {
+              font-size: 10px;
+            }
           }
-          #g-template-medium p {
-            font-family:Skia;
-            font-weight:regular;
-            line-height:9px;
-            height:auto;
-            opacity:1;
-            letter-spacing:0em;
-            font-size:8px;
-            text-align:left;
-            color:rgb(0,0,0);
-            text-transform:none;
-            padding-bottom:0;
-            padding-top:0;
-            mix-blend-mode:normal;
-            font-style:normal;
-            position:static;
-          }
-          #g-template-medium .g-pstyle0 {
-            font-weight:400;
-            line-height:16px;
-            font-size:13px;
-          }
-          #g-template-medium .g-pstyle1 {
-            font-weight:400;
-            line-height:12px;
-            height:12px;
-            font-size:10px;
-          }
-          #g-template-medium .g-pstyle2 {
-            font-weight:400;
-            height:9px;
-          }
-          #g-template-medium .g-cstyle0 {
-            font-size:10px;
-          }
-          #g-template-mobile {
-            position:relative;
-            overflow:hidden;
-          }
-          #g-template-mobile p {
-            font-family:Skia;
-            font-weight:regular;
-            line-height:8px;
-            height:auto;
-            opacity:1;
-            letter-spacing:0em;
-            font-size:7px;
-            text-align:left;
-            color:rgb(0,0,0);
-            text-transform:none;
-            padding-bottom:0;
-            padding-top:0;
-            mix-blend-mode:normal;
-            font-style:normal;
-            position:static;
-          }
-          #g-template-mobile .g-pstyle0 {
-            font-weight:400;
-            line-height:16px;
-            font-size:13px;
-          }
-          #g-template-mobile .g-pstyle1 {
-            font-weight:400;
-            line-height:13px;
-            height:13px;
-            font-size:11px;
-          }
-          #g-template-mobile .g-pstyle2 {
-            font-weight:400;
-            height:8px;
-          }
-          #g-template-mobile .g-pstyle3 {
-            font-weight:400;
-            line-height:9px;
-            height:9px;
-            font-size:8px;
-          }
-          #g-template-Artboard_9 {
-            position:relative;
-            overflow:hidden;
-          }
-          #g-template-Artboard_9 p {
-            font-family:Skia;
-            font-weight:regular;
-            line-height:16px;
-            height:auto;
-            opacity:1;
-            letter-spacing:0em;
-            font-size:13px;
-            text-align:left;
-            color:rgb(0,0,0);
-            text-transform:none;
-            padding-bottom:0;
-            padding-top:0;
-            mix-blend-mode:normal;
-            font-style:normal;
-            position:static;
-          }
-          #g-template-Artboard_9 .g-pstyle0 {
-            font-weight:700;
-            line-height:36px;
-            font-size:30px;
-            color:rgb(55,26,86);
-          }
-          #g-template-Artboard_9 .g-pstyle1 {
-            font-weight:400;
-            line-height:24px;
-            height:24px;
-            font-size:20px;
-            color:rgb(61,27,86);
-          }
-          #g-template-Artboard_9 .g-pstyle2 {
-            font-weight:400;
-            line-height:22px;
-            font-size:18px;
-          }
-          #g-template-Artboard_9 .g-pstyle3 {
-            font-weight:400;
-            height:16px;
-          }
-          #g-template-Artboard_10 {
-            position:relative;
-            overflow:hidden;
-          }
-          #g-template-Artboard_10 p {
-            font-family:Skia;
-            font-weight:regular;
-            line-height:16px;
-            height:auto;
-            opacity:1;
-            letter-spacing:0em;
-            font-size:13px;
-            text-align:left;
-            color:rgb(0,0,0);
-            text-transform:none;
-            padding-bottom:0;
-            padding-top:0;
-            mix-blend-mode:normal;
-            font-style:normal;
-            position:static;
-          }
-          #g-template-Artboard_10 .g-pstyle0 {
-            font-weight:400;
-            height:16px;
-          }
-        
         </style>
-        
+      </head>
+      
+      <body>
         <div id="g-template-box" class="ai2html">
-        
           <!-- Artboard: full -->
-        
-          <img id="g-template-full-img" class="g-template-full-img g-aiImg" alt="" src="template-full.png"/>
-          <div id="g-template-full" class="g-artboard" style="width:700px; height:787.000000000001px;" data-aspect-ratio="0.889" data-min-width="700" data-max-width="700">
-        <div style=""></div>
-            <img id="g-template-full-img" class="g-template-full-img g-aiImg" alt="" src="template-full.jpg"/>
-            <div id="g-ai0-1" class="g-Layer_1 g-aiAbs" style="top:1.906%;left:2.2143%;width:94.2857%;">
+          <div id="g-template-full" class="g-artboard" style="width:700px; height:787.000000000001px;"
+            data-aspect-ratio="0.889" data-min-width="700" data-max-width="700">
+            <div style=""></div>
+            <img id="g-template-full-img" class="g-template-full-img g-aiImg" alt="" src="template-full.jpg" />
+            <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+              style="top:7.3099%;margin-top:-31.5px;left:1.5402%;width:469px;">
               <p class="g-pstyle0">What fast fashion and high-end brands </p>
               <p class="g-pstyle0">categorize as XS to XL in hip sizes</p>
             </div>
-            <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:15.5262%;margin-top:-26.2px;left:1.2959%;width:652px;">
-              <p class="g-pstyle1">Each brand&rsquo;s range of hip sizes in inches from extra small (XS) to extra </p>
-              <p class="g-pstyle1">large (XL).  </p>
+            <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+              style="top:14.8375%;margin-top:-23.8px;left:2.153%;width:589px;">
+              <p class="g-pstyle1">Each brand's range of hip sizes in inches from extra small (XS) to extra </p>
+              <p class="g-pstyle1">large (XL). </p>
             </div>
             <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:17.662%;left:11.2487%;width:39.7143%;">
               <p class="g-pstyle2"> </p>
             </div>
-            <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:61.9344%;margin-top:-48.4px;left:73.7416%;width:200px;">
+            <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+              style="top:62%;margin-top:-100px;left:74.5988%;width:214px;">
               <p class="g-pstyle3">American Eagle had the</p>
               <p class="g-pstyle3">smallest small (S) hip size </p>
               <p class="g-pstyle3">starting at 32 inches. </p>
@@ -535,65 +449,19 @@ a
               <p class="g-pstyle3">largest small (S) hip size at</p>
               <p class="g-pstyle3"> 37 inches.</p>
             </div>
-            <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:98.4656%;margin-top:-8.9px;left:80.178%;width:162px;">
-              <p class="g-pstyle4">Source: Scraped every brand   <span class="g-cstyle0">  </span></p>
-            </div>
-            <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:98.4873%;margin-top:-7.1px;left:0.8503%;width:204px;">
+            <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
+              style="top:98.4377%;margin-top:-7.7px;left:0.8503%;width:222px;">
               <p class="g-pstyle4">CleanPNG and pnegg provided the logos.</p>
             </div>
-          </div>
-        
-          <!-- Artboard: medium -->
-          <div id="g-template-medium" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="699">
-        <div style=""></div>
-            <img id="g-template-medium-img" class="g-template-medium-img g-aiImg" alt="" src="template-medium.jpg"/>
-            <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs" style="top:3.7143%;left:16.5098%;width:41.4286%;">
-              <p class="g-pstyle0">whose jeans stretch the least </p>
-            </div>
-            <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:10.3518%;margin-top:-7.2px;left:5.521%;width:354px;">
-              <p class="g-pstyle1">Each brand&rsquo;s range of hip sizes in inches from extra small (XS) to extra large (XL)  </p>
-            </div>
-            <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:51.8775%;margin-top:-27.6px;left:76.7066%;width:123px;">
-              <p class="g-pstyle2">American Eagle had the</p>
-              <p class="g-pstyle2">smallest  small (S) hip size </p>
-              <p class="g-pstyle2">starting at 32 inches. </p>
-              <p class="g-pstyle2">High-end brand AMO had the </p>
-              <p class="g-pstyle2">largest small (S) hip size at</p>
-              <p class="g-pstyle2"> 37 inches.</p>
-            </div>
-            <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:94.1748%;margin-top:-6.6px;left:83.969%;width:100px;">
-              <p class="g-pstyle2">Source: Ananya Chetia  <span class="g-cstyle0">  </span></p>
-            </div>
-            <div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:94.3433%;margin-top:-5.2px;left:2.7113%;width:149px;">
-              <p class="g-pstyle2">CleanPNG and pnegg provided the logos.</p>
+            <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
+              style="top:98.6918%;margin-top:-7.7px;left:77.6066%;width:174px;">
+              <p class="g-pstyle4">Source: Scraped every brand </p>
             </div>
           </div>
-        
-          <!-- Artboard: mobile -->
-          <div id="g-template-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px" data-aspect-ratio="0.797" data-min-width="0" data-max-width="489">
-        <div style="padding: 0 0 125.5467% 0;"></div>
-            <img id="g-template-mobile-img" class="g-template-mobile-img g-aiImg" alt="" src="template-mobile.jpg"/>
-            <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:4.0357%;left:14.834%;width:54.1333%;">
-              <p class="g-pstyle0">whose jeans stretch the least </p>
-            </div>
-            <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:9.4574%;margin-top:-7.5px;left:1.3232%;width:370px;">
-              <p class="g-pstyle1">Each brand&rsquo;s range of hip sizes in inches from extra small (XS) to extra large (XL)  </p>
-            </div>
-            <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:55.0047%;margin-top:-24px;left:75.3159%;width:110px;">
-              <p class="g-pstyle2">American Eagle had the</p>
-              <p class="g-pstyle2">smallest  small (S) hip size </p>
-              <p class="g-pstyle2">starting at 32 inches. </p>
-              <p class="g-pstyle2">High-end brand AMO had the </p>
-              <p class="g-pstyle2">largest small (S) hip size at</p>
-              <p class="g-pstyle2"> 37 inches. </p>
-            </div>
-            <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:98.1834%;margin-top:-5.2px;left:1.5906%;width:149px;">
-              <p class="g-pstyle3">CleanPNG and pnegg provided the logos.</p>
-            </div>
-            <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:98.146%;margin-top:-5.1px;left:77.9737%;width:97px;">
-              <p class="g-pstyle3">Source: Ananya Chetia</p>
-            </div>
-          </div>
+        </div>
+      </body>
+      
+      </html>
 
       <p>For Ahmed, the numbers on a pant's tag measured her self-worth. </p>
       <p>"Logically, I understand that my health is important," Ahmed said. "There are moments i get bad at it, just to see a pair of small pants not tighten up on my stomach."</p>
@@ -603,6 +471,8 @@ a
       <p>Brands design their own size guides to cater to their audience and make consumers feel good picking up clothing as size small, said Patience Billingsley, a graduate of the University of Arkansas, where she conducted research on vanity sizing.</p>
       <p>"[Vanity sizing] is also unethical and it can be manipulating to tell customers a size they are not," said Billingsley.</p>
 
+<!-- Generated by ai2html v0.121.1 - 2025-06-04 14:26 -->
+<!-- ai file: beeswarm_maximum_annotation copy.ai -->
 <style media="screen,print">
   #g-beeswarm_maximum_annotation-copy-box,
   #g-beeswarm_maximum_annotation-copy-box .g-artboard {
@@ -633,40 +503,47 @@ a
     white-space: nowrap;
   }
 
+  /* Hide all artboards by default */
   .g-artboard {
     display: none;
   }
 
+  /* Desktop - show full version */
+  @media (min-width: 768px) {
+    #g-beeswarm_maximum_annotation-copy-full {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  /* Tablet - show medium version */
+  @media (min-width: 490px) and (max-width: 767px) {
+    #g-beeswarm_maximum_annotation-copy-medium {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  /* Mobile - show mobile version */
   @media (max-width: 489px) {
     #g-beeswarm_maximum_annotation-copy-mobile {
       display: block;
+      position: relative;
+      overflow: hidden;
     }
   }
 
-  @media (min-width: 490px) and (max-width: 666px) {
-    #g-beeswarm_maximum_annotation-copy-medium {
-      display: block;
-    }
-  }
-
-  @media (min-width: 667px) {
-    #g-beeswarm_maximum_annotation-copy-full {
-      display: block;
-    }
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full {
-    position: relative;
-    overflow: hidden;
-  }
-
+  /* Full version styles */
   #g-beeswarm_maximum_annotation-copy-full p {
+    font-family: Skia;
     font-weight: regular;
-    line-height: 13px;
+    line-height: 14px;
     height: auto;
     opacity: 1;
     letter-spacing: 0em;
-    font-size: 11px;
+    font-size: 12px;
     text-align: left;
     color: rgb(0, 0, 0);
     text-transform: none;
@@ -678,7 +555,6 @@ a
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-pstyle0 {
-    font-family: Skia;
     font-weight: 700;
     line-height: 25px;
     height: 25px;
@@ -686,7 +562,6 @@ a
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-pstyle1 {
-    font-family: Skia;
     font-weight: 400;
     line-height: 22px;
     height: 22px;
@@ -694,7 +569,6 @@ a
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-pstyle2 {
-    font-family: Skia;
     font-weight: 700;
     line-height: 24px;
     height: 24px;
@@ -702,37 +576,20 @@ a
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-pstyle3 {
-    font-family: Skia;
     font-weight: 400;
-    line-height: 14px;
     height: 14px;
-    font-size: 12px;
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-pstyle4 {
-    font-family: Skia;
+    font-weight: 500;
+    height: 14px;
+  }
+
+  #g-beeswarm_maximum_annotation-copy-full .g-pstyle5 {
     font-weight: 700;
     line-height: 22px;
     height: 22px;
     font-size: 18px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle5 {
-    font-family: Skia;
-    font-weight: 400;
-    height: 13px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle6 {
-    font-weight: 500;
-    height: 13px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle7 {
-    font-weight: 500;
-    line-height: 14px;
-    height: 14px;
-    font-size: 12px;
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-cstyle0 {
@@ -740,24 +597,21 @@ a
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-cstyle1 {
-    font-family: Skia;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 11px;
   }
 
   #g-beeswarm_maximum_annotation-copy-full .g-cstyle2 {
-    font-size: 12px;
+    font-weight: 500;
   }
 
+  /* Medium version styles */
   #g-beeswarm_maximum_annotation-copy-medium {
     position: relative;
     overflow: hidden;
   }
 
-  #g-beeswarm_maximum_annotation-copy-mobile {
-    position: relative;
-    overflow: hidden;
-  }
-
+  /* Mobile version styles */
   #g-beeswarm_maximum_annotation-copy-mobile p {
     font-weight: regular;
     line-height: 13px;
@@ -822,11 +676,19 @@ a
     font-family: Skia;
     font-weight: 400;
   }
+
+  /* Remove unused artboard styles - keeping only the three we need */
+  #g-beeswarm_maximum_annotation-copy-Artboard_9,
+  #g-beeswarm_maximum_annotation-copy-Artboard_10,
+  #g-beeswarm_maximum_annotation-copy-Artboard_16,
+  #g-beeswarm_maximum_annotation-copy-Artboard_17 {
+    display: none !important;
+  }
 </style>
 
 <div id="g-beeswarm_maximum_annotation-copy-box" class="ai2html">
 
-  <!-- Artboard: full (DESKTOP VERSION) -->
+  <!-- Artboard: full -->
   <div id="g-beeswarm_maximum_annotation-copy-full" class="g-artboard" style="width:667px; height:355.117151628541px;"
     data-aspect-ratio="1.878" data-min-width="667" data-max-width="667">
     <div style=""></div>
@@ -861,24 +723,25 @@ a
       <p class="g-pstyle2">S</p>
     </div>
     <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText"
+      style="top:43.1581%;margin-top:-36.3px;left:31.72%;width:244px;">
+      <p class="g-pstyle3">Clothing brand ASOS </p>
+      <p class="g-pstyle3">leads with largest bust sizes </p>
+      <p class="g-pstyle3">in XS, S and L. ASOS tied with </p>
+      <p class="g-pstyle3">Ralph Lauren with largest bust size in M<span class="g-cstyle1">.</span><span
+          class="g-cstyle2"> </span></p>
+      <p class="g-pstyle4"> </p>
+    </div>
+    <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText"
       style="top:36.133%;margin-top:-8.3px;left:69.9149%;width:96px;">
       <p class="g-pstyle3">Ralph Lauren </p>
     </div>
-    <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:38.2892%;margin-top:-13px;left:16.8092%;width:43px;">
-      <p class="g-pstyle4">45</p>
-    </div>
     <div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:45.2382%;margin-top:-34.6px;left:31.72%;width:210px;">
-      <p class="g-pstyle5">Clothing brand ASOS </p>
-      <p class="g-pstyle6"><span class="g-cstyle1">leads with</span> largest bust sizes </p>
-      <p class="g-pstyle6">in XS, S and L. ASOS tied with </p>
-      <p class="g-pstyle6">Ralph Lauren with largest bust size in M.<span class="g-cstyle2"> </span></p>
-      <p class="g-pstyle7">. </p>
+      style="top:38.2892%;margin-top:-13px;left:16.8092%;width:43px;">
+      <p class="g-pstyle5">45</p>
     </div>
     <div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText"
       style="top:53.2139%;margin-top:-13px;left:16.7494%;width:45px;">
-      <p class="g-pstyle4">40</p>
+      <p class="g-pstyle5">40</p>
     </div>
     <div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText"
       style="top:57.6631%;margin-top:-23.8px;left:2.5074%;width:97px;">
@@ -887,19 +750,19 @@ a
     </div>
     <div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText"
       style="top:66.449%;margin-top:-13px;left:17.0497%;width:40px;">
-      <p class="g-pstyle4">35</p>
+      <p class="g-pstyle5">35</p>
     </div>
     <div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText"
       style="top:80.2472%;margin-top:-13px;left:17.0738%;width:42px;">
-      <p class="g-pstyle4">30</p>
+      <p class="g-pstyle5">30</p>
     </div>
     <div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText"
       style="top:94.3271%;margin-top:-13px;left:17.062%;width:41px;">
-      <p class="g-pstyle4">25</p>
+      <p class="g-pstyle5">25</p>
     </div>
   </div>
 
-  <!-- Artboard: medium (TABLET VERSION) -->
+  <!-- Artboard: medium -->
   <div id="g-beeswarm_maximum_annotation-copy-medium" class="g-artboard" style="width:490px; height:350px;"
     data-aspect-ratio="1.4" data-min-width="490" data-max-width="559">
     <div style=""></div>
@@ -908,7 +771,7 @@ a
       src="beeswarm_maximum_annotation-copy-medium.png" />
   </div>
 
-  <!-- Artboard: mobile (MOBILE VERSION) -->
+  <!-- Artboard: mobile -->
   <div id="g-beeswarm_maximum_annotation-copy-mobile" class="g-artboard" style="max-width: 333px;max-height: 537px"
     data-aspect-ratio="0.62" data-min-width="0" data-max-width="489">
     <div style="padding: 0 0 161.2012% 0;"></div>
@@ -976,6 +839,8 @@ a
   </div>
 
 </div>
+
+<!-- End ai2html - 2025-06-04 14:26 -->
 
       <p>Because vanity sizing misleads shoppers, consumers often order the same item in different sizes to see what works. With the <a href="https://inbeat.agency/blog/online-shopping-statistics/" target="_blank" rel="noopener noreferrer">
         rise
