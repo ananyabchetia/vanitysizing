@@ -10,16 +10,205 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 
   <style>
+    .methodology-container {
+      max-width: 850px;
+      margin: 3em auto;
+      border: 1px solid #FFFCF5;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      background-color: #fdfdfd;
+    }
+
+    .methodology-header {
+      padding: 1.2em 1.5em;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #f9f9f9;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .methodology-header h2 {
+      margin: 0;
+      font-size: 1.5em;
+      color: var(--primary-color);
+    }
+
+    .methodology-toggle {
+      width: 24px;
+      height: 24px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .methodology-toggle::before,
+    .methodology-toggle::after {
+      content: '';
+      position: absolute;
+      background-color: var(--accent-color);
+      border-radius: 1px;
+    }
+
+    .methodology-toggle::before {
+      width: 2px;
+      height: 16px;
+      top: 4px;
+      left: 11px;
+      transition: transform 0.3s ease;
+    }
+
+    .methodology-toggle::after {
+      width: 16px;
+      height: 2px;
+      top: 11px;
+      left: 4px;
+    }
+
+    .methodology-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .methodology-content-inner {
+      padding: 0 1.5em;
+    }
+
+    .methodology-container.active .methodology-content {
+      padding: 1.5em 0;
+      max-height: 2000px;
+    }
+
+    .methodology-container.active .methodology-toggle::before {
+      transform: rotate(90deg);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 17px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      .subhead {
+        font-size: 1.1em;
+        max-width: 95%;
+      }
+
+      .pullquote {
+        font-size: 1.4em;
+      }
+
+      .header {
+        min-height: 40vh;
+        padding: 3em 0;
+      }
+
+      .student-quote {
+        flex: 1 1 100%;
+      }
+
+      blockquote {
+        padding: 1em;
+      }
+
+      .methodology-container {
+        margin: 2em auto;
+      }
+
+      .methodology-header {
+        padding: 1em;
+      }
+
+      .methodology-header h2 {
+        font-size: 1.3em;
+      }
+
+      .methodology-content-inner {
+        padding: 0 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+
+      .header {
+        min-height: 30vh;
+        padding: 2em 0;
+      }
+
+      .content {
+        padding: 0 1rem;
+      }
+
+      .highlight-box {
+        padding: 1em;
+      }
+
+      .full-width {
+        padding: 1em 0;
+      }
+
+      .pullquote {
+        font-size: 1.2em;
+      }
+
+      .methodology-container {
+        margin: 1.5em auto;
+      }
+
+      .methodology-header {
+        padding: 0.8em;
+      }
+
+      .methodology-header h2 {
+        font-size: 1.2em;
+      }
+
+      .methodology-toggle {
+        width: 20px;
+        height: 20px;
+      }
+
+      .methodology-toggle::before {
+        height: 14px;
+        top: 3px;
+        left: 9px;
+      }
+
+      .methodology-toggle::after {
+        width: 14px;
+        top: 9px;
+        left: 3px;
+      }
+    }
+
     body {
-  margin: 0;
-  background: #FFFCF5;
-  font-size: 20px;
-  font-family: 'Quicksand', 'Avenir', Georgia, 'Times New Roman', Times, serif;
-  text-rendering: optimizeLegibility;
-}
+      margin: 0;
+      background: #FFFCF5;
+      font-size: 20px;
+      font-family: 'Quicksand', 'Avenir', Georgia, 'Times New Roman', Times, serif;
+      text-rendering: optimizeLegibility;
+    }
 
     .content {
       max-width: 640px;
@@ -36,7 +225,7 @@
     }
 
     .footer {
-      background: #f4f4f4;
+      background: #FFFCF5;
       text-align: center;
       font-size: 0.8em;
       margin-top: 4em;
@@ -65,8 +254,8 @@
     .subhead {
       font-family: 'Lora', Georgia, serif;
       font-size: 25px;
-      font-weight: 700; 
-      color: black; 
+      font-weight: 700;
+      color: black;
       line-height: 1.4;
       margin-top: 0.5em;
       margin-bottom: 1em;
@@ -94,8 +283,8 @@
     iframe {
       padding-bottom: 1.2em;
     }
-a
-    code {
+
+    a code {
       font-family: 'Courier New', monospace;
       background: #fff880;
     }
@@ -112,13 +301,12 @@ a
       }
     }
 
-   
     .with-video-bg {
       position: relative;
       width: 100%;
       margin: 0;
       padding: 0;
-      
+
       min-height: 70vh;
       display: flex;
       justify-content: center;
@@ -133,7 +321,7 @@ a
       text-align: center;
     }
 
-    
+
     .video-background video {
       object-fit: contain;
       width: 50%;
@@ -142,7 +330,7 @@ a
       margin: 0 auto;
     }
 
-   
+
     .plot-container {
       position: relative;
       max-width: 640px;
@@ -161,7 +349,7 @@ a
       left: 0;
       width: 100%;
       height: 100%;
-      pointer-events: none; 
+      pointer-events: none;
     }
 
     .hidden {
@@ -169,69 +357,68 @@ a
     }
 
     #measuring-tape {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: #ffdd76;
-    border-top: 2px solid #333;
-    overflow: hidden;
-    z-index: 1000;
-}
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #ffdd76;
+      border-top: 2px solid #333;
+      overflow: hidden;
+      z-index: 1000;
+    }
 
-#tape {
-    position: relative;
-    height: 100%;
-    width: max-content;
-    padding: 0 100vw;
-}
+    #tape {
+      position: relative;
+      height: 100%;
+      width: max-content;
+      padding: 0 100vw;
+    }
 
-.tick {
-    position: absolute;
-    bottom: 0;
-    width: 2px;
-    background: #333;
-}
+    .tick {
+      position: absolute;
+      bottom: 0;
+      width: 2px;
+      background: #333;
+    }
 
-.tick.large {
-    height: 30px;
-}
+    .tick.large {
+      height: 30px;
+    }
 
-.tick.medium {
-    height: 20px;
-}
+    .tick.medium {
+      height: 20px;
+    }
 
-.tick.small {
-    height: 10px;
-}
+    .tick.small {
+      height: 10px;
+    }
 
-.tick-label {
-    position: absolute;
-    bottom: 35px;
-    transform: translateX(-50%);
-    font-size: 12px;
-}
+    .tick-label {
+      position: absolute;
+      bottom: 35px;
+      transform: translateX(-50%);
+      font-size: 12px;
+    }
 
-#current-measurement {
-    position: fixed;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    z-index: 1000;
-}
+    #current-measurement {
+      position: fixed;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      z-index: 1000;
+    }
 
-.indented {
-  margin-left: 2em; 
-  font-size: 0.95em; 
-  color: #444;       
-}
-
+    .indented {
+      margin-left: 2em;
+      font-size: 0.95em;
+      color: #444;
+    }
   </style>
 </head>
 
@@ -241,1009 +428,1970 @@ a
       <video src="titles.mp4" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
     </div>
     <div class="content">
-    
+
       <p class="subhead"></p>
     </div>
   </div>
 
   <div class="content">
     <div class="byline">
-      <p>To slip into a new pair of size double zero jeans felt like an achievement, said Aleena Ahmed, a resident of New Jersey.</p>
-      <p>“I didn't even want to take the tag off,” she said about her American Eagle jeans. “It was like a marker of 'I did it.'”</p>
-      <p>Perhaps it was her slim tall Barbie dolls growing up or the eruption of skinny beauty standard posts titled “Thinspo” on Tumblr, but Ahmed said she would eat less to be thinner. New clothes could monitor the progress.</p>
-      <p>So when the double zero jeans from Old Navy didn't fit, even though the ones from American Eagle did, Ahmed said it tripped her out and made her “feel unattractive.”</p>
-      <p> Different jean sizes fitting Ahmed is an example of vanity sizing, where clothing brands label their clothes smaller than they actually are. This means there's no consistency across brands when it comes to what the measurements for each size actually are.</p> 
-      <p>High-end brands like AMO, AYR and Agolde had a smaller range of hip sizes from XS to XL compared to fast fashion brands like Old Navy or Ambercrombie & Fitch. </p>
+      <p>To slip into a new pair of size double zero jeans felt like an achievement, said Aleena Ahmed, a resident of
+        New Jersey.</p>
+      <p>“I didn't even want to take the tag off,” she said about her American Eagle jeans. “It was like a marker of 'I
+        did it.'”</p>
+      <p>Perhaps it was her slim tall Barbie dolls growing up or the eruption of skinny beauty standard posts titled
+        “Thinspo” on Tumblr, but Ahmed said she would eat less to be thinner. New clothes could monitor the progress.
+      </p>
+      <p>So when the double zero jeans from Old Navy didn't fit, even though the ones from American Eagle did, Ahmed
+        said it tripped her out and made her “feel unattractive.”</p>
+      <p> Different jean sizes fitting Ahmed is an example of vanity sizing, where clothing brands label their clothes
+        smaller than they actually are. This means there's no consistency across brands when it comes to what the
+        measurements for each size actually are.</p>
+      <p>High-end brands like AMO, AYR and Agolde had a smaller range of hip sizes from XS to XL compared to fast
+        fashion brands like Old Navy or Ambercrombie & Fitch. </p>
+    </div>
+  </div>
+  <!--insert hip chart here !!!!!!!!!!-->
+  <style media="screen,print">
+    #g-hip_sizes-box,
+    #g-hip_sizes-box .g-artboard {
+      margin: 0 auto;
+    }
 
-      <!DOCTYPE html>
-      <html lang="en">
-      
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fashion Size Chart</title>
-        <style>
-          /* Your original styles with responsive modifications */
-          #g-template-box,
-          #g-template-box .g-artboard {
-            margin: 0 auto;
-          }
-      
-          #g-template-box p {
-            margin: 0;
-          }
-      
-          #g-template-box .g-aiAbs {
-            position: absolute;
-          }
-      
-          #g-template-box .g-aiImg {
-            position: absolute;
-            top: 0;
-            display: block;
-            width: 100% !important;
-          }
-      
-          #g-template-box .g-aiSymbol {
-            position: absolute;
-            box-sizing: border-box;
-          }
-      
-          #g-template-box .g-aiPointText p {
-            white-space: nowrap;
-          }
-      
-          /* Hide all artboards by default */
-          .g-artboard {
-            display: none;
-          }
-      
-          /* Show only the full artboard and make it responsive */
-          #g-template-full {
-            display: block;
-            position: relative;
-            overflow: hidden;
-            width: 100% !important;
-            max-width: 700px;
-            height: auto;
-          }
-      
-          #g-template-full p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: regular;
-            line-height: 17px;
-            height: auto;
-            opacity: 1;
-            letter-spacing: 0em;
-            font-size: 14px;
-            text-align: left;
-            color: rgb(0, 0, 0);
-            text-transform: none;
-            padding-bottom: 0;
-            padding-top: 0;
-            mix-blend-mode: normal;
-            font-style: normal;
-            position: static;
-          }
-      
-          #g-template-full .g-pstyle0 {
-            font-weight: 700;
-            line-height: 29px;
-            height: 29px;
-            font-size: 24px;
-          }
-      
-          #g-template-full .g-pstyle1 {
-            font-weight: 400;
-            line-height: 22px;
-            height: 22px;
-            font-size: 18px;
-          }
-      
-          #g-template-full .g-pstyle2 {
-            font-weight: 400;
-            line-height: 22px;
-            font-size: 18px;
-          }
-      
-          #g-template-full .g-pstyle3 {
-            font-weight: 400;
-            height: 17px;
-          }
-      
-          #g-template-full .g-pstyle4 {
-            font-weight: 400;
-            line-height: 13px;
-            height: 13px;
-            font-size: 11px;
-          }
-      
-          /* Mobile responsive adjustments */
-          @media (max-width: 768px) {
-            #g-template-full {
-              max-width: 100%;
-              padding: 10px;
-            }
-      
-            #g-template-full .g-pstyle0 {
-              font-size: 20px;
-              line-height: 24px;
-              height: auto;
-            }
-      
-            #g-template-full .g-pstyle1 {
-              font-size: 16px;
-              line-height: 20px;
-              height: auto;
-            }
-      
-            #g-template-full .g-pstyle2 {
-              font-size: 16px;
-              line-height: 20px;
-            }
-      
-            #g-template-full .g-pstyle3 {
-              font-size: 13px;
-              height: auto;
-            }
-      
-            #g-template-full p {
-              font-size: 12px;
-              white-space: normal;
-            }
-          }
-      
-          @media (max-width: 480px) {
-            #g-template-full .g-pstyle0 {
-              font-size: 18px;
-              line-height: 22px;
-            }
-      
-            #g-template-full .g-pstyle1 {
-              font-size: 14px;
-              line-height: 18px;
-            }
-      
-            #g-template-full .g-pstyle2 {
-              font-size: 14px;
-              line-height: 18px;
-            }
-      
-            #g-template-full .g-pstyle3 {
-              font-size: 12px;
-            }
-      
-            #g-template-full .g-pstyle4 {
-              font-size: 10px;
-            }
-          }
-        </style>
-      </head>
-      
-      <body>
-        <div id="g-template-box" class="ai2html">
-          <!-- Artboard: full -->
-          <div id="g-template-full" class="g-artboard" style="width:700px; height:787.000000000001px;"
-            data-aspect-ratio="0.889" data-min-width="700" data-max-width="700">
-            <div style=""></div>
-            <img id="g-template-full-img" class="g-template-full-img g-aiImg" alt="" src="template-full.jpg" />
-            <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
-              style="top:7.3099%;margin-top:-31.5px;left:1.5402%;width:469px;">
-              <p class="g-pstyle0">What fast fashion and high-end brands </p>
-              <p class="g-pstyle0">categorize as XS to XL in hip sizes</p>
-            </div>
-            <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
-              style="top:14.8375%;margin-top:-23.8px;left:2.153%;width:589px;">
-              <p class="g-pstyle1">Each brand's range of hip sizes in inches from extra small (XS) to extra </p>
-              <p class="g-pstyle1">large (XL). </p>
-            </div>
-            <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:17.662%;left:11.2487%;width:39.7143%;">
-              <p class="g-pstyle2"> </p>
-            </div>
-            <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
-              style="top:62%;margin-top:-100px;left:74.5988%;width:214px;">
-              <p class="g-pstyle3">American Eagle had the</p>
-              <p class="g-pstyle3">smallest small (S) hip size </p>
-              <p class="g-pstyle3">starting at 32 inches. </p>
-              <p class="g-pstyle3">High-end brand AMO had the </p>
-              <p class="g-pstyle3">largest small (S) hip size at</p>
-              <p class="g-pstyle3"> 37 inches.</p>
-            </div>
-            <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
-              style="top:98.4377%;margin-top:-7.7px;left:0.8503%;width:222px;">
-              <p class="g-pstyle4">CleanPNG and pnegg provided the logos.</p>
-            </div>
-            <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
-              style="top:98.6918%;margin-top:-7.7px;left:77.6066%;width:174px;">
-              <p class="g-pstyle4">Source: Scraped every brand </p>
-            </div>
-          </div>
-        </div>
-      </body>
-      
-      </html>
+    #g-hip_sizes-box p {
+      margin: 0;
+    }
 
+    #g-hip_sizes-box .g-aiAbs {
+      position: absolute;
+    }
+
+    #g-hip_sizes-box .g-aiImg {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100% !important;
+    }
+
+    #g-hip_sizes-box .g-aiSymbol {
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    #g-hip_sizes-box .g-aiPointText p {
+      white-space: nowrap;
+    }
+
+    #g-hip_sizes-full {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #g-hip_sizes-full p {
+      font-family: arial, helvetica, sans-serif;
+      line-height: 17px;
+      height: auto;
+      opacity: 1;
+      letter-spacing: 0em;
+      font-size: 14px;
+      text-align: left;
+      color: rgb(0, 0, 0);
+      text-transform: none;
+      padding-bottom: 0;
+      padding-top: 0;
+      mix-blend-mode: normal;
+      font-style: normal;
+      font-weight: regular;
+      position: static;
+    }
+
+    #g-hip_sizes-full .g-pstyle0 {
+      font-weight: bold;
+      line-height: 29px;
+      height: 29px;
+      font-size: 24px;
+    }
+
+    #g-hip_sizes-full .g-pstyle1 {
+      line-height: 22px;
+      height: 22px;
+      font-size: 18px;
+    }
+
+    #g-hip_sizes-full .g-pstyle2 {
+      font-family: Skia;
+      font-weight: 400;
+      line-height: 22px;
+      font-size: 18px;
+    }
+
+    #g-hip_sizes-full .g-pstyle3 {
+      height: 17px;
+    }
+
+    #g-hip_sizes-full .g-pstyle4 {
+      line-height: 13px;
+      height: 13px;
+      font-size: 11px;
+    }
+
+    #g-hip_sizes-medium {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #g-hip_sizes-medium p {
+      font-family: arial, helvetica, sans-serif;
+      line-height: 9px;
+      height: auto;
+      opacity: 1;
+      letter-spacing: 0em;
+      font-size: 8px;
+      text-align: left;
+      color: rgb(0, 0, 0);
+      text-transform: none;
+      padding-bottom: 0;
+      padding-top: 0;
+      mix-blend-mode: normal;
+      font-style: normal;
+      font-weight: regular;
+      position: static;
+    }
+
+    #g-hip_sizes-medium .g-pstyle0 {
+      font-weight: bold;
+      line-height: 20px;
+      height: 20px;
+      font-size: 17px;
+    }
+
+    #g-hip_sizes-medium .g-pstyle1 {
+      line-height: 16px;
+      height: 16px;
+      font-size: 13px;
+    }
+
+    #g-hip_sizes-medium .g-pstyle2 {
+      height: 9px;
+    }
+
+    #g-hip_sizes-mobile {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #g-hip_sizes-mobile p {
+      font-family: arial, helvetica, sans-serif;
+      line-height: 10px;
+      height: auto;
+      opacity: 1;
+      letter-spacing: 0em;
+      font-size: 8px;
+      text-align: left;
+      color: rgb(0, 0, 0);
+      text-transform: none;
+      padding-bottom: 0;
+      padding-top: 0;
+      mix-blend-mode: normal;
+      font-style: normal;
+      font-weight: regular;
+      position: static;
+    }
+
+    #g-hip_sizes-mobile .g-pstyle0 {
+      font-weight: bold;
+      line-height: 18px;
+      height: 18px;
+      font-size: 15px;
+    }
+
+    #g-hip_sizes-mobile .g-pstyle1 {
+      line-height: 13px;
+      height: 13px;
+      font-size: 11px;
+    }
+
+    #g-hip_sizes-mobile .g-pstyle2 {
+      height: 10px;
+    }
+
+    #g-hip_sizes-mobile .g-pstyle3 {
+      line-height: 9px;
+      height: 9px;
+    }
+  </style>
+
+  <div id="g-hip_sizes-box" class="ai2html ai2html-responsive">
+
+    <!-- Artboard: full -->
+    <div id="g-hip_sizes-full" class="g-artboard" style="width:700px; height:793px;" data-aspect-ratio="0.883"
+      data-min-width="700">
+      <div style=""></div>
+      <img id="g-hip_sizes-full-img" class="g-hip_sizes-full-img g-aiImg" alt="" src="hip_sizes-full.jpg" />
+      <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:5.7645%;margin-top:-31.7px;left:1.5558%;width:631px;">
+        <p class="g-pstyle0">What fast fashion and high-end brands categorize as </p>
+        <p class="g-pstyle0">XS to XL in hip sizes</p>
+      </div>
+      <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:14.3059%;margin-top:-23.4px;left:1.5972%;width:593px;">
+        <p class="g-pstyle1">Each brand&rsquo;s range of hip sizes in inches from extra small (XS) to extra </p>
+        <p class="g-pstyle1">large (XL). </p>
+      </div>
+      <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:18.285%;left:11.55%;width:39.7143%;">
+        <p class="g-pstyle2"> </p>
+      </div>
+      <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:62.2674%;margin-top:-51.8px;left:72.4684%;width:211px;">
+        <p class="g-pstyle3">American Eagle had the</p>
+        <p class="g-pstyle3">smallest small (S) hip size </p>
+        <p class="g-pstyle3">starting at 32 inches. </p>
+        <p class="g-pstyle3">High-end brand AMO had the </p>
+        <p class="g-pstyle3">largest small (S) hip size at</p>
+        <p class="g-pstyle3"> 37 inches.</p>
+      </div>
+      <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:98.4244%;margin-top:-7.5px;left:1.1516%;width:226px;">
+        <p class="g-pstyle4">CleanPNG and pnegg provided the logos.</p>
+      </div>
+    </div>
+
+    <!-- Artboard: medium -->
+    <div id="g-hip_sizes-medium" class="g-artboard" style="width:490px; height:387px;" data-aspect-ratio="1.266"
+      data-min-width="490" data-max-width="699">
+      <div style=""></div>
+      <img id="g-hip_sizes-medium-img" class="g-hip_sizes-medium-img g-aiImg" alt="" src="hip_sizes-medium.jpg" />
+      <div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:6.5097%;margin-top:-22.2px;left:2.0261%;width:454px;">
+        <p class="g-pstyle0">What fast fashion and high-end brands categorize as </p>
+        <p class="g-pstyle0">XS to XL in hip sizes</p>
+      </div>
+      <div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:16.276%;margin-top:-17px;left:2.4855%;width:434px;">
+        <p class="g-pstyle1">Each brand&rsquo;s range of hip sizes in inches from extra small (XS) to extra </p>
+        <p class="g-pstyle1">large (XL). </p>
+      </div>
+      <div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:56.4434%;margin-top:-27.4px;left:76.3636%;width:122px;">
+        <p class="g-pstyle2">American Eagle had the</p>
+        <p class="g-pstyle2">smallest small (S) hip size </p>
+        <p class="g-pstyle2">starting at 32 inches. </p>
+        <p class="g-pstyle2">High-end brand AMO had the </p>
+        <p class="g-pstyle2">largest small (S) hip size at</p>
+        <p class="g-pstyle2"> 37 inches.</p>
+      </div>
+      <div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:97.961%;margin-top:-5.1px;left:1.2085%;width:152px;">
+        <p class="g-pstyle2">CleanPNG and pnegg provided the logos.</p>
+      </div>
+    </div>
+
+    <!-- Artboard: mobile -->
+    <div id="g-hip_sizes-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px" data-aspect-ratio="0.797"
+      data-min-width="0" data-max-width="489">
+      <div style="padding: 0 0 125.5467% 0;"></div>
+      <img id="g-hip_sizes-mobile-img" class="g-hip_sizes-mobile-img g-aiImg" alt="" src="hip_sizes-mobile.jpg" />
+      <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:5.0463%;margin-top:-19.8px;left:1.0167%;width:382px;">
+        <p class="g-pstyle0">What fast fashion and high-end brands categorize </p>
+        <p class="g-pstyle0">as XS to XL in hip sizes</p>
+      </div>
+      <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:10.9681%;margin-top:-7.6px;left:1.0729%;width:388px;">
+        <p class="g-pstyle1">Each brand&rsquo;s range of hip sizes in inches from extra small (XS) to extra large
+          (XL)
+        </p>
+      </div>
+      <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:58.5666%;margin-top:-29.7px;left:70.5289%;width:128px;">
+        <p class="g-pstyle2">American Eagle had the</p>
+        <p class="g-pstyle2">smallest small (S) hip size </p>
+        <p class="g-pstyle2">starting at 32 inches. </p>
+        <p class="g-pstyle2">High-end brand AMO had the </p>
+        <p class="g-pstyle2">largest small (S) hip size at</p>
+        <p class="g-pstyle2"> 37 inches. </p>
+      </div>
+      <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+        style="top:98.5799%;margin-top:-5.1px;left:0.6307%;width:170px;">
+        <p class="g-pstyle3">CleanPNG and pnegg provided the logos.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    (function (containerId, opts) {
+      var nameSpace = opts.namespace || '';
+      var containers = findContainers(containerId);
+      containers.forEach(resize);
+
+      function resize(container) {
+        var onResize = throttle(update, 200);
+        var waiting = !!window.IntersectionObserver;
+        var observer;
+        update();
+
+        document.addEventListener('DOMContentLoaded', update);
+        window.addEventListener('resize', onResize);
+
+        // NYT Scoop-specific code
+        if (opts.setup) {
+          opts.setup(container).on('cleanup', cleanup);
+        }
+
+        function cleanup() {
+          document.removeEventListener('DOMContentLoaded', update);
+          window.removeEventListener('resize', onResize);
+          if (observer) observer.disconnect();
+        }
+
+        function update() {
+          var artboards = selectChildren('.' + nameSpace + 'artboard[data-min-width]', container),
+            width = Math.round(container.getBoundingClientRect().width);
+
+          // Set artboard visibility based on container width
+          artboards.forEach(function (el) {
+            var minwidth = el.getAttribute('data-min-width'),
+              maxwidth = el.getAttribute('data-max-width');
+            if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+              if (!waiting) {
+                selectChildren('.' + nameSpace + 'aiImg', el).forEach(updateImgSrc);
+                selectChildren('video', el).forEach(updateVideoSrc);
+              }
+              el.style.display = 'block';
+            } else {
+              el.style.display = 'none';
+            }
+          });
+
+          // Initialize lazy loading on first call
+          if (waiting && !observer) {
+            if (elementInView(container)) {
+              waiting = false;
+              update();
+            } else {
+              observer = new IntersectionObserver(onIntersectionChange, { rootMargin: "800px" });
+              observer.observe(container);
+            }
+          }
+        }
+
+        function onIntersectionChange(entries) {
+          // There may be multiple entries relating to the same container
+          // (captured at different times)
+          var isIntersecting = entries.reduce(function (memo, entry) {
+            return memo || entry.isIntersecting;
+          }, false);
+          if (isIntersecting) {
+            waiting = false;
+            // update: don't remove -- we need the observer to trigger an update
+            // when a hidden map becomes visible after user interaction
+            // (e.g. when an accordion menu or tab opens)
+            // observer.disconnect();
+            // observer = null;
+            update();
+          }
+        }
+      }
+
+      function findContainers(id) {
+        // support duplicate ids on the page
+        return selectChildren('.ai2html-responsive', document).filter(function (el) {
+          if (el.getAttribute('id') != id) return false;
+          if (el.classList.contains('ai2html-resizer')) return false;
+          el.classList.add('ai2html-resizer');
+          return true;
+        });
+      }
+
+      // Replace blank placeholder image with actual image
+      function updateImgSrc(img) {
+        var src = img.getAttribute('data-src');
+        if (src && img.getAttribute('src') != src) {
+          img.setAttribute('src', src);
+        }
+      }
+
+      function updateVideoSrc(el) {
+        var src = el.getAttribute('data-src');
+        if (src && !el.hasAttribute('src')) {
+          el.setAttribute('src', src);
+        }
+      }
+
+      function elementInView(el) {
+        var bounds = el.getBoundingClientRect();
+        return bounds.top < window.innerHeight && bounds.bottom > 0;
+      }
+
+      function selectChildren(selector, parent) {
+        return parent ? Array.prototype.slice.call(parent.querySelectorAll(selector)) : [];
+      }
+
+      // based on underscore.js
+      function throttle(func, wait) {
+        var timeout = null, previous = 0;
+        function run() {
+          previous = Date.now();
+          timeout = null;
+          func();
+        }
+        return function () {
+          var remaining = wait - (Date.now() - previous);
+          if (remaining <= 0 || remaining > wait) {
+            clearTimeout(timeout);
+            run();
+          } else if (!timeout) {
+            timeout = setTimeout(run, remaining);
+          }
+        };
+      }
+    })("g-hip_sizes-box", { namespace: "g-", setup: window.setupInteractive || window.getComponent });
+  </script>
+  <!--End code for hip chart here-->
+  <div class="content">
+    <div class="byline">
       <p>For Ahmed, the numbers on a pant's tag measured her self-worth. </p>
-      <p>"Logically, I understand that my health is important," Ahmed said. "There are moments i get bad at it, just to see a pair of small pants not tighten up on my stomach."</p>
-      <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S1057740813000612?fr=RR-2&ref=pdf_download&rr=926bde3029fc41c3">Research</a> shows one's mental image about being a larger size than what a size tag states may be detrimental to self-worth.</p>
-      <p>Critics say there are downsides to a universal size guide too. Given the vast differences in body types and sizes, it would be impossible to develop a size guide accommodating every person. As an article from <a href="https://sizebay.com/en/blog/why-clothing-sizes-are-inconsistent-across-brands/#:~:text=Bodies%20are%20not%20standardized,-Universal%20sizing%20is&text=But%20in%20practice%2C%20universal%20sizing,measurements%20are%20based%20on%20data">sizebay</a>  put it,  “standard measurements and sizing will never be able to capture the nuances and unique fit and style preferences of every single shopper."</p>
-      <p>According to the <a href="https://www.cdc.gov/nchs/fastats/body-measurements.htm">Centers for Disease Control and Prevention,</a>the average waist size for women is 38.7 inches. Yet majority of the brands in this dataset categorize this average waist size as a large (L) or even extra large (XL). Despite championing itself as “one size fits all,” clothing brand Brandy Melville excludes the average woman's size by selling jeans that only fit 24 to 30 inches in waist.</p>
-      <p>Brands design their own size guides to cater to their audience and make consumers feel good picking up clothing as size small, said Patience Billingsley, a graduate of the University of Arkansas, where she conducted research on vanity sizing.</p>
-      <p>"[Vanity sizing] is also unethical and it can be manipulating to tell customers a size they are not," said Billingsley.</p>
-
-<style media="screen,print">
-  #g-beeswarm_maximum_annotation-copy-box,
-  #g-beeswarm_maximum_annotation-copy-box .g-artboard {
-    margin: 0 auto;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-box p {
-    margin: 0;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-box .g-aiAbs {
-    position: absolute;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-box .g-aiImg {
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 100% !important;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-box .g-aiSymbol {
-    position: absolute;
-    box-sizing: border-box;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-box .g-aiPointText p {
-    white-space: nowrap;
-  }
-
-  /* Hide all artboards by default */
-  .g-artboard {
-    display: none;
-  }
-
-  /* Desktop - show full version */
-  @media (min-width: 768px) {
-    #g-beeswarm_maximum_annotation-copy-full {
-      display: block;
-      position: relative;
-      overflow: hidden;
-    }
-  }
-
-  /* Tablet - show medium version */
-  @media (min-width: 490px) and (max-width: 767px) {
-    #g-beeswarm_maximum_annotation-copy-medium {
-      display: block;
-      position: relative;
-      overflow: hidden;
-    }
-  }
-
-  /* Mobile - show mobile version */
-  @media (max-width: 489px) {
-    #g-beeswarm_maximum_annotation-copy-mobile {
-      display: block;
-      position: relative;
-      overflow: hidden;
-    }
-  }
-
-  /* Full version styles */
-  #g-beeswarm_maximum_annotation-copy-full p {
-    font-family: Arial;
-    font-weight: regular;
-    line-height: 14px;
-    height: auto;
-    opacity: 1;
-    letter-spacing: 0em;
-    font-size: 12px;
-    text-align: left;
-    color: rgb(0, 0, 0);
-    text-transform: none;
-    padding-bottom: 0;
-    padding-top: 0;
-    mix-blend-mode: normal;
-    font-style: normal;
-    position: static;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle0 {
-    font-weight: 700;
-    line-height: 25px;
-    height: 25px;
-    font-size: 21px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle1 {
-    font-weight: 400;
-    line-height: 22px;
-    height: 22px;
-    font-size: 18px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle2 {
-    font-weight: 700;
-    line-height: 24px;
-    height: 24px;
-    font-size: 20px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle3 {
-    font-weight: 400;
-    height: 14px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle4 {
-    font-weight: 500;
-    height: 14px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-pstyle5 {
-    font-weight: 700;
-    line-height: 22px;
-    height: 22px;
-    font-size: 18px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-cstyle0 {
-    font-size: 18px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-cstyle1 {
-    font-weight: 500;
-    font-size: 11px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-full .g-cstyle2 {
-    font-weight: 500;
-  }
-
-  /* Medium version styles */
-  #g-beeswarm_maximum_annotation-copy-medium {
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Mobile version styles */
-  #g-beeswarm_maximum_annotation-copy-mobile p {
-    font-weight: regular;
-    line-height: 13px;
-    height: auto;
-    opacity: 1;
-    letter-spacing: 0em;
-    font-size: 11px;
-    text-align: left;
-    color: rgb(0, 0, 0);
-    text-transform: none;
-    padding-bottom: 0;
-    padding-top: 0;
-    mix-blend-mode: normal;
-    font-style: normal;
-    position: static;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-pstyle0 {
-    font-family: Arial;
-    font-weight: 700;
-    line-height: 22px;
-    height: 22px;
-    font-size: 18px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-pstyle1 {
-    font-family: Arial;
-    font-weight: 400;
-    line-height: 16px;
-    height: 16px;
-    font-size: 14px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-pstyle2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    line-height: 14px;
-    height: 14px;
-    font-size: 12px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-pstyle3 {
-    font-family: Arial;
-    font-weight: 700;
-    line-height: 24px;
-    height: 24px;
-    font-size: 20px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-pstyle4 {
-    font-family: Arial;
-    font-weight: 400;
-    height: 13px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-pstyle5 {
-    font-weight: 500;
-    height: 13px;
-  }
-
-  #g-beeswarm_maximum_annotation-copy-mobile .g-cstyle0 {
-    font-family: Arial;
-    font-weight: 400;
-  }
-
-  /* Remove unused artboard styles - keeping only the three we need */
-  #g-beeswarm_maximum_annotation-copy-Artboard_9,
-  #g-beeswarm_maximum_annotation-copy-Artboard_10,
-  #g-beeswarm_maximum_annotation-copy-Artboard_16,
-  #g-beeswarm_maximum_annotation-copy-Artboard_17 {
-    display: none !important;
-  }
-</style>
-
-<div id="g-beeswarm_maximum_annotation-copy-box" class="ai2html">
-
-  <!-- Artboard: full -->
-  <div id="g-beeswarm_maximum_annotation-copy-full" class="g-artboard" style="width:667px; height:355.117151628541px;"
-    data-aspect-ratio="1.878" data-min-width="667" data-max-width="667">
-    <div style=""></div>
-    <img id="g-beeswarm_maximum_annotation-copy-full-img" class="g-beeswarm_maximum_annotation-copy-full-img g-aiImg"
-      alt="" src="beeswarm_maximum_annotation-copy-full.png" />
-    <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:5.8574%;margin-top:-14.8px;left:2.7153%;width:582px;">
-      <p class="g-pstyle0">Fast fashion brands vary in what constitutes as XS to XL<span class="g-cstyle0"> </span></p>
-    </div>
-    <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:14.6351%;margin-top:-13px;left:2.8622%;width:634px;">
-      <p class="g-pstyle1">Bust size measurement in inches from sizes XS to XL for 45 clothing brands. </p>
-    </div>
-    <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:27.0871%;margin-top:-14.2px;left:70.2324%;width:33px;">
-      <p class="g-pstyle2">L</p>
-    </div>
-    <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:27.0871%;margin-top:-14.2px;left:82.0416%;width:46px;">
-      <p class="g-pstyle2">XL</p>
-    </div>
-    <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:27.3687%;margin-top:-14.2px;left:29.1845%;width:46px;">
-      <p class="g-pstyle2">XS</p>
-    </div>
-    <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:27.3687%;margin-top:-14.2px;left:56.0661%;width:41px;">
-      <p class="g-pstyle2">M</p>
-    </div>
-    <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:27.3687%;margin-top:-14.2px;left:44.0522%;width:33px;">
-      <p class="g-pstyle2">S</p>
-    </div>
-    <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:43.1581%;margin-top:-36.3px;left:31.72%;width:244px;">
-      <p class="g-pstyle3">Clothing brand ASOS </p>
-      <p class="g-pstyle3">leads with largest bust sizes </p>
-      <p class="g-pstyle3">in XS, S and L. ASOS tied with </p>
-      <p class="g-pstyle3">Ralph Lauren with largest bust size in M<span class="g-cstyle1">.</span><span
-          class="g-cstyle2"> </span></p>
-      <p class="g-pstyle4"> </p>
-    </div>
-    <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:36.133%;margin-top:-8.3px;left:69.9149%;width:96px;">
-      <p class="g-pstyle3">Ralph Lauren </p>
-    </div>
-    <div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:38.2892%;margin-top:-13px;left:16.8092%;width:43px;">
-      <p class="g-pstyle5">45</p>
-    </div>
-    <div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:53.2139%;margin-top:-13px;left:16.7494%;width:45px;">
-      <p class="g-pstyle5">40</p>
-    </div>
-    <div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:57.6631%;margin-top:-23.8px;left:2.5074%;width:97px;">
-      <p class="g-pstyle1">Bust size</p>
-      <p class="g-pstyle1">in inches </p>
-    </div>
-    <div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:66.449%;margin-top:-13px;left:17.0497%;width:40px;">
-      <p class="g-pstyle5">35</p>
-    </div>
-    <div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:80.2472%;margin-top:-13px;left:17.0738%;width:42px;">
-      <p class="g-pstyle5">30</p>
-    </div>
-    <div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:94.3271%;margin-top:-13px;left:17.062%;width:41px;">
-      <p class="g-pstyle5">25</p>
+      <p>"Logically, I understand that my health is important," Ahmed said. "There are moments i get bad at it, just to
+        see a
+        pair of small pants not tighten up on my stomach."</p>
+      <p><a
+          href="https://www.sciencedirect.com/science/article/abs/pii/S1057740813000612?fr=RR-2&ref=pdf_download&rr=926bde3029fc41c3">Research</a>
+        shows one's mental image about being a larger size than what a size tag states may be detrimental to self-worth.
+      </p>
+      <p>Critics say there are downsides to a universal size guide too. Given the vast differences in body types and
+        sizes, it
+        would be impossible to develop a size guide accommodating every person. As an article from <a
+          href="https://sizebay.com/en/blog/why-clothing-sizes-are-inconsistent-across-brands/#:~:text=Bodies%20are%20not%20standardized,-Universal%20sizing%20is&text=But%20in%20practice%2C%20universal%20sizing,measurements%20are%20based%20on%20data">sizebay</a>
+        put it, “standard measurements and sizing will never be able to capture the nuances and unique fit and style
+        preferences of every single shopper."</p>
+      <p>According to the <a href="https://www.cdc.gov/nchs/fastats/body-measurements.htm">Centers for Disease Control
+          and
+          Prevention,</a>the average waist size for women is 38.7 inches. Yet majority of the brands in this dataset
+        categorize this average waist size as a large (L) or even extra large (XL). Despite championing itself as “one
+        size
+        fits all,” clothing brand Brandy Melville excludes the average woman's size by selling jeans that only fit 24 to
+        30
+        inches in waist.</p>
+      <p>Brands design their own size guides to cater to their audience and make consumers feel good picking up clothing
+        as
+        size small, said Patience Billingsley, a graduate of the University of Arkansas, where she conducted research on
+        vanity sizing.</p>
+      <p>"[Vanity sizing] is also unethical and it can be manipulating to tell customers a size they are not," said
+        Billingsley.</p>
     </div>
   </div>
 
-  <!-- Artboard: medium -->
-  <div id="g-beeswarm_maximum_annotation-copy-medium" class="g-artboard" style="width:490px; height:350px;"
-    data-aspect-ratio="1.4" data-min-width="490" data-max-width="559">
-    <div style=""></div>
-    <img id="g-beeswarm_maximum_annotation-copy-medium-img"
-      class="g-beeswarm_maximum_annotation-copy-medium-img g-aiImg" alt=""
-      src="beeswarm_maximum_annotation-copy-medium.png" />
-  </div>
+  <!--inserting scrollytelling code here!!!!!!!!!!-->
+  <!DOCTYPE html>
+  <html>
 
-  <!-- Artboard: mobile -->
-  <div id="g-beeswarm_maximum_annotation-copy-mobile" class="g-artboard" style="max-width: 333px;max-height: 537px"
-    data-aspect-ratio="0.62" data-min-width="0" data-max-width="489">
-    <div style="padding: 0 0 161.2012% 0;"></div>
-    <img id="g-beeswarm_maximum_annotation-copy-mobile-img"
-      class="g-beeswarm_maximum_annotation-copy-mobile-img g-aiImg" alt=""
-      src="beeswarm_maximum_annotation-copy-mobile.png" />
-    <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:5.5461%;margin-top:-23.8px;left:1.8737%;width:303px;">
-      <p class="g-pstyle0">Fast fashion brands vary in what </p>
-      <p class="g-pstyle0">constitutes as XS to XL </p>
-    </div>
-    <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:11.0337%;margin-top:-9.2px;left:1.8253%;width:339px;">
-      <p class="g-pstyle1">Bust size measurement in inches from sizes XS to XL </p>
-    </div>
-    <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:14.2166%;margin-top:-8.3px;left:83.3193%;width:36px;">
-      <p class="g-pstyle2">45</p>
-    </div>
-    <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:14.2166%;margin-top:-8.3px;left:55.5998%;width:34px;">
-      <p class="g-pstyle2">35</p>
-    </div>
-    <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:14.2166%;margin-top:-8.3px;left:24.0859%;width:35px;">
-      <p class="g-pstyle2">25</p>
-    </div>
-    <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:14.4028%;margin-top:-8.3px;left:68.7975%;width:37px;">
-      <p class="g-pstyle2">40</p>
-    </div>
-    <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:14.4028%;margin-top:-8.3px;left:41.7288%;width:36px;">
-      <p class="g-pstyle2">30</p>
-    </div>
-    <div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:23.508%;margin-top:-14.2px;left:8.9193%;width:46px;">
-      <p class="g-pstyle3">XS</p>
-    </div>
-    <div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:33.1452%;margin-top:-39.9px;left:56.9239%;width:167px;">
-      <p class="g-pstyle4">Clothing brand ASOS </p>
-      <p class="g-pstyle5"><span class="g-cstyle0">leads with</span> largest bust sizes </p>
-      <p class="g-pstyle5">in XS, S and L. ASOS tied </p>
-      <p class="g-pstyle5">with Ralph Lauren with </p>
-      <p class="g-pstyle5">largest bust size in M. </p>
-      <p class="g-pstyle5">. </p>
-    </div>
-    <div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:40.6466%;margin-top:-14.2px;left:10.9926%;width:33px;">
-      <p class="g-pstyle3">S</p>
-    </div>
-    <div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:55.3634%;margin-top:-14.2px;left:10.5463%;width:41px;">
-      <p class="g-pstyle3">M</p>
-    </div>
-    <div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:72.502%;margin-top:-14.2px;left:12.2607%;width:33px;">
-      <p class="g-pstyle3">L</p>
-    </div>
-    <div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText"
-      style="top:89.0818%;margin-top:-14.2px;left:11.1058%;width:46px;">
-      <p class="g-pstyle3">XL</p>
-    </div>
-  </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #scrolly {
+        position: relative;
+        padding: 1rem;
+      }
 
-</div>
-      <p>Because vanity sizing misleads shoppers, consumers often order the same item in different sizes to see what works. With the <a href="https://inbeat.agency/blog/online-shopping-statistics/" target="_blank" rel="noopener noreferrer">
-        rise
-        </a> of online shopping—especially since the 2020 pandemic—the trend of over-purchasing and returning what doesn't fit has only grown. </p>
+      .scrolly-overlay {
+        position: relative;
+        padding: 0;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
 
-        <!DOCTYPE html>
-        <html lang="en">
-        
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Responsive Dollar Chart</title>
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 0;
+        top: 0;
+        height: 100vh;
+        /* Center everything inside */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .step {
+        margin: 0 auto 2rem auto;
+        margin-bottom: 25rem;
+        background-color: #eee;
+        background-color: #fff;
+        color: black;
+      }
+
+      .step p {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      /* When it's less than 700 pixels wide, do normal scrollytelling */
+      @media only screen and (min-width: 700px) {
+        #scrolly.side-by-side {
+          display: flex;
+        }
+
+        #scrolly.side-by-side>div {
+          flex-basis: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+          padding: 0.75em;
+        }
+
+        #scrolly.side-by-side .scrolly-overlay {
+          margin-top: 70vh;
+          order: 0;
+          /* Change these to adjust sizing options */
+          min-width: 15rem;
+          max-width: 20rem;
+        }
+
+        #scrolly.side-by-side .sticky-thing {
+          order: 1;
+          flex-grow: 2;
+        }
+      }
+    </style>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+
+  </head>
+
+  <body>
+    <h1></h1>
+    <section id="scrolly">
+      <div class="sticky-thing">
+        <div class="ai2html-container">
+
+          <!-- ai2html goes below this line -->
+          <!-- Generated by ai2html v0.121.1 - 2025-06-06 16:43 -->
+          <!-- ai file: template_all_annotations.ai -->
           <style media="screen,print">
-            #g-dollar-box,
-            #g-dollar-box .g-artboard {
+            #g-template_all_annotations-box,
+            #g-template_all_annotations-box .g-artboard {
               margin: 0 auto;
             }
-        
-            #g-dollar-box p {
+
+            #g-template_all_annotations-box p {
               margin: 0;
             }
-        
-            #g-dollar-box .g-aiAbs {
+
+            #g-template_all_annotations-box .g-aiAbs {
               position: absolute;
             }
-        
-            #g-dollar-box .g-aiImg {
+
+            #g-template_all_annotations-box .g-aiImg {
               position: absolute;
               top: 0;
               display: block;
               width: 100% !important;
             }
-        
-            #g-dollar-box .g-aiSymbol {
+
+            #g-template_all_annotations-box .g-aiSymbol {
               position: absolute;
               box-sizing: border-box;
             }
-        
-            #g-dollar-box .g-aiPointText p {
+
+            #g-template_all_annotations-box .g-aiPointText p {
               white-space: nowrap;
             }
-        
-            /* Desktop version - show by default */
-            #g-dollar-full {
+
+            #g-template_all_annotations-full {
               position: relative;
               overflow: hidden;
-              display: block;
             }
-        
-            #g-dollar-full p {
+
+            #g-template_all_annotations-full p {
               font-family: arial, helvetica, sans-serif;
-              line-height: 11px;
+              line-height: 18px;
+              height: auto;
               opacity: 1;
               letter-spacing: 0em;
-              font-size: 9px;
+              font-size: 15px;
               text-align: left;
-              color: rgb(50, 18, 81);
+              color: rgb(0, 0, 0);
               text-transform: none;
               padding-bottom: 0;
               padding-top: 0;
               mix-blend-mode: normal;
               font-style: normal;
               font-weight: regular;
-              height: auto;
               position: static;
             }
-        
-            #g-dollar-full .g-pstyle0 {
-              font-weight: bold;
-              line-height: 29px;
-              font-size: 24px;
-              color: rgb(0, 0, 0);
-            }
-        
-            #g-dollar-full .g-pstyle1 {
-              font-family: Arial, Helvetica, sans-serif;
-              font-weight: 400;
-              line-height: 29px;
-              font-size: 24px;
-              color: rgb(0, 0, 0);
-            }
-        
-            #g-dollar-full .g-pstyle2 {
-              line-height: 22px;
-              font-size: 18px;
-              color: rgb(0, 0, 0);
-            }
-        
-            #g-dollar-full .g-pstyle3 {
+
+            #g-template_all_annotations-full .g-pstyle0 {
               font-weight: bold;
               line-height: 25px;
+              height: 25px;
               font-size: 21px;
-              color: rgb(0, 0, 0);
             }
-        
-            #g-dollar-full .g-pstyle4 {
-              line-height: 16px;
-              font-size: 14px;
-              color: rgb(0, 0, 0);
+
+            #g-template_all_annotations-full .g-pstyle1 {
+              line-height: 22px;
+              height: 22px;
+              font-size: 18px;
             }
-        
-            #g-dollar-full .g-pstyle5 {
-              line-height: 16px;
+
+            #g-template_all_annotations-full .g-pstyle2 {
+              font-weight: bold;
+              line-height: 23px;
+              height: 23px;
+              font-size: 19px;
+            }
+
+            #g-template_all_annotations-full .g-pstyle3 {
+              height: 18px;
+            }
+
+            #g-template_all_annotations-full .g-pstyle4 {
+              font-weight: bold;
+              line-height: 26px;
+              height: 26px;
+              font-size: 22px;
+            }
+
+            #g-template_all_annotations-full .g-pstyle5 {
+              line-height: 19px;
+              height: 19px;
+              font-size: 16px;
+            }
+
+            #g-template_all_annotations-full .g-cstyle0 {
+              font-size: 18px;
+            }
+
+            #g-template_all_annotations-full .g-cstyle1 {
               font-size: 13px;
-              color: rgb(44, 24, 76);
             }
-        
-            #g-dollar-full .g-pstyle6 {
-              line-height: 13px;
-              font-size: 11px;
-              color: rgb(44, 24, 76);
-            }
-        
-            #g-dollar-full .g-cstyle0 {
-              font-size: 12px;
-            }
-        
-            #g-dollar-full .g-cstyle1 {
-              color: rgb(50, 18, 81);
-            }
-        
-            /* Mobile version - hidden by default */
-            #g-dollar-mobile {
+
+            #g-template_all_annotations-medium {
               position: relative;
               overflow: hidden;
-              display: none;
             }
-        
-            #g-dollar-mobile p {
-              font-family: Skia;
-              font-weight: regular;
-              line-height: 6px;
+
+            #g-template_all_annotations-medium p {
+              font-family: arial, helvetica, sans-serif;
+              line-height: 13px;
+              height: auto;
               opacity: 1;
               letter-spacing: 0em;
-              font-size: 5px;
+              font-size: 11px;
               text-align: left;
-              color: rgb(50, 18, 81);
+              color: rgb(0, 0, 0);
               text-transform: none;
               padding-bottom: 0;
               padding-top: 0;
               mix-blend-mode: normal;
               font-style: normal;
-              height: auto;
+              font-weight: regular;
               position: static;
             }
-        
-            #g-dollar-mobile .g-pstyle0 {
-              font-weight: 700;
-              line-height: 24px;
-              font-size: 20px;
-              color: rgb(72, 46, 114);
+
+            #g-template_all_annotations-medium .g-pstyle0 {
+              font-weight: bold;
+              line-height: 22px;
+              height: 22px;
+              font-size: 18px;
             }
-        
-            #g-dollar-mobile .g-pstyle1 {
-              font-weight: 400;
-              line-height: 23px;
-              font-size: 19px;
-              color: rgb(72, 46, 114);
+
+            #g-template_all_annotations-medium .g-pstyle1 {
+              line-height: 17px;
+              height: 17px;
+              font-size: 14px;
             }
-        
-            #g-dollar-mobile .g-pstyle2 {
-              font-weight: 700;
-              line-height: 20px;
-              font-size: 17px;
-              color: rgb(72, 46, 114);
+
+            #g-template_all_annotations-medium .g-pstyle2 {
+              font-weight: bold;
+              line-height: 18px;
+              height: 18px;
+              font-size: 15px;
             }
-        
-            #g-dollar-mobile .g-pstyle3 {
-              font-weight: 700;
-              line-height: 11px;
-              font-size: 9px;
+
+            #g-template_all_annotations-medium .g-pstyle3 {
+              height: 13px;
+            }
+
+            #g-template_all_annotations-medium .g-pstyle4 {
+              line-height: 14px;
+              height: 14px;
+              font-size: 12px;
+            }
+
+            #g-template_all_annotations-medium .g-pstyle5 {
+              font-weight: bold;
+              line-height: 21px;
+              height: 21px;
+              font-size: 18px;
+            }
+
+            #g-template_all_annotations-medium .g-pstyle6 {
+              height: 13px;
+              text-align: center;
+            }
+
+            #g-template_all_annotations-medium .g-pstyle7 {
+              line-height: 12px;
+              height: 12px;
+              font-size: 10px;
+            }
+
+            #g-template_all_annotations-mobile {
+              position: relative;
+              overflow: hidden;
+            }
+
+            #g-template_all_annotations-mobile p {
+              font-family: arial, helvetica, sans-serif;
+              line-height: 12px;
+              height: auto;
+              opacity: 1;
+              letter-spacing: 0em;
+              font-size: 10px;
+              text-align: left;
               color: rgb(0, 0, 0);
+              text-transform: none;
+              padding-bottom: 0;
+              padding-top: 0;
+              mix-blend-mode: normal;
+              font-style: normal;
+              font-weight: regular;
+              position: static;
             }
-        
-            #g-dollar-mobile .g-pstyle4 {
-              font-weight: 400;
-              line-height: 11px;
-              font-size: 9px;
-              color: rgb(44, 24, 76);
+
+            #g-template_all_annotations-mobile .g-pstyle0 {
+              font-weight: bold;
+              line-height: 19px;
+              height: 19px;
+              font-size: 16px;
             }
-        
-            #g-dollar-mobile .g-pstyle5 {
-              font-weight: 400;
+
+            #g-template_all_annotations-mobile .g-pstyle1 {
+              line-height: 14px;
+              height: 14px;
+              font-size: 12px;
             }
-        
-            #g-dollar-mobile .g-pstyle6 {
-              font-weight: 400;
-              color: rgb(44, 24, 76);
+
+            #g-template_all_annotations-mobile .g-pstyle2 {
+              font-family: Skia;
+              font-weight: 700;
+              line-height: 13px;
+              height: 13px;
+              font-size: 11px;
             }
-        
-            #g-dollar-mobile .g-cstyle0 {
-              color: rgb(50, 18, 81);
+
+            #g-template_all_annotations-mobile .g-pstyle3 {
+              font-family: Skia;
+              font-weight: 700;
+              line-height: 21px;
+              height: 21px;
+              font-size: 18px;
             }
-        
-            /* Hide other artboards */
-            #g-dollar-medium,
-            #g-dollar-Artboard_9,
-            #g-dollar-Artboard_10 {
-              display: none;
+
+            #g-template_all_annotations-mobile .g-pstyle4 {
+              height: 12px;
             }
-        
-            /* Media query for mobile devices */
-            @media screen and (max-width: 768px) {
-              #g-dollar-full {
-                display: none;
-              }
-        
-              #g-dollar-mobile {
-                display: block;
-              }
-            }
-        
-            /* Ensure container is responsive */
-            #g-dollar-box {
-              max-width: 100%;
-              width: 100%;
+
+            #g-template_all_annotations-Artboard_8 {
+              position: relative;
+              overflow: hidden;
             }
           </style>
-        </head>
-        
-        <body>
-          <div id="g-dollar-box" class="ai2html">
-            <!-- Desktop version -->
-            <div id="g-dollar-full" class="g-artboard" style="width:700px; height:671.686639084911px;" data-aspect-ratio="1.042"
-              data-min-width="700" data-max-width="700">
-              <div style=""></div>
-              <img id="g-dollar-full-img" class="g-dollar-full-img g-aiImg" alt="" src="dollar-full.jpg" />
-              <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs" style="top:2.0843%;left:1.4947%;width:101%;">
-                <p class="g-pstyle0">Consumers returned a record $890 billion in retail </p>
-                <p class="g-pstyle0">goods in 2024</p>
-              </div>
-              <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs" style="top:14.5901%;left:10.3012%;width:21.1429%;">
-                <p class="g-pstyle1">=</p>
-              </div>
-              <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:15.3345%;left:13.2061%;width:34.7143%;">
-                <p class="g-pstyle2">$127.14B</p>
-              </div>
-              <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs" style="top:25.3094%;left:2.3072%;width:34.7143%;">
-                <p class="g-pstyle3">2024</p>
-              </div>
-              <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs" style="top:25.7561%;left:92.6243%;width:10.2857%;">
-                <p class="g-pstyle4">$890 B<span class="g-cstyle0"> </span></p>
-              </div>
-              <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs" style="top:39.6018%;left:2.3014%;width:34.7143%;">
-                <p class="g-pstyle3">2022</p>
-              </div>
-              <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:40.0484%;left:82.4708%;width:10.2857%;">
-                <p class="g-pstyle4">$816.8B</p>
-              </div>
-              <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs" style="top:53.2987%;left:68.9411%;width:10.2857%;">
-                <p class="g-pstyle4">$760.8B</p>
-              </div>
-              <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs" style="top:53.5964%;left:2.2965%;width:34.7143%;">
-                <p class="g-pstyle3">2021</p>
-              </div>
-              <div id="g-ai0-10" class="g-ai2html-settings g-aiAbs" style="top:66.8466%;left:47.2071%;width:10.2857%;">
-                <p class="g-pstyle4">$428B</p>
-              </div>
-              <div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:67.591%;left:2.2965%;width:34.7143%;">
-                <p class="g-pstyle3">2020</p>
-              </div>
-              <div id="g-ai0-12" class="g-ai2html-settings g-aiAbs" style="top:69.8242%;left:57.399%;width:42%;">
-                <p class="g-pstyle5">Nearly 2/3 of consumers buy multiple sizes and return what doesn't fit. This is part of the
-                  reason why return rates have increased, according to the 2024 report from National Retail Federation and Happy
-                  Returns. </p>
-              </div>
-              <div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:80.5435%;left:2.2965%;width:34.7143%;">
-                <p class="g-pstyle3">2019</p>
-              </div>
-              <div id="g-ai0-14" class="g-ai2html-settings g-aiAbs" style="top:80.6924%;left:36.0563%;width:10.2857%;">
-                <p class="g-pstyle4">$309B</p>
-              </div>
-              <div id="g-ai0-15" class="g-ai2html-settings g-aiAbs" style="top:92.7516%;left:0.6352%;width:59%;">
-                <p>*Note: NRF's 2023 study on retail returns used a different methodology to calculate the return rate that is
-                  not directly comparable to other years' data.</p>
-                <p>&nbsp;</p>
-              </div>
-              <div id="g-ai0-16" class="g-ai2html-settings g-aiAbs" style="top:97.9623%;left:60.2075%;width:59%;">
-                <p class="g-pstyle6"><span class="g-cstyle1">Source: </span>National Retail Federation and Happy Returns. </p>
-                <p>&nbsp;</p>
-              </div>
-              <div id="g-ai0-17" class="g-ai2html-settings g-aiAbs" style="top:97.9623%;left:0.7022%;width:73.8571%;">
-                <p>*Note: Retail here includes returning clothes, in addition to the returning of shoes and accessories. </p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
-        
-            <!-- Mobile version -->
-            <div id="g-dollar-mobile" class="g-artboard" style="max-width: 375px;max-height: 471px" data-aspect-ratio="0.797"
-              data-min-width="0" data-max-width="489">
-              <div style="padding: 0 0 125.5467% 0;"></div>
-              <img id="g-dollar-mobile-img" class="g-dollar-mobile-img g-aiImg" alt="" src="dollar-mobile.jpg" />
-              <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs" style="top:0.8496%;left:1.3686%;width:105.8667%;">
-                <p class="g-pstyle0">Consumers returned a record $890 billion in retail goods in 2024.</p>
-              </div>
-              <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs" style="top:12.7443%;left:17.1533%;width:37.8667%;">
-                <p class="g-pstyle1">$127.14B</p>
-              </div>
-              <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs" style="top:12.5319%;left:13.3688%;width:21.6%;">
-                <p class="g-pstyle1">=</p>
-              </div>
-              <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs" style="top:22.7273%;left:0.6053%;width:38.1333%;">
-                <p class="g-pstyle2">2024</p>
-              </div>
-              <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs" style="top:23.5769%;left:93.4138%;width:10.4%;">
-                <p class="g-pstyle3">$890 B</p>
-              </div>
-              <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs" style="top:36.746%;left:0.5799%;width:37.0667%;">
-                <p class="g-pstyle2">2022</p>
-              </div>
-              <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs" style="top:37.3832%;left:81.3161%;width:10.4%;">
-                <p class="g-pstyle3">$816.8B</p>
-              </div>
-              <div id="g-ai2-8" class="g-ai2html-settings g-aiAbs" style="top:50.5523%;left:0.7017%;width:40%;">
-                <p class="g-pstyle2">2021</p>
-              </div>
-              <div id="g-ai2-9" class="g-ai2html-settings g-aiAbs" style="top:51.1895%;left:69.8897%;width:10.4%;">
-                <p class="g-pstyle3">$760.8B</p>
-              </div>
-              <div id="g-ai2-10" class="g-ai2html-settings g-aiAbs" style="top:63.9337%;left:0.6824%;width:37.8667%;">
-                <p class="g-pstyle2">2020</p>
-              </div>
-              <div id="g-ai2-11" class="g-ai2html-settings g-aiAbs" style="top:64.1461%;left:45.5571%;width:10.4%;">
-                <p class="g-pstyle3">$428B</p>
-              </div>
-              <div id="g-ai2-12" class="g-ai2html-settings g-aiAbs" style="top:69.0314%;left:50.0892%;width:50.1333%;">
-                <p class="g-pstyle4">Nearly 2/3 of consumers buy multiple sizes and return what doesn't fit. This is part of the
-                  reason why return rates have increased, according to the 2024 report from National Retail Federation and Happy
-                  Returns. </p>
-              </div>
-              <div id="g-ai2-13" class="g-ai2html-settings g-aiAbs" style="top:77.74%;left:0.6654%;width:39.2%;">
-                <p class="g-pstyle2">2019</p>
-              </div>
-              <div id="g-ai2-14" class="g-ai2html-settings g-aiAbs" style="top:77.5276%;left:34.1582%;width:10.4%;">
-                <p class="g-pstyle3">$309B</p>
-              </div>
-              <div id="g-ai2-15" class="g-ai2html-settings g-aiAbs" style="top:94.9448%;left:0.2818%;width:69.3333%;">
-                <p class="g-pstyle5">*Note: NRF's 2023 study on retail returns used a different methodology to calculate the
-                  return rate that is not directly comparable to other years' data.</p>
-                <p>&nbsp;</p>
-              </div>
-              <div id="g-ai2-17" class="g-ai2html-settings g-aiAbs" style="top:97.9184%;left:66.1778%;width:110.1333%;">
-                <p class="g-pstyle6"><span class="g-cstyle0">Source: </span>National Retail Federation and Happy Returns. </p>
-                <p>&nbsp;</p>
-              </div>
-              <div id="g-ai2-18" class="g-ai2html-settings g-aiAbs" style="top:98.5556%;left:0.211%;width:81.8667%;">
-                <p class="g-pstyle5">*Note: Retail here includes returning clothes, in addition to the returning of shoes and
-                  accessories. </p>
-                <p>&nbsp;</p>
-              </div>
-            </div>
-          </div>
-        </body> </html>
 
+          <div id="g-template_all_annotations-box" class="ai2html ai2html-responsive">
+
+            <!-- Artboard: full -->
+            <div id="g-template_all_annotations-full" class="g-artboard" style="width:700px; height:455px;"
+              data-aspect-ratio="1.538" data-min-width="700">
+              <div style=""></div>
+              <img id="g-template_all_annotations-full-img" class="g-template_all_annotations-full-img g-aiImg" alt=""
+                src="template_all_annotations-full.png" />
+              <svg class="g-template_all_annotations-full-interactions-img g-aiImg"
+                id="g-template_all_annotations-full-interactions-img" xmlns="http://www.w3.org/2000/svg"
+                baseProfile="tiny" version="1.2" viewBox="0 0 699.5 455">
+                <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+                <path id="_x3C_Line_x3E_" d="M385.925,402.917c2.752,30.854,82.291,11.318,145.65-25.153" fill="none"
+                  fill-rule="evenodd" stroke="#000" stroke-miterlimit="10" stroke-width=".55" />
+                <line id="ralph" x1="566.602" y1="160.905" x2="584.002" y2="160.905" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".75" />
+                <path id="_x3C_Line_x3E_1" data-name="_x3C_Line_x3E_"
+                  d="M312.701,219.012c1.881,27.714,28.192,45.291,61.745,38.728" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".55" />
+                <path id="_x3C_Line_x3E_2" data-name="_x3C_Line_x3E_"
+                  d="M589.961,260.668c0,21.85-4.554,42.995-10.409,47.449" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".55" />
+                <style>
+                  #g-template_all_annotations-full-interactions-img rect,
+                  #g-template_all_annotations-full-interactions-img circle,
+                  #g-template_all_annotations-full-interactions-img path,
+                  #g-template_all_annotations-full-interactions-img line,
+                  #g-template_all_annotations-full-interactions-img polyline,
+                  #g-template_all_annotations-full-interactions-img polygon {
+                    vector-effect: non-scaling-stroke;
+                  }
+                </style>
+              </svg>
+              <div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:7.4639%;margin-top:-15px;left:2.2314%;width:598px;">
+                <p class="g-pstyle0">Fast fashion brands vary in what constitutes as XS to XL<span class="g-cstyle0">
+                  </span></p>
+              </div>
+              <div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:12.2298%;margin-top:-12.6px;left:2.2285%;width:642px;">
+                <p class="g-pstyle1">Bust size measurement in inches from sizes XS to XL for 45 clothing
+                  brands. </p>
+              </div>
+              <div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:25.0459%;margin-top:-14px;left:82.6305%;width:45px;">
+                <p class="g-pstyle2">XL</p>
+              </div>
+              <div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:25.2657%;margin-top:-14px;left:24.5506%;width:46px;">
+                <p class="g-pstyle2">XS</p>
+              </div>
+              <div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:25.2657%;margin-top:-14px;left:54.0581%;width:37px;">
+                <p class="g-pstyle2">M</p>
+              </div>
+              <div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:25.2657%;margin-top:-14px;left:69.255%;width:33px;">
+                <p class="g-pstyle2">L</p>
+              </div>
+              <div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:25.2657%;margin-top:-14px;left:40.2359%;width:34px;">
+                <p class="g-pstyle2">S</p>
+              </div>
+              <div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:42.4388%;margin-top:-46.1px;left:26.521%;width:286px;">
+                <p class="g-pstyle3">Clothing brand ASOS </p>
+                <p class="g-pstyle3">leads with largest bust sizes </p>
+                <p class="g-pstyle3">in XS, S and L. ASOS tied with </p>
+                <p class="g-pstyle3">Ralph Lauren with largest bust size in M<span class="g-cstyle1">.</span> </p>
+                <p class="g-pstyle3"> </p>
+              </div>
+              <div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:35.8591%;margin-top:-10.2px;left:68.7372%;width:109px;">
+                <p class="g-pstyle3">Ralph Lauren </p>
+              </div>
+              <div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:37.4841%;margin-top:-15.6px;left:13.4916%;width:45px;">
+                <p class="g-pstyle4">45</p>
+              </div>
+              <div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:51.7698%;margin-top:-15.6px;left:13.4254%;width:45px;">
+                <p class="g-pstyle4">40</p>
+              </div>
+              <div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:54.4094%;margin-top:-20.6px;left:1.6048%;width:90px;">
+                <p class="g-pstyle5">Bust size</p>
+                <p class="g-pstyle5">in inches </p>
+              </div>
+              <div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:64.2973%;margin-top:-15.6px;left:13.7573%;width:45px;">
+                <p class="g-pstyle4">35</p>
+              </div>
+              <div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:75.0266%;margin-top:-37.4px;left:71.7021%;width:214px;">
+                <p class="g-pstyle3">Clothing brand Alloy </p>
+                <p class="g-pstyle3">leads with smallest bust sizes </p>
+                <p class="g-pstyle3">in XS, S, M and L. Forever 21 </p>
+                <p class="g-pstyle3">had the smallest XL size. </p>
+              </div>
+              <div id="g-ai0-15" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:77.7039%;margin-top:-15.6px;left:13.784%;width:45px;">
+                <p class="g-pstyle4">30</p>
+              </div>
+              <div id="g-ai0-16" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:91.1105%;margin-top:-15.6px;left:13.771%;width:45px;">
+                <p class="g-pstyle4">25</p>
+              </div>
+            </div>
+
+            <!-- Artboard: medium -->
+            <div id="g-template_all_annotations-medium" class="g-artboard" style="width:490px; height:359px;"
+              data-aspect-ratio="1.365" data-min-width="490" data-max-width="699">
+              <div style=""></div>
+              <img id="g-template_all_annotations-medium-img" class="g-template_all_annotations-medium-img g-aiImg"
+                alt="" src="template_all_annotations-medium.png" />
+              <svg class="g-template_all_annotations-medium-interactions-img g-aiImg"
+                id="g-template_all_annotations-medium-interactions-img" xmlns="http://www.w3.org/2000/svg"
+                baseProfile="tiny" version="1.2" viewBox="0 0 490 359">
+                <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+                <rect x="1.5" y=".257" width="488.5" height="358.743" fill="#fffcf5" />
+                <rect x="53.375" y="131.266" width="412.75" height=".533" fill="#ebebeb" />
+                <rect x="50.786" y="233.485" width="412.751" height=".533" fill="#ebebeb" />
+                <rect x="335.942" y="83.408" width="1.066" height="234.178" fill="#ebebeb" />
+                <rect x="50.587" y="280.097" width="412.751" height=".533" fill="#ebebeb" />
+                <rect x="54.373" y="110.284" width="411.506" height="1.067" fill="#ebebeb" />
+                <rect x="53.426" y="158.872" width="411.506" height="1.067" fill="#ebebeb" />
+                <rect x="52.084" y="208.733" width="411.506" height="1.066" fill="#ebebeb" />
+                <path d="M255.069,190.553c.081,4.924-7.636,5.064-7.717.14s7.636-5.064,7.717-.14" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M262.342,214.561c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M254.005,213.023c.081,4.924-7.636,5.064-7.717.14s7.636-5.064,7.717-.14" fill="#d32a2a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M264.414,209.056c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff2439" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M264.887,219.792c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="249.024" y="85.053" width="1.066" height="234.517" fill="#ebebeb" />
+                <path d="M243.406,204.388c0,4.004-6.033,4.004-6.033,0s6.033-4.004,6.033,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M349.415,187.743c0,4.547-7.455,4.547-7.455,0s7.455-4.547,7.455,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M254.746,186.423c.076,4.577-6.865,4.703-6.941.126-.076-4.577,6.865-4.703,6.941-.126"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M345.824,177.43c0,4.734-6.969,4.734-6.969,0s6.969-4.734,6.969,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M340.535,194.48c0,5.112-7.894,5.112-7.894,0s7.894-5.112,7.894,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M348.45,194.48c0,5.112-7.883,5.112-7.883,0s7.883-5.112,7.883,0" fill="#ff647a" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M341.907,175.155c0,3.704-6.525,3.704-6.525,0s6.525-3.704,6.525,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M343.085,260.315" fill="#d32a2a" stroke="#4682b4" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width=".709" />
+                <path d="M334.636,260.315" fill="#d32a2a" stroke="#4682b4" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width=".709" />
+                <path d="M343.085,260.315" fill="#d32a2a" stroke="#4682b4" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width=".709" />
+                <path d="M338.825,177.43c0,4.734-6.979,4.734-6.979,0s6.979-4.734,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M345.824,171.144c0,4.997-6.969,4.997-6.969,0s6.969-4.987,6.969,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M338.397,164.735c0,5.418-8.746,5.418-8.746,0s8.746-5.418,8.746,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M344.847,154.553c0,5.188-7.092,5.188-7.092,0s7.092-5.188,7.092,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M342.139,131.202c0,5.594-8.45,5.594-8.45,0s8.45-5.594,8.45,0" fill="#ff647a" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M352.831,177.43c0,4.734-6.979,4.734-6.979,0s6.979-4.734,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M348.45,175.155c0,3.704-6.516,3.704-6.516,0s6.516-3.704,6.516,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M331.818,177.43c0,4.734-6.979,4.734-6.979,0s6.979-4.734,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M335.355,175.155c0,3.704-6.525,3.704-6.525,0s6.525-3.704,6.525,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M343.274,205.74c0,4.681-7.692,4.681-7.692,0s7.692-4.691,7.692,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M332.609,194.48c0,5.112-7.894,5.112-7.894,0s7.894-5.112,7.894,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M343.321,179.223c0,4.547-7.465,4.547-7.465,0s7.465-4.547,7.465,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M355.003,175.155c0,3.704-6.525,3.704-6.525,0s6.525-3.704,6.525,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M338.825,171.144c0,4.997-6.979,4.997-6.979,0s6.979-4.987,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M342.564,158.821c0,5.188-7.102,5.188-7.102,0s7.102-5.188,7.102,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M352.831,171.144c0,4.997-6.979,4.997-6.979,0s6.979-4.987,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M355.003,194.218c0,4.763-6.525,4.763-6.525,0s6.525-4.763,6.525,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M347.167,164.735c0,5.418-8.734,5.418-8.734,0s8.734-5.418,8.734,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M331.818,171.144c0,4.997-6.979,4.997-6.979,0s6.979-4.987,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M359.839,171.144c0,4.997-6.979,4.997-6.979,0,0-4.987,6.979-4.987,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M342.564,150.295c0,5.188-7.102,5.188-7.102,0s7.102-5.188,7.102,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M324.81,171.144c0,4.997-6.969,4.997-6.969,0s6.969-4.987,6.969,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M332.852,187.883c-.36,4.393-6.861,3.808-6.501-.585s6.862-3.817,6.501.585" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M324.683,194.48c0,5.112-7.883,5.112-7.883,0s7.883-5.112,7.883,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M359.839,177.43c0,4.734-6.979,4.734-6.979,0s6.979-4.734,6.979,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M337.726,154.553c0,5.188-7.102,5.188-7.102,0s7.102-5.188,7.102,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M328.783,175.9c-.129,4.561-6.642,4.359-6.513-.202.129-4.561,6.642-4.359,6.513.202"
+                  fill="#ff647a" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M329.616,164.735c0,5.418-8.746,5.418-8.746,0s8.746-5.418,8.746,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M362.129,194.218c0,4.763-7.1,4.763-7.1,0s7.1-4.763,7.1,0" fill="#ff647a" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M342.139,140.395c0,5.594-8.45,5.594-8.45,0s8.45-5.594,8.45,0" fill="#ff647a" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M355.949,164.735c0,5.418-8.746,5.418-8.746,0s8.746-5.418,8.746,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M324.81,177.43c0,4.734-6.969,4.734-6.969,0s6.969-4.734,6.969,0" fill="#ff647a" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="416.113" y="83.274" width="1.066" height="236.907" fill="#ebebeb" />
+                <path d="M419.586,147.459c0,3.835-2.98,3.835-2.98,0s2.98-3.835,2.98,0" fill="#f7869b" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M418.626,144.311c0,3.835-5.839,3.835-5.839,0s5.839-3.835,5.839,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M424.271,144.426c0,3.835-5.757,3.835-5.757,0s5.757-3.835,5.757,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M420.845,151.846c0,3.835-6.118,3.835-6.118,0s6.118-3.835,6.118,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M420.405,139.557c0,4.076-2.649,4.076-2.649,0s2.649-4.067,2.649,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M418.173,128.132c0,4.449-5.971,4.449-5.971,0s5.971-4.44,5.971,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M423.09,138.93c0,4.076-6.591,4.076-6.591,0s6.591-4.067,6.591,0" fill="#f7869b" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M417.689,135.147c0,4.062-6.052,4.062-6.052,0s6.052-4.062,6.052,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M420.625,165.141c0,3.835-6.2,3.835-6.2,0s6.2-3.835,6.2,0" fill="#f7869b" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M419.29,140.026c-.122,4.539-6.722,4.343-6.599-.196.122-4.529,6.721-4.333,6.599.196"
+                  fill="#f7869b" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M414.4,165.141c0,3.835-6.208,3.835-6.208,0s6.208-3.835,6.208,0" fill="#f7869b" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M426.859,165.141c0,3.835-6.208,3.835-6.208,0s6.208-3.835,6.208,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M422.624,135.437c0,4.44-6.485,4.44-6.485,0s6.485-4.449,6.485,0" fill="#f7869b" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M421.332,104.026c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M252.866,210.143c0,4.355-5.278,4.355-5.278,0s5.278-4.364,5.278,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M247.566,209.152c0,4.355-5.278,4.355-5.278,0,0-4.364,5.278-4.364,5.278,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M256.146,215.059c0,3.966-5.636,3.966-5.636,0s5.636-3.966,5.636,0" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M258.159,209.152c0,4.355-6.712,4.355-6.712,0s6.712-4.364,6.712,0" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M254.788,276.774c-.634,6.632-9.916,5.751-9.282-.881.634-6.632,9.916-5.751,9.282.881"
+                  fill="#ff2439" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M251.273,203.589c0,3.085-2.085,3.085-2.085,0s2.085-3.085,2.085,0" fill="#d32a2a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M254.083,198.795c0,3.454-5.273,3.454-5.273,0s5.273-3.454,5.273,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M249.179,203.589c0,3.085-2.085,3.085-2.085,0s2.085-3.085,2.085,0" fill="#6b171d"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M249.179,198.519c0,3.085-4.176,3.085-4.176,0s4.176-3.085,4.176,0" fill="#d32a2a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M253.364,203.589c0,3.085-2.082,3.085-2.082,0s2.082-3.085,2.082,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M258.657,197.313c0,4.004-5.801,4.004-5.801,0s5.801-4.004,5.801,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M247.086,203.589c0,3.085-2.082,3.085-2.082,0s2.082-3.085,2.082,0" fill="#d32a2a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M251.447,206.482c0,3.559-5.506,3.559-5.506,0s5.506-3.559,5.506,0" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M259.903,204.046c0,4.248-6.499,4.248-6.499,0s6.499-4.248,6.499,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M256.146,206.482c0,3.559-5.537,3.559-5.537,0s5.537-3.559,5.537,0" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M251.182,193.691c-.191,3.937-5.956,3.63-5.764-.307.191-3.937,5.956-3.63,5.764.307"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M247.502,197.313c0,4.004-6.033,4.004-6.033,0s6.033-4.004,6.033,0" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M245.377,215.059c0,3.966-5.105,3.966-5.105,0s5.105-3.966,5.105,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M251.986,200.607c0,4.004-5.329,4.004-5.329,0s5.329-4.004,5.329,0" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="83.43" y="89.224" width="1.067" height="238.891" fill="#ebebeb" />
+                <path d="M103.091,262.252c0,6.356-8.502,6.356-8.502,0s8.502-6.356,8.502,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M70.932,246.78c0,5.249-6.884,5.249-6.884,0s6.884-5.259,6.884,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M105.034,246.708c0,5.785-8.288,5.785-8.288,0s8.288-5.797,8.288,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M96.363,233.623c0,5.363-7.777,5.363-7.777,0s7.777-5.363,7.777,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M113.357,246.708c0,5.785-8.288,5.785-8.288,0s8.288-5.797,8.288,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M75.462,233.623c0,5.363-8.261,5.363-8.261,0s8.261-5.363,8.261,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M83.231,240.229c.007,3.492-3.792,3.501-3.799.009-.007-3.492,3.792-3.501,3.799-.009"
+                  fill="#ff981d" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M106.327,237.984c.013,5.826-8.235,5.844-8.249.018-.013-5.826,8.235-5.844,8.249-.018"
+                  fill="#b50808" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M110.76,260.054c0,6.356-8.502,6.356-8.502,0s8.502-6.356,8.502,0" fill="#ff981d"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M80.375,260.054c0,6.356-8.513,6.356-8.513,0s8.513-6.356,8.513,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M84.976,243.079c.01,4.794-7.44,4.811-7.45.017s7.44-4.811,7.45-.017" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M57.107,246.78c0,5.249-6.884,5.249-6.884,0s6.884-5.259,6.884,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M91.702,262.672c0,1.483-4.662,1.483-4.662,0,0-3.085,4.662-3.085,4.662,0" fill="#ff981d"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M121.679,246.708c0,5.785-8.288,5.785-8.288,0s8.288-5.797,8.288,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="169.936" y="87.036" width="1.067" height="235.129" fill="#ebebeb" />
+                <path d="M173.419,227.19c0,4.644-5.605,4.644-5.605,0s5.605-4.634,5.605,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M167.791,227.19c0,4.644-5.598,4.644-5.598,0s5.598-4.634,5.598,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M172.786,237.026c0,3.661-3.9,3.661-3.9,0s3.9-3.661,3.9,0" fill="#e21e1e" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M179.048,227.19c0,4.644-5.605,4.644-5.605,0s5.605-4.634,5.605,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M162.17,227.19c0,4.644-5.605,4.644-5.605,0s5.605-4.634,5.605,0" fill="#e21e1e" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M175.213,221.893c0,3.085-4.522,3.085-4.522,0s4.522-3.085,4.522,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M171.673,215.49c0,4.863-6.792,4.863-6.792,0s6.792-4.863,6.792,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M172.895,220.819c0,3.519-5.493,3.519-5.493,0s5.493-3.519,5.493,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M184.676,227.19c0,4.644-5.605,4.644-5.605,0s5.605-4.634,5.605,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M178.502,215.49c0,4.863-6.801,4.863-6.801,0s6.801-4.863,6.801,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M175.213,233.063c0,4.435-6.119,4.435-6.119,0s6.119-4.435,6.119,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M191.813,226.845c0,4.183-7.114,4.183-7.114,0s7.114-4.175,7.114,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M178.712,233.063c0,4.435-6.35,4.435-6.35,0s6.35-4.435,6.35,0" fill="#e21e1e" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M179.591,221.322c0,3.783-5.628,3.783-5.628,0s5.628-3.783,5.628,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M169.138,220.947c0,3.69-5.664,3.69-5.664,0s5.664-3.69,5.664,0" fill="#e21e1e" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M169.074,233.063c0,4.435-4.803,4.435-4.803,0s4.803-4.435,4.803,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M81.752,262.644c0,5.419-8.559,5.419-8.559,0s8.559-5.419,8.559,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M95,263.636c0,5.419-8.559,5.419-8.559,0s8.559-5.419,8.559,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M88.376,221.989c0,5.419-8.559,5.419-8.559,0s8.559-5.419,8.559,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M82.786,233.409c0,5.419-8.559,5.419-8.559,0s8.559-5.419,8.559,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M98.487,239.518c0,5.419-8.559,5.419-8.559,0s8.559-5.419,8.559,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M343.3,200.145c0,4.656-7.704,4.656-7.704,0s7.704-4.647,7.704,0" fill="#ff647a" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M259.122,219.765c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M253.444,219.765c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff2439" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M248.713,219.765c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#f72626" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M243.035,219.765c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M254.39,226.706c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M271.133,209.11c.081,4.924-7.636,5.064-7.717.14s7.636-5.064,7.717-.14" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M275.864,209.11c.081,4.924-7.636,5.064-7.717.14s7.636-5.064,7.717-.14" fill="#ff3145"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M244.073,209.758c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M239.342,209.758c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M234.611,208.767c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M247.858,203.809c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff2439" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M252.01,215.495c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M266.306,203.107c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M184.31,221.693c-1.012,4.031-6.895,2.526-5.882-1.505,1.012-4.031,6.895-2.526,5.882,1.505"
+                  fill="#e21e1e" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M179.593,224.907c0,5.053-7.803,5.053-7.802,0,0-5.053,7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M172.023,224.907c0,5.053-7.803,5.053-7.802,0s7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M157.829,226.89c0,5.053-7.803,5.053-7.802,0s7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M175.622,244.374c0,5.053-7.803,5.053-7.802,0s7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M170.891,239.416c0,5.053-7.803,5.053-7.802,0s7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M178.461,239.416c0,5.053-7.803,5.053-7.802,0s7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M183.192,239.416c0,5.053-7.803,5.053-7.802,0s7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M165.737,232.567c0,5.053-7.803,5.053-7.802,0,0-5.053,7.803-5.053,7.802,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="50.516" y="308.028" width="411.506" height="1.066" fill="#ebebeb" />
+                <path d="M88.121,308.795c0,5.419-8.559,5.419-8.559,0s8.559-5.419,8.559,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <line x1="251.934" y1="269.066" x2="656.807" y2="887.816" fill="none" />
+                <text />
+                <path d="M110.712,260.126c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M84.217,267.067c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M89.202,240.518c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".55" />
+                <path d="M88.525,232.988c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M87.579,227.038c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M103.665,232.988c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M64.66,247.419c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M96.832,247.419c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M97.779,259.318c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M88.316,247.419c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M81.693,249.402c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M93.047,237.503c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M93.994,243.453c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M84.531,239.486c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M76.961,247.419c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M77.908,240.478c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M90.209,260.31c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M87.37,262.293c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M174.659,292.137c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M341.008,248.447c0,4.656-7.704,4.656-7.704,0s7.704-4.647,7.704,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="52.679" y="182.914" width="412.751" height=".533" fill="#ebebeb" />
+                <path d="M251.046,181.875c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M258.366,181.711c.081,4.924-7.636,5.064-7.717.14-.081-4.924,7.636-5.064,7.717-.14"
+                  fill="#ff3145" stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <rect x="45.41" y="253.648" width="419.502" height="1.066" fill="#ebebeb" />
+                <path d="M77.586,254.62c0,5.645-7.866,5.645-7.866,0s7.866-5.645,7.866,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M101.303,254.62c0,5.645-7.866,5.645-7.866,0s7.866-5.645,7.866,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M109.213,254.62c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M61.778,254.62c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M92.713,254.176c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M86.11,254.176c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M69.391,255.352c0,5.645-7.877,5.645-7.877,0s7.877-5.645,7.877,0" fill="#b50808"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M341.008,256.379c0,4.656-7.704,4.656-7.704,0s7.704-4.647,7.704,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M344.774,182.963c0,4.547-7.455,4.547-7.455,0s7.455-4.547,7.455,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M339.558,185.204c0,4.547-7.465,4.547-7.465,0s7.465-4.547,7.465,0" fill="#ff647a"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M254.183,289.067c-.634,6.632-9.916,5.751-9.282-.881s9.916-5.751,9.282.881" fill="#ff2439"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path id="_x3C_Line_x3E_" d="M249.31,294.841c.988,25.159,66.585,12.544,119.688-14.478" fill="none"
+                  fill-rule="evenodd" stroke="#000" stroke-miterlimit="10" stroke-width=".55" />
+                <line x1="397.592" y1="102.094" x2="411.785" y2="102.094" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".75" />
+                <path id="_x3C_Line_x3E_1" data-name="_x3C_Line_x3E_"
+                  d="M190.47,149.323c1.535,22.526,22.998,36.813,50.369,31.478" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".55" />
+                <path id="_x3C_Line_x3E_2" data-name="_x3C_Line_x3E_"
+                  d="M416.647,187.244c0,17.76-3.715,34.946-8.491,38.566" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".55" />
+                <path d="M415.953,125.358c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M424.953,128.358c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M422.953,123.358c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M415.237,143.913c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M409.237,143.913c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M413.237,138.913c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M427.497,139.65c0,5.056-7.509,5.056-7.509,0s7.509-5.056,7.509,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M433.237,138.913c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M418.76,156.823c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M424.855,162.492c0,4.519-6.2,4.519-6.2,0s6.2-4.51,6.2,0" fill="#f7869b" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M418.63,161.986c0,3.843-6.208,3.843-6.208,0s6.208-3.835,6.208,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M431.237,144.913c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M424.76,156.823c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M435.632,171.462c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M418.632,171.462c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M410.632,171.462c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M422.456,177.674c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M426.632,171.462c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M421.844,147.255c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M415.76,150.823c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M427.76,150.823c0,6.016-8.567,6.016-8.567,0s8.567-6.028,8.567,0" fill="#f7869b"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M174.378,302.289c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M198.6,226.862c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M175.6,247.862c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e" stroke="#4682b4"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M153.623,226.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M147.623,226.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M186.623,215.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M190.623,221.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M165.623,215.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M166.623,221.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M159.623,220.321c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M173.722,201.25c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M178.753,207.786c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M172.103,210.804c0,4.351-6.677,4.351-6.677,0s6.677-4.351,6.677,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M192.606,233.142c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <path d="M185.606,233.142c0,5.797-8.405,5.797-8.405,0s8.405-5.797,8.405,0" fill="#e21e1e"
+                  stroke="#4682b4" stroke-linecap="round" stroke-linejoin="round" stroke-width=".709" />
+                <style>
+                  #g-template_all_annotations-medium-interactions-img rect,
+                  #g-template_all_annotations-medium-interactions-img circle,
+                  #g-template_all_annotations-medium-interactions-img path,
+                  #g-template_all_annotations-medium-interactions-img line,
+                  #g-template_all_annotations-medium-interactions-img polyline,
+                  #g-template_all_annotations-medium-interactions-img polygon {
+                    vector-effect: non-scaling-stroke;
+                  }
+                </style>
+              </svg>
+              <div id="g-ai1-1" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:5.88%;margin-top:-13.1px;left:1.1125%;width:506px;">
+                <p class="g-pstyle0">Fast fashion brands vary in what constitues as XS to XL </p>
+              </div>
+              <div id="g-ai1-2" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:11.0807%;margin-top:-9.8px;left:1.4142%;width:407px;">
+                <p class="g-pstyle1">Bust size in inches from sizes XS to XL for 45 clothing brands.</p>
+              </div>
+              <div id="g-ai1-3" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:20.8239%;margin-top:-10.8px;left:15.0584%;width:42px;">
+                <p class="g-pstyle2">XS</p>
+              </div>
+              <div id="g-ai1-4" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:20.8239%;margin-top:-10.8px;left:49.3856%;width:34px;">
+                <p class="g-pstyle2">M</p>
+              </div>
+              <div id="g-ai1-5" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:20.8239%;margin-top:-10.8px;left:68.0114%;width:31px;">
+                <p class="g-pstyle2">L</p>
+              </div>
+              <div id="g-ai1-6" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:20.8239%;margin-top:-10.8px;left:34.1713%;width:32px;">
+                <p class="g-pstyle2">S</p>
+              </div>
+              <div id="g-ai1-7" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:20.8239%;margin-top:-10.8px;left:83.3925%;width:40px;">
+                <p class="g-pstyle2">XL</p>
+              </div>
+              <div id="g-ai1-8" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:35.2168%;margin-top:-34.4px;left:17.7192%;width:227px;">
+                <p class="g-pstyle3">Clothing brand ASOS </p>
+                <p class="g-pstyle3">leads with largest bust sizes </p>
+                <p class="g-pstyle3">in XS, S and L. ASOS tied with </p>
+                <p class="g-pstyle3">Ralph Lauren with largest bust size in M. </p>
+                <p class="g-pstyle3"> </p>
+              </div>
+              <div id="g-ai1-9" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:28.9797%;margin-top:-8px;left:66.9167%;width:93px;">
+                <p class="g-pstyle4">Ralph Lauren </p>
+              </div>
+              <div id="g-ai1-10" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:31.015%;margin-top:-12.3px;left:5.2601%;width:40px;">
+                <p class="g-pstyle5">45</p>
+              </div>
+              <div id="g-ai1-11" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:44.9425%;margin-top:-12.3px;left:5.1869%;width:40px;">
+                <p class="g-pstyle5">40</p>
+              </div>
+              <div id="g-ai1-12" class="g-interactions g-aiAbs g-aiPointText"
+                style="transform: matrix(0.0075,-1,1,0.0075,0,0);transform-origin: 50% 56.7891003116091%;-webkit-transform: matrix(0.0075,-1,1,0.0075,0,0);-webkit-transform-origin: 50% 56.7891003116091%;-ms-transform: matrix(0.0075,-1,1,0.0075,0,0);-ms-transform-origin: 50% 56.7891003116091%;top:54.6977%;margin-top:-7.4px;left:2.8424%;margin-left:-54px;width:108px;">
+                <p class="g-pstyle6">Bust size in inches </p>
+              </div>
+              <div id="g-ai1-13" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:58.5916%;margin-top:-12.3px;left:5.1447%;width:40px;">
+                <p class="g-pstyle5">35</p>
+              </div>
+              <div id="g-ai1-14" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:70.576%;margin-top:-25.4px;left:71.9262%;width:156px;">
+                <p class="g-pstyle7">Clothing brand Alloy </p>
+                <p class="g-pstyle7">leads with smallest bust sizes </p>
+                <p class="g-pstyle7">in XS, S, M and L. Forever 21 </p>
+                <p class="g-pstyle7">had the smallest XL size. </p>
+              </div>
+              <div id="g-ai1-15" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:71.1264%;margin-top:-12.3px;left:4.9695%;width:40px;">
+                <p class="g-pstyle5">30</p>
+              </div>
+              <div id="g-ai1-16" class="g-interactions g-aiAbs g-aiPointText"
+                style="top:85.8896%;margin-top:-12.3px;left:5.1592%;width:40px;">
+                <p class="g-pstyle5">25</p>
+              </div>
+            </div>
+
+            <!-- Artboard: mobile -->
+            <div id="g-template_all_annotations-mobile" class="g-artboard"
+              style="width:375px; height:470.799999999999px;" data-aspect-ratio="0.797" data-min-width="375"
+              data-max-width="489">
+              <div style=""></div>
+              <img id="g-template_all_annotations-mobile-img" class="g-template_all_annotations-mobile-img g-aiImg"
+                alt="" src="template_all_annotations-mobile.png" />
+              <svg class="g-template_all_annotations-mobile-interactions-img g-aiImg"
+                id="g-template_all_annotations-mobile-interactions-img" xmlns="http://www.w3.org/2000/svg"
+                baseProfile="tiny" version="1.2" viewBox="0 0 375 470.8">
+                <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+                <line x1="210.443" y1="415.516" x2="237.961" y2="422.557" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".75" />
+                <line x1="116.332" y1="272.496" x2="125.138" y2="361.389" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".75" />
+                <line x1="120.735" y1="351.707" x2="117.433" y2="276.897" fill="none" />
+                <line x1="275.385" y1="185.804" x2="243.465" y2="257.094" fill="none" stroke="#000"
+                  stroke-miterlimit="10" stroke-width=".75" />
+                <style>
+                  #g-template_all_annotations-mobile-interactions-img rect,
+                  #g-template_all_annotations-mobile-interactions-img circle,
+                  #g-template_all_annotations-mobile-interactions-img path,
+                  #g-template_all_annotations-mobile-interactions-img line,
+                  #g-template_all_annotations-mobile-interactions-img polyline,
+                  #g-template_all_annotations-mobile-interactions-img polygon {
+                    vector-effect: non-scaling-stroke;
+                  }
+                </style>
+              </svg>
+              <div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:5.264%;margin-top:-20.8px;left:2.5932%;width:305px;">
+                <p class="g-pstyle0">Fast fashion brands vary in what </p>
+                <p class="g-pstyle0">constitutes as XS to XL </p>
+              </div>
+              <div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:10.8384%;margin-top:-8px;left:2.5461%;width:343px;">
+                <p class="g-pstyle1">Bust size measurement in inches from sizes XS to XL </p>
+              </div>
+              <div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:14.9612%;margin-top:-7.4px;left:81.9344%;width:37px;">
+                <p class="g-pstyle2">45</p>
+              </div>
+              <div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:15.1736%;margin-top:-7.4px;left:54.8404%;width:35px;">
+                <p class="g-pstyle2">35</p>
+              </div>
+              <div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:15.1736%;margin-top:-7.4px;left:24.0378%;width:36px;">
+                <p class="g-pstyle2">25</p>
+              </div>
+              <div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:15.1736%;margin-top:-7.4px;left:67.7401%;width:39px;">
+                <p class="g-pstyle2">40</p>
+              </div>
+              <div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:15.386%;margin-top:-7.4px;left:41.2826%;width:37px;">
+                <p class="g-pstyle2">30</p>
+              </div>
+              <div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:24.4753%;margin-top:-12.2px;left:9.213%;width:48px;">
+                <p class="g-pstyle3">XS</p>
+              </div>
+              <div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:33.9358%;margin-top:-35.8px;left:60.8867%;width:162px;">
+                <p class="g-pstyle4">Clothing brand ASOS </p>
+                <p class="g-pstyle4">leads with largest bust sizes </p>
+                <p class="g-pstyle4">in XS, S and L. ASOS tied </p>
+                <p class="g-pstyle4">with Ralph Lauren with </p>
+                <p class="g-pstyle4">largest bust size in M. </p>
+                <p class="g-pstyle4">. </p>
+              </div>
+              <div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:41.4676%;margin-top:-12.2px;left:11.2396%;width:34px;">
+                <p class="g-pstyle3">S</p>
+              </div>
+              <div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:56.3359%;margin-top:-12.2px;left:10.8036%;width:42px;">
+                <p class="g-pstyle3">M</p>
+              </div>
+              <div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:73.5407%;margin-top:-12.2px;left:12.4792%;width:34px;">
+                <p class="g-pstyle3">L</p>
+              </div>
+              <div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:82.4452%;margin-top:-24.2px;left:21.7677%;width:161px;">
+                <p class="g-pstyle4">Clothing brand Alloy </p>
+                <p class="g-pstyle4">leads with smallest bust sizes </p>
+                <p class="g-pstyle4">in XS, S, M and L. Forever 21 </p>
+                <p class="g-pstyle4">had the smallest XL size. </p>
+              </div>
+              <div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText"
+                style="top:90.3206%;margin-top:-12.2px;left:11.3505%;width:48px;">
+                <p class="g-pstyle3">XL</p>
+              </div>
+            </div>
+
+            <!-- Artboard: Artboard_8 -->
+            <div id="g-template_all_annotations-Artboard_8" class="g-artboard" style="max-width: 8px;max-height: 4px"
+              data-aspect-ratio="2" data-min-width="0" data-max-width="374">
+              <div style="padding: 0 0 50% 0;"></div>
+              <img id="g-template_all_annotations-Artboard_8-img"
+                class="g-template_all_annotations-Artboard_8-img g-aiImg" alt=""
+                src="template_all_annotations-Artboard_8.png" />
+            </div>
+
+          </div>
+
+          <script type="text/javascript">
+            (function (containerId, opts) {
+              var nameSpace = opts.namespace || '';
+              var containers = findContainers(containerId);
+              containers.forEach(resize);
+
+              function resize(container) {
+                var onResize = throttle(update, 200);
+                var waiting = !!window.IntersectionObserver;
+                var observer;
+                update();
+
+                document.addEventListener('DOMContentLoaded', update);
+                window.addEventListener('resize', onResize);
+
+                // NYT Scoop-specific code
+                if (opts.setup) {
+                  opts.setup(container).on('cleanup', cleanup);
+                }
+
+                function cleanup() {
+                  document.removeEventListener('DOMContentLoaded', update);
+                  window.removeEventListener('resize', onResize);
+                  if (observer) observer.disconnect();
+                }
+
+                function update() {
+                  var artboards = selectChildren('.' + nameSpace + 'artboard[data-min-width]', container),
+                    width = Math.round(container.getBoundingClientRect().width);
+
+                  // Set artboard visibility based on container width
+                  artboards.forEach(function (el) {
+                    var minwidth = el.getAttribute('data-min-width'),
+                      maxwidth = el.getAttribute('data-max-width');
+                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                      if (!waiting) {
+                        selectChildren('.' + nameSpace + 'aiImg', el).forEach(updateImgSrc);
+                        selectChildren('video', el).forEach(updateVideoSrc);
+                      }
+                      el.style.display = 'block';
+                    } else {
+                      el.style.display = 'none';
+                    }
+                  });
+
+                  // Initialize lazy loading on first call
+                  if (waiting && !observer) {
+                    if (elementInView(container)) {
+                      waiting = false;
+                      update();
+                    } else {
+                      observer = new IntersectionObserver(onIntersectionChange, { rootMargin: "800px" });
+                      observer.observe(container);
+                    }
+                  }
+                }
+
+                function onIntersectionChange(entries) {
+                  // There may be multiple entries relating to the same container
+                  // (captured at different times)
+                  var isIntersecting = entries.reduce(function (memo, entry) {
+                    return memo || entry.isIntersecting;
+                  }, false);
+                  if (isIntersecting) {
+                    waiting = false;
+                    // update: don't remove -- we need the observer to trigger an update
+                    // when a hidden map becomes visible after user interaction
+                    // (e.g. when an accordion menu or tab opens)
+                    // observer.disconnect();
+                    // observer = null;
+                    update();
+                  }
+                }
+              }
+
+              function findContainers(id) {
+                // support duplicate ids on the page
+                return selectChildren('.ai2html-responsive', document).filter(function (el) {
+                  if (el.getAttribute('id') != id) return false;
+                  if (el.classList.contains('ai2html-resizer')) return false;
+                  el.classList.add('ai2html-resizer');
+                  return true;
+                });
+              }
+
+              // Replace blank placeholder image with actual image
+              function updateImgSrc(img) {
+                var src = img.getAttribute('data-src');
+                if (src && img.getAttribute('src') != src) {
+                  img.setAttribute('src', src);
+                }
+              }
+
+              function updateVideoSrc(el) {
+                var src = el.getAttribute('data-src');
+                if (src && !el.hasAttribute('src')) {
+                  el.setAttribute('src', src);
+                }
+              }
+
+              function elementInView(el) {
+                var bounds = el.getBoundingClientRect();
+                return bounds.top < window.innerHeight && bounds.bottom > 0;
+              }
+
+              function selectChildren(selector, parent) {
+                return parent ? Array.prototype.slice.call(parent.querySelectorAll(selector)) : [];
+              }
+
+              // based on underscore.js
+              function throttle(func, wait) {
+                var timeout = null, previous = 0;
+                function run() {
+                  previous = Date.now();
+                  timeout = null;
+                  func();
+                }
+                return function () {
+                  var remaining = wait - (Date.now() - previous);
+                  if (remaining <= 0 || remaining > wait) {
+                    clearTimeout(timeout);
+                    run();
+                  } else if (!timeout) {
+                    timeout = setTimeout(run, remaining);
+                  }
+                };
+              }
+            })("g-template_all_annotations-box", { namespace: "g-", setup: window.setupInteractive || window.getComponent });
+          </script>
+          <!-- End ai2html - 2025-06-06 16:43 -->
+
+          <!-- ai2html goes above this line -->
+
+        </div>
+      </div>
+      <div class="scrolly-overlay">
+        <div class="step" id="step-zero">
+          <p>Each dot represents 45 fast fashion brands and what each brand categorizes as extra small (XS), small
+            (S), medium (M), large (L) and extra large (XL).</p>
+        </div>
+        <div class="step" id="step-one">
+          <p>For example, this brand is Ralph Lauren and it's extra large in bust size is 47 inches.</p>
+        </div>
+        <div class="step" id="step-two">
+          <p>Here are some brands with the smallest bust size in each category.</p>
+        </div>
+        <div class="step" id="step-three">
+          <p>And here are some brands wit the largest bust size in each category.</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+
+      /* Scrollytelling code goes under here */
+
+
+      d3.select("#step-zero").on('stepin', function (e) {
+        console.log("Got to step zero")
+        d3.select("#ralph").classed('hidden', true);
+        d3.select('#alloy-text').classed('hidden', true)
+        d3.select('#horizontal_line').classed('hidden', true)
+        d3.select('#g-ai0-8').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_').classed('hidden', true)
+        d3.select('#my-arrow').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_1').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_2').classed('hidden', true)
+        d3.select('#g-ai0-9').classed('hidden', true)
+        d3.select('#g-ai0-14').classed('hidden', true)
+        d3.select('#gl_line').classed('hidden', true)
+
+      })
+
+      d3.select("#step-one").on('stepin', function (e) {
+        console.log("Got to step one")
+        d3.select('#alloy-text').classed('hidden', true);
+        d3.select('#g-ai0-8').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_').classed('hidden', true)
+        d3.select('#my-arrow').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_1').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_2').classed('hidden', true)
+        d3.select('#g-ai0-9').classed('hidden', false)
+        d3.select('#g-ai0-14').classed('hidden', true)
+        d3.select('#ralph').classed('hidden', false)
+
+      })
+
+      d3.select("#step-two").on('stepin', function (e) {
+        console.log("Got to step one")
+        d3.select('#alloy-text').classed('hidden', false);
+        d3.select('#g-ai0-8').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_').classed('hidden', false)
+        d3.select('#my-arrow').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_1').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_2').classed('hidden', false)
+        d3.select('#g-ai0-9').classed('hidden', true)
+        d3.select('#g-ai0-14').classed('hidden', false)
+        d3.select("#ralph").classed('hidden', true)
+
+      })
+
+      d3.select("#step-three").on('stepin', function (e) {
+
+        console.log("Got to step two")
+        d3.select('#alloy-text').classed('hidden', true);
+        d3.select('#g-ai0-8').classed('hidden', false)
+        d3.select('#_x3C_Line_x3E_').classed('hidden', true)
+        d3.select('#my-arrow').classed('hidden', true)
+        d3.select('#_x3C_Line_x3E_1').classed('hidden', false)
+        d3.select('#_x3C_Line_x3E_2').classed('hidden', true)
+        d3.select('#g-ai0-9').classed('hidden', true)
+        d3.select('#g-ai0-14').classed('hidden', true)
+        d3.select("ralph").classed('hidden', true)
+
+      })
+
+
+    </script>
+
+    <script>
+      const scroller = scrollama();
+
+      scroller
+        .setup({
+          step: "#scrolly .scrolly-overlay .step",
+          offset: 0.75,
+          debug: false
+        })
+        .onStepEnter(function ({ element, index, direction }) {
+          const event = new CustomEvent('stepin', { detail: { direction: direction } })
+          element.dispatchEvent(event);
+        })
+        .onStepExit(function ({ element, index, direction }) {
+          const event = new CustomEvent('stepout', { detail: { direction: direction } })
+          element.dispatchEvent(event);
+        });
+
+      window.addEventListener("resize", scroller.resize);
+    </script>
+
+
+    <!-- ai2html resizer script -->
+
+    <script type="text/javascript">
+      (function () {
+        // only want one resizer on the page
+        if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+        document.documentElement.className += " g-resizer-v3-init";
+        // require IE9+
+        if (!("querySelector" in document)) return;
+        function resizer() {
+          var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+            widthById = {};
+          elements.forEach(function (el) {
+            var parent = el.parentNode,
+              width = widthById[parent.id] || parent.getBoundingClientRect().width,
+              minwidth = el.getAttribute("data-min-width"),
+              maxwidth = el.getAttribute("data-max-width");
+            widthById[parent.id] = width;
+
+            if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+              el.style.display = "block";
+            } else {
+              el.style.display = "none";
+            }
+          });
+          try {
+            if (window.parent && window.parent.$) {
+              window.parent.$("body").trigger("resizedcontent", [window]);
+            }
+            if (window.require) {
+              require(['foundation/main'], function () {
+                require(['shared/interactive/instances/app-communicator'], function (AppCommunicator) {
+                  AppCommunicator.triggerResize();
+                });
+              });
+            }
+          } catch (e) { console.log(e); }
+        }
+
+        document.addEventListener('DOMContentLoaded', resizer);
+        // feel free to replace throttle with _.throttle, if available
+        window.addEventListener('resize', throttle(resizer, 200));
+
+        function throttle(func, wait) {
+          // from underscore.js
+          var _now = Date.now || function () { return new Date().getTime(); },
+            context, args, result, timeout = null, previous = 0;
+          var later = function () {
+            previous = _now();
+            timeout = null;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+          };
+          return function () {
+            var now = _now(), remaining = wait - (now - previous);
+            ontext = this;
+            args = arguments;
+            if (remaining <= 0 || remaining > wait) {
+              if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+              }
+              previous = now;
+              result = func.apply(context, args);
+              if (!timeout) context = args = null;
+            } else if (!timeout && options.trailing !== false) {
+              timeout = setTimeout(later, remaining);
+            }
+            return result;
+          };
+        }
+
+
+      })();
+    </script>
+
+  </body>
+
+  </html>
+
+  <!--scrollytelling ends here!!!!!!!!!!!!!!!!!!!!-->
+
+  <div class="content">
+    <div class="byline">
+      <p>Because vanity sizing misleads shoppers, consumers often order the same item in different sizes to see what
+        works. With the <a href="https://inbeat.agency/blog/online-shopping-statistics/" target="_blank"
+          rel="noopener noreferrer">
+          rise
+        </a> of online shopping—especially since the 2020 pandemic—the trend of over-purchasing and returning what
+        doesn't
+        fit has only grown. </p>
+    </div>
+  </div>
+  <!--dollar chart goes here!!!-->
+
+
+  <!--dollar chart ends here!!!-->
   <p>Returning packages seem harmless, but it hits brands' profits and fuels emissions and landfill waste.</p>
-  <p>Returned retailed packages led to 8.4 billion pounds of waste in 2023, according to a report from <a href="https://4771362.fs1.hubspotusercontent-na1.net/hubfs/4771362/The%20State%20of%20Returns%20Report%202024%20%E2%80%94%20Optoro.pdf" target="_blank">Optoro</a>. Meanwhile, <a href="https://www.imrg.org/blog/sustainable-ecommerce-returns-arent-working-its-time-for-a-circular-approach/?utm_source=chatgpt.com" target="_blank">24 million metric tons</a> of emissions were released from transporting returned goods in 2022.</p>
-    <p>The variety in what constitutes a “small” waist or “large” bust in clothes makes the concept of what our sizes actually are irrelevant, Ahmed said.</p>
-    <p>Despite vanity sizing being inconsistent across major brands, clothing size and body image are a persistent thought for Ahmed. That's what hurts the most, she said.</p>
-    <p>“I want my life to be bigger,” Ahmed told me. “This is the physical body I have and I want my life to be about other things.”</p>
+  <p>Returned retailed packages led to 8.4 billion pounds of waste in 2023, according to a report from <a
+      href="https://4771362.fs1.hubspotusercontent-na1.net/hubfs/4771362/The%20State%20of%20Returns%20Report%202024%20%E2%80%94%20Optoro.pdf"
+      target="_blank">Optoro</a>. Meanwhile, <a
+      href="https://www.imrg.org/blog/sustainable-ecommerce-returns-arent-working-its-time-for-a-circular-approach/?utm_source=chatgpt.com"
+      target="_blank">24 million metric tons</a> of emissions were released from transporting returned goods in
+    2022.
+  </p>
+  <p>The variety in what constitutes a “small” waist or “large” bust in clothes makes the concept of what our sizes
+    actually are irrelevant, Ahmed said.</p>
+  <p>Despite vanity sizing being inconsistent across major brands, clothing size and body image are a persistent
+    thought for Ahmed. That's what hurts the most, she said.</p>
+  <p>“I want my life to be bigger,” Ahmed told me. “This is the physical body I have and I want my life to be about
+    other things.”</p>
+  </div>
+  </div>
   </div>
   <div class="content">
-  <p>------------------------------------------------------------------------------------------------</p>
-  <div class="subhead">
-    How did this story come to be!
-  </div>
+    <div class="methodology-container">
+      <div class="methodology-header">
+        <h2>Click here to read my methodology</h2>
+        <div class="methodology-toggle"></div>
+      </div>
+      <div class="methodology-content">
+        <div class="methodology-content-inner">
 
-  <p>First off, I am incredibly grateful to have spoken to Aleena and Patience. Thank you for trusting me with your stories on body image and vanity sizing.</p>
-  
-  <p> Our assignment includes finding a dataset or making a dataset within two weeks, in addition to interviewing multiple sources and producing a polished story within 14 days. Sometimes our deadline is cut short by seven days. I decided to make the challenge fun and multi-page scrape a website called sizecharts.com and individually scrape 30 more clothing brands.</p>
-  <p>For my first chart, I wanted to look at affordable jean brands for college women and compare it to top high-end jean brands. I relied on two lists that helped me 
-  build my dataset. </p>
-  
-  <p>
-    <a href="https://www.hercampus.com/style/best-favorite-affordable-jeans-college-women/" target="_blank" rel="noopener noreferrer">
-      HER CAMPUS
-    </a>
-  </p>
-  
-  <p class="indented">
-    a. This link gave me a comprehensive list of popular, affordable brands college women go to buy jeans.
-  </p>
-  
-  <p><a href="https://www.nytimes.com/wirecutter/reviews/best-womens-jeans/" target="_blank" rel="noopener noreferrer">
-    Wirecutter
-  </a>
-</p>
-  
+          <p>First off, I am incredibly grateful to have spoken to Aleena and Patience. Thank you for trusting me with
+            your
+            stories on body image and vanity sizing.</p>
+
+          <p> Our assignment includes finding a dataset or making a dataset within two weeks, in addition to
+            interviewing
+            multiple sources and producing a polished story within 14 days. Sometimes our deadline is cut short by seven
+            days.
+            I decided to make the challenge fun and multi-page scrape a website called sizecharts.com and individually
+            scrape
+            30 more clothing brands.</p>
+          <p>For my first chart, I wanted to look at affordable jean brands for college women and compare it to top
+            high-end
+            jean brands. I relied on two lists that helped me
+            build my dataset. </p>
+
+          <p>
+            <a href="https://www.hercampus.com/style/best-favorite-affordable-jeans-college-women/" target="_blank"
+              rel="noopener noreferrer">
+              HER CAMPUS
+            </a>
+          </p>
+
+          <p class="indented">
+            a. This link gave me a comprehensive list of popular, affordable brands college women go to buy jeans.
+          </p>
+
+          <p><a href="https://www.nytimes.com/wirecutter/reviews/best-womens-jeans/" target="_blank"
+              rel="noopener noreferrer">
+              Wirecutter
+            </a>
+          </p>
 
 
-<p class="indented">
-  a. This link gave a comprehensive list of popular, high-end brands that provide jeans for women.
-</p>
-    <p> I merged these list and made a dataset that looked what each brand constitutes as a extra small, small, medium, large and extra large. </p> 
-    <p>From there, I found that high-end jean brands had a smaller range of sizes between XS to XL versus fast fashion brands. </p>
 
-    <p>There's more to how I developed my datasets.</p> 
-    
-    <p>We can chat about it, you can email at ac5708@columbia.edu or check out my GitHub's <a href="https://github.com/ananyabchetia/vanitysizing/">ReadMe,</a> which gives a detailed explanation of how this story came to be.</p>
-  
-  <div class="footer">
-      <p><a href="https://ananyabchetia.github.io/">Ananya Chetia</a> is a data journalist in NYC. Find the code for this story <a href="https://github.com/ananyabchetia/vanitysizing/">here.</a></p>
+          <p class="indented">
+            a. This link gave a comprehensive list of popular, high-end brands that provide jeans for women.
+          </p>
+          <p> I merged these list and made a dataset that looked what each brand constitutes as a extra small, small,
+            medium,
+            large and extra large. </p>
+          <p>From there, I found that high-end jean brands had a smaller range of sizes between XS to XL versus fast
+            fashion
+            brands. </p>
+
+          <p>There's more to how I developed my datasets.</p>
+
+          <p>We can chat about it, you can email at ac5708@columbia.edu or check out my GitHub's <a
+              href="https://github.com/ananyabchetia/vanitysizing/">ReadMe,</a> which gives a detailed explanation of
+            how
+            this
+            story came to be.</p>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="footer">
+    <p><a href="https://ananyabchetia.github.io/">Ananya Chetia</a> is a data journalist in NYC. Find the code for
+      this story <a href="https://github.com/ananyabchetia/vanitysizing/">here.</a></p>
+  </div>
   </div>
 
   <div id="measuring-tape">
     <div id="tape"></div>
-</div>
-<div id="current-measurement">0 cm</div>
+  </div>
+  <div id="current-measurement">0 cm</div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
@@ -1273,39 +2421,51 @@ a
     });
 
 
-const tape = document.getElementById('tape');
-const currentMeasurement = document.getElementById('current-measurement');
+    const tape = document.getElementById('tape');
+    const currentMeasurement = document.getElementById('current-measurement');
 
 
-for (let i = 0; i <= 1000; i++) {
-    const tick = document.createElement('div');
-    tick.className = 'tick';
-    
-    if (i % 10 === 0) {
+    for (let i = 0; i <= 1000; i++) {
+      const tick = document.createElement('div');
+      tick.className = 'tick';
+
+      if (i % 10 === 0) {
         tick.className += ' large';
         const label = document.createElement('div');
         label.className = 'tick-label';
         label.textContent = i;
         tick.appendChild(label);
-    } else if (i % 5 === 0) {
+      } else if (i % 5 === 0) {
         tick.className += ' medium';
-    } else {
+      } else {
         tick.className += ' small';
+      }
+
+      tick.style.left = `${i * 10}px`;
+      tape.appendChild(tick);
     }
-    
-    tick.style.left = `${i * 10}px`;
-    tape.appendChild(tick);
-}
 
 
-window.addEventListener('scroll', () => {
-    const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-    const measurement = Math.round(scrollPercent * 100);
-    currentMeasurement.textContent = `${measurement} cm`;
-    
-    tape.style.transform = `translateX(${-window.scrollY}px)`;
-});
+    window.addEventListener('scroll', () => {
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      const measurement = Math.round(scrollPercent * 100);
+      currentMeasurement.textContent = `${measurement} cm`;
 
+      tape.style.transform = `translateX(${-window.scrollY}px)`;
+    });
+
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const methodologyHeader = document.querySelector('.methodology-header');
+      const methodologyContainer = document.querySelector('.methodology-container');
+
+      if (methodologyHeader && methodologyContainer) {
+        methodologyHeader.addEventListener('click', function () {
+          methodologyContainer.classList.toggle('active');
+        });
+      }
+    });
   </script>
 </body>
 
