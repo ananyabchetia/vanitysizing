@@ -1,0 +1,29 @@
+library(ggplot2)
+library(ggbeeswarm)
+library(plotly)
+library(ggimage)
+library(ggpattern)
+
+# Read the CSV file (update the file path as needed)
+tops_df <- read.csv("/Users/ananya/columbia/somapython/data_studio/clothing sizes/tops.csv")
+head(tops_df)
+
+top_df_XL <- subset(tops_df, Letter.Sizing == "XL")
+p <- ggplot(top_df_XL, aes(x = Bust, y = Letter.Sizing, color = Letter.Sizing,
+                           text = paste("Brand:", Brands, "<br>Bust:", Bust))) +
+  geom_beeswarm(color = "darkorchid4", size = 6, dodge.width = 0.8)+
+  scale_x_continuous(breaks = seq(floor(min(top_df_XL$Bust)),
+                                  ceiling(max(top_df_XL$Bust)),
+                                  by = 1)) +
+  theme_minimal() +
+  labs(x = "Bust measurement in inches", 
+       y = "Size", 
+       color = "Size",
+       title = "Forever 21 and Ralph Lauren on opposite ends on what counts as XL",
+       subtitle = "Hoover for each point to see what UK and US clothing brands mark as an XL for women's tops",
+       caption= "Dataset from sizecharts.com. Majority data added from Ananya Chetia") +
+  theme(axis.text.x = element_text(angle = 0, hjust = 0.5))
+
+# Convert the ggplot to an interactive plotly object with hover tooltips
+p_interactive <- ggplotly(p, tooltip = "text")
+print(p_interactive)
