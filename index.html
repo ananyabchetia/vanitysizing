@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vanity sizing</title>
-  <link rel="icon" type="image/png" href="jeans.png">
+  <title>What's OFF about vanity sizing</title>
+  <link rel="icon" type="image/png" href="photo_icon/jeans.png">
+
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -484,8 +485,6 @@
       Billingsley.</p>
   </div>
   </div>
-
-  <!--inserting scrollytelling code here!!!!!!!!!!-->
   <!DOCTYPE html>
   <html>
 
@@ -1718,10 +1717,27 @@
     </section>
 
     <script>
+      // Add this initialization code right after your D3 chart is created
+      // This should run once when the page loads, before any scrolling
+      function initializeAnnotations() {
+        // Hide all annotations initially
+        d3.select("#ralph").classed('hidden', true);
+        d3.select('#alloy-text').classed('hidden', true);
+        d3.select('#horizontal_line').classed('hidden', true);
+        d3.select('#g-ai0-8').classed('hidden', true);
+        d3.select('#_x3C_Line_x3E_').classed('hidden', true);
+        d3.select('#my-arrow').classed('hidden', true);
+        d3.select('#_x3C_Line_x3E_1').classed('hidden', true);
+        d3.select('#_x3C_Line_x3E_2').classed('hidden', true);
+        d3.select('#g-ai0-9').classed('hidden', true);
+        d3.select('#g-ai0-14').classed('hidden', true);
+        d3.select('#gl_line').classed('hidden', true);
+      }
 
-      /* Scrollytelling code goes under here */
+      // Call this function when your D3 chart is ready
+      initializeAnnotations();
 
-
+      // Your existing step handlers (keep these as they are)
       d3.select("#step-zero").on('stepin', function (e) {
         console.log("Got to step zero")
         d3.select("#ralph").classed('hidden', true);
@@ -1735,7 +1751,6 @@
         d3.select('#g-ai0-9').classed('hidden', true)
         d3.select('#g-ai0-14').classed('hidden', true)
         d3.select('#gl_line').classed('hidden', true)
-
       })
 
       d3.select("#step-one").on('stepin', function (e) {
@@ -1749,11 +1764,10 @@
         d3.select('#g-ai0-9').classed('hidden', false)
         d3.select('#g-ai0-14').classed('hidden', true)
         d3.select('#ralph').classed('hidden', false)
-
       })
 
       d3.select("#step-two").on('stepin', function (e) {
-        console.log("Got to step one")
+        console.log("Got to step two")
         d3.select('#alloy-text').classed('hidden', false);
         d3.select('#g-ai0-8').classed('hidden', true)
         d3.select('#_x3C_Line_x3E_').classed('hidden', false)
@@ -1763,12 +1777,10 @@
         d3.select('#g-ai0-9').classed('hidden', true)
         d3.select('#g-ai0-14').classed('hidden', false)
         d3.select("#ralph").classed('hidden', true)
-
       })
 
       d3.select("#step-three").on('stepin', function (e) {
-
-        console.log("Got to step two")
+        console.log("Got to step three")
         d3.select('#alloy-text').classed('hidden', true);
         d3.select('#g-ai0-8').classed('hidden', false)
         d3.select('#_x3C_Line_x3E_').classed('hidden', true)
@@ -1777,11 +1789,8 @@
         d3.select('#_x3C_Line_x3E_2').classed('hidden', true)
         d3.select('#g-ai0-9').classed('hidden', true)
         d3.select('#g-ai0-14').classed('hidden', true)
-        d3.select("ralph").classed('hidden', true)
-
+        d3.select("#ralph").classed('hidden', true)
       })
-
-
     </script>
 
     <script>
