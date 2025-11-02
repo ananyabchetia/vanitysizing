@@ -420,70 +420,223 @@
       font-size: 0.95em;
       color: #444;
     }
+
+
+    .intro-header {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      display: table;
+      background-color: #FFFCF5;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+
+    .header-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .floating-icons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .icon {
+      position: absolute;
+      opacity: 0.7;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.4;
+    }
+
+    .icon1 {
+      width: 150px;
+      height: 150px;
+      top: 65%;
+      left: 30%;
+      background-image: url('floating_images/floating_image1.png');
+      animation: floating 25s infinite linear;
+    }
+
+    .icon2 {
+      width: 180px;
+      height: 180px;
+      top: 29%;
+      left: 75%;
+      background-image: url('floating_images/floating_image2.png');
+      animation: floating 20s infinite linear;
+      animation-delay: -5s;
+    }
+
+    .icon3 {
+      width: 100px;
+      height: 100px;
+      left: 20%;
+      top: 25%;
+      transform: translate(-50%, -60%);
+      background-image: url('floating_images/floating_image3.png');
+      animation: floatUpDown 5s ease-in-out infinite;
+    }
+
+
+    .icon4 {
+      width: 200px;
+      height: 100px;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+      background-image: url('floating_images/floating_image4.png');
+      animation: floatUpDown 4s ease-in-out infinite;
+    }
+
+    .headline {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      font-size: 38px;
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: #3e0a0a;
+    }
+
+    .subtitle {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #020101;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    .subtitle a {
+      text-decoration: none;
+      /* removes underline */
+      color: inherit;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      25% {
+        transform: translate(10px, -15px) rotate(5deg);
+      }
+
+      50% {
+        transform: translate(-5px, -25px) rotate(-3deg);
+      }
+
+      75% {
+        transform: translate(-15px, -10px) rotate(3deg);
+      }
+
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+    }
+
+    @keyframes floatUpDown {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="header with-video-bg">
-    <div class="video-background">
-      <video src="titles.mp4" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
+  <div class="page">
+    <div class="intro-header">
+      <div class="floating-icons">
+        <div class="icon icon1"></div>
+        <div class="icon icon2"></div>
+        <div class="icon icon3"></div>
+        <div class="icon icon4"></div>
+      </div>
+      <div class="header-content">
+        <h1 class="headline">What's off about vanity sizing</h1>
+        <p class="subtitle">By: <a href="https://ananyabchetia.github.io/" target="_blank"
+            rel="noopener noreferrer">Ananya
+            Chetia</a></p>
+      </div>
     </div>
     <div class="content">
-
-      <p class="subhead"></p>
+      <div class="byline">
+        <p>To slip into a new pair of size double zero jeans felt like an achievement, said Aleena Ahmed, a resident of
+          New Jersey.</p>
+        <p>“I didn't even want to take the tag off,” she said about her American Eagle jeans. “It was like a marker of
+          'I
+          did it.'”</p>
+        <p>Perhaps it was her slim tall Barbie dolls growing up or the eruption of skinny beauty standard posts titled
+          “Thinspo” on Tumblr, but Ahmed said she would eat less to be thinner. New clothes could monitor the progress.
+        </p>
+        <p>So when the double zero jeans from Old Navy didn't fit, even though the ones from American Eagle did, Ahmed
+          said it tripped her out and made her “feel unattractive.”</p>
+        <p> Different jean sizes fitting Ahmed is an example of vanity sizing, where clothing brands label their clothes
+          smaller than they actually are. This means there's no consistency across brands when it comes to what the
+          measurements for each size actually are.</p>
+        <p>High-end brands like AMO, AYR and Agolde had a smaller range of hip sizes from XS to XL compared to fast
+          fashion brands like Old Navy or Ambercrombie & Fitch. </p>
+      </div>
     </div>
-  </div>
+    <iframe src="hip_sizes/ai2html_for_hips/hips.html" width="100%" height="800" style="border:none;"></iframe>
 
-  <div class="content">
-    <div class="byline">
-      <p>To slip into a new pair of size double zero jeans felt like an achievement, said Aleena Ahmed, a resident of
-        New Jersey.</p>
-      <p>“I didn't even want to take the tag off,” she said about her American Eagle jeans. “It was like a marker of 'I
-        did it.'”</p>
-      <p>Perhaps it was her slim tall Barbie dolls growing up or the eruption of skinny beauty standard posts titled
-        “Thinspo” on Tumblr, but Ahmed said she would eat less to be thinner. New clothes could monitor the progress.
+    <div class="content">
+      <p>For Ahmed, the numbers on a pant's tag measured her self-worth. </p>
+      <p>"Logically, I understand that my health is important," Ahmed said. "There are moments i get bad at it, just to
+        see a
+        pair of small pants not tighten up on my stomach."</p>
+      <p><a
+          href="https://www.sciencedirect.com/science/article/abs/pii/S1057740813000612?fr=RR-2&ref=pdf_download&rr=926bde3029fc41c3">Research</a>
+        shows one's mental image about being a larger size than what a size tag states may be detrimental to self-worth.
       </p>
-      <p>So when the double zero jeans from Old Navy didn't fit, even though the ones from American Eagle did, Ahmed
-        said it tripped her out and made her “feel unattractive.”</p>
-      <p> Different jean sizes fitting Ahmed is an example of vanity sizing, where clothing brands label their clothes
-        smaller than they actually are. This means there's no consistency across brands when it comes to what the
-        measurements for each size actually are.</p>
-      <p>High-end brands like AMO, AYR and Agolde had a smaller range of hip sizes from XS to XL compared to fast
-        fashion brands like Old Navy or Ambercrombie & Fitch. </p>
+      <p>Critics say there are downsides to a universal size guide too. Given the vast differences in body types and
+        sizes, it
+        would be impossible to develop a size guide accommodating every person. As an article from <a
+          href="https://sizebay.com/en/blog/why-clothing-sizes-are-inconsistent-across-brands/#:~:text=Bodies%20are%20not%20standardized,-Universal%20sizing%20is&text=But%20in%20practice%2C%20universal%20sizing,measurements%20are%20based%20on%20data">sizebay</a>
+        put it, “standard measurements and sizing will never be able to capture the nuances and unique fit and style
+        preferences of every single shopper."</p>
+      <p>According to the <a href="https://www.cdc.gov/nchs/fastats/body-measurements.htm">Centers for Disease Control
+          and
+          Prevention,</a>the average waist size for women is 38.7 inches. Yet majority of the brands in this dataset
+        categorize this average waist size as a large (L) or even extra large (XL). Despite championing itself as “one
+        size
+        fits all,” clothing brand Brandy Melville excludes the average woman's size by selling jeans that only fit 24 to
+        30
+        inches in waist.</p>
+      <p>Brands design their own size guides to cater to their audience and make consumers feel good picking up clothing
+        as
+        size small, said Patience Billingsley, a graduate of the University of Arkansas, where she conducted research on
+        vanity sizing.</p>
+      <p>"[Vanity sizing] is also unethical and it can be manipulating to tell customers a size they are not," said
+        Billingsley.</p>
     </div>
-  </div>
-  <iframe src="hip_sizes/ai2html_for_hips/hips.html" width="100%" height="800" style="border:none;"></iframe>
-
-  <div class="content">
-    <p>For Ahmed, the numbers on a pant's tag measured her self-worth. </p>
-    <p>"Logically, I understand that my health is important," Ahmed said. "There are moments i get bad at it, just to
-      see a
-      pair of small pants not tighten up on my stomach."</p>
-    <p><a
-        href="https://www.sciencedirect.com/science/article/abs/pii/S1057740813000612?fr=RR-2&ref=pdf_download&rr=926bde3029fc41c3">Research</a>
-      shows one's mental image about being a larger size than what a size tag states may be detrimental to self-worth.
-    </p>
-    <p>Critics say there are downsides to a universal size guide too. Given the vast differences in body types and
-      sizes, it
-      would be impossible to develop a size guide accommodating every person. As an article from <a
-        href="https://sizebay.com/en/blog/why-clothing-sizes-are-inconsistent-across-brands/#:~:text=Bodies%20are%20not%20standardized,-Universal%20sizing%20is&text=But%20in%20practice%2C%20universal%20sizing,measurements%20are%20based%20on%20data">sizebay</a>
-      put it, “standard measurements and sizing will never be able to capture the nuances and unique fit and style
-      preferences of every single shopper."</p>
-    <p>According to the <a href="https://www.cdc.gov/nchs/fastats/body-measurements.htm">Centers for Disease Control
-        and
-        Prevention,</a>the average waist size for women is 38.7 inches. Yet majority of the brands in this dataset
-      categorize this average waist size as a large (L) or even extra large (XL). Despite championing itself as “one
-      size
-      fits all,” clothing brand Brandy Melville excludes the average woman's size by selling jeans that only fit 24 to
-      30
-      inches in waist.</p>
-    <p>Brands design their own size guides to cater to their audience and make consumers feel good picking up clothing
-      as
-      size small, said Patience Billingsley, a graduate of the University of Arkansas, where she conducted research on
-      vanity sizing.</p>
-    <p>"[Vanity sizing] is also unethical and it can be manipulating to tell customers a size they are not," said
-      Billingsley.</p>
-  </div>
   </div>
   <!DOCTYPE html>
   <html>
@@ -2072,6 +2225,28 @@
           methodologyContainer.classList.toggle('active');
         });
       }
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var $parallaxElement = $('.floating-icons');
+      var elementHeight = $parallaxElement.outerHeight();
+
+      function parallax() {
+        var scrollPos = $(window).scrollTop();
+        var transformValue = scrollPos / 40;
+
+        if (scrollPos < elementHeight) {
+          $parallaxElement.css({
+            'transform': 'translate3d(0, -' + transformValue + '%, 0)'
+          });
+        }
+      }
+
+      $(window).scroll(function () {
+        parallax();
+      });
     });
   </script>
 </body>
