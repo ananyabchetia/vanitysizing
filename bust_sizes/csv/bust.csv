@@ -1,9 +1,9 @@
 Brands,Letter_sizing,Bust
-Amazon ,XS,32.5
-Amazon ,S,34.5
-Amazon ,M,36.5
-Amazon ,L,39.25
-Amazon ,XL,42.25
+Amazon,XS,32.5
+Amazon,S,34.5
+Amazon,M,36.5
+Amazon,L,39.25
+Amazon,XL,42.25
 Abercrombie & Fitch Size Charts,XS,32.5
 Abercrombie & Fitch Size Charts,S,34.5
 Abercrombie & Fitch Size Charts,M,36.5
@@ -151,10 +151,12 @@ H&M,S,33.85
 H&M,M,37
 H&M,L,40.25
 H&M,XL,44.375
-Hollister Size Charts,,32
-Hollister Size Charts,,34.5
-Hollister Size Charts,,36.5
-Hollister Size Charts,,38
+Hollister Size Charts,XS,32
+Hollister Size Charts,S,34.5
+Hollister Size Charts,M,36.5
+Hollister Size Charts,L,38
+Hollister Size Charts,XL,39.5
+Hollister Size Charts,XL,43
 JCPenney's Liz Claiborne Size Charts,XS,33
 JCPenney's Liz Claiborne Size Charts,S,35
 JCPenney's Liz Claiborne Size Charts,M,37
@@ -240,3 +242,4 @@ FashionNova,XS,32.5
 FashionNova,S,34.5
 FashionNova,M,36.5
 FashionNova,L,39.25
+FashionNova,XL,41.5
