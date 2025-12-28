@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bust Size Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #791a32;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #e5556b;
+        }
+
+        .receipt {
+            background: #f8f9fa;
+            border: 2px dashed #333;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: monospace;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .receipt.show {
+            display: block;
+        }
+
+        .receipt h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Find Your Clothing Size</h2>
+
+    <label for="brand-select">Choose a brand:</label>
+    <select id="brand-select">
+        <option value="">-- select a brand --</option>
+    </select>
+
+    <label for="bust-input">Enter bust measurement (in inches):</label>
+    <input type="number" id="bust-input" placeholder="e.g. 35" step="0.1">
+
+    <button id="search-btn">Find my size</button>
+
+    <div id="receipt" class="receipt"></div>
+
+    <script>
+        // Embedded JSON data
+
+
+        // Populate brand dropdown
+        function populateBrands(data) {
+            const brands = [...new Set(data.map(d => d.Brands))];
+            const select = document.getElementById("brand-select");
+
+            brands.sort().forEach(brand => {
+                const option = document.createElement("option");
+                option.value = brand;
+                option.textContent = brand;
+                select.appendChild(option);
+            });
+        }
+
+        // Build bust ranges for each brand
+        function computeRangesForBrand(brand) {
+            const entries = sizeData
+                .filter(d => d.Brands === brand)
+                .sort((a, b) => Number(a.Bust) - Number(b.Bust));
+
+            const ranges = [];
+
+            for (let i = 0; i < entries.length; i++) {
+                const current = entries[i];
+                const next = entries[i + 1];
+
+                let min, max;
+
+                if (i === 0) {
+                    min = 0;
+                } else {
+                    const prev = entries[i - 1];
+                    min = (prev.Bust + current.Bust) / 2;
+                }
+
+                if (!next) {
+                    max = 100;
+                } else {
+                    max = (current.Bust + next.Bust) / 2;
+                }
+
+                ranges.push({
+                    size: current.Letter_sizing,
+                    min: min,
+                    max: max
+                });
+            }
+
+            return ranges;
+        }
+
+        // On click → compute size
+        document.getElementById("search-btn").addEventListener("click", () => {
+            const brand = document.getElementById("brand-select").value;
+            const bust = parseFloat(document.getElementById("bust-input").value);
+
+            if (!brand || isNaN(bust)) {
+                alert("Please choose a brand and enter a valid bust measurement.");
+                return;
+            }
+
+            const ranges = computeRangesForBrand(brand);
+            let found = ranges.find(r => bust >= r.min && bust < r.max);
+
+            generateReceipt(brand, bust, found);
+        });
+
+        // Generate receipt
+        function generateReceipt(brand, bust, match) {
+            const receipt = document.getElementById("receipt");
+            receipt.classList.add("show");
+
+            if (!match) {
+                receipt.innerHTML = `
+                    <h3>🧾 Size Result</h3>
+                    <p><strong>Brand:</strong> ${brand}</p>
+                    <p><strong>Bust:</strong> ${bust}"</p>
+                    <p><strong>Result:</strong> No matching size found for this measurement.</p>
+                `;
+                return;
+            }
+
+            receipt.innerHTML = `
+                <h3>🧾 Your Size Receipt</h3>
+                <p><strong>Brand:</strong> ${brand}</p>
+                <p><strong>Bust:</strong> ${bust}"</p>
+                <p><strong>Your Size:</strong> <span style="font-size: 1.5em; color: #007bff;">${match.size}</span></p>
+            `;
+        }
+
+        // Initialize on load
+        populateBrands(sizeData);
+    </script>
+
+</body>
+
+</html>

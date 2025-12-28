@@ -1,0 +1,1448 @@
+[
+ {
+   "FIELD1": 0,
+   "Brands": "Amazon",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 1,
+   "Brands": "Amazon",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 2,
+   "Brands": "Amazon",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 3,
+   "Brands": "Amazon",
+   "Letter_sizing": "L",
+   "Bust": 39.25
+ },
+ {
+   "FIELD1": 4,
+   "Brands": "Amazon",
+   "Letter_sizing": "XL",
+   "Bust": 42.25
+ },
+ {
+   "FIELD1": 5,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 6,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 7,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 8,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 9,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "XL",
+   "Bust": 41
+ },
+ {
+   "FIELD1": 10,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "XL",
+   "Bust": 45
+ },
+ {
+   "FIELD1": 11,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "XXL",
+   "Bust": 45
+ },
+ {
+   "FIELD1": 12,
+   "Brands": "Abercrombie & Fitch",
+   "Letter_sizing": "XXL",
+   "Bust": 49
+ },
+ {
+   "FIELD1": 13,
+   "Brands": "Addidas",
+   "Letter_sizing": "XXS",
+   "Bust": 29.3
+ },
+ {
+   "FIELD1": 14,
+   "Brands": "Addidas",
+   "Letter_sizing": "XS",
+   "Bust": 31.3
+ },
+ {
+   "FIELD1": 15,
+   "Brands": "Addidas",
+   "Letter_sizing": "S",
+   "Bust": 33.7
+ },
+ {
+   "FIELD1": 16,
+   "Brands": "Addidas",
+   "Letter_sizing": "M",
+   "Bust": 36
+ },
+ {
+   "FIELD1": 17,
+   "Brands": "Addidas",
+   "Letter_sizing": "L",
+   "Bust": 38.6
+ },
+ {
+   "FIELD1": 18,
+   "Brands": "Addidas",
+   "Letter_sizing": "XL",
+   "Bust": 41.5
+ },
+ {
+   "FIELD1": 19,
+   "Brands": "Addidas",
+   "Letter_sizing": "XXL",
+   "Bust": 44.9
+ },
+ {
+   "FIELD1": 20,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "XXS",
+   "Bust": 30.5
+ },
+ {
+   "FIELD1": 21,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "XS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 22,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 23,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "S",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 24,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 25,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "M",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 26,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 27,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 28,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "L",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 29,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "XL",
+   "Bust": 41
+ },
+ {
+   "FIELD1": 30,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "XL",
+   "Bust": 42.5
+ },
+ {
+   "FIELD1": 31,
+   "Brands": "Aerpostale",
+   "Letter_sizing": "XXL",
+   "Bust": 44
+ },
+ {
+   "FIELD1": 32,
+   "Brands": "Alloy",
+   "Letter_sizing": "XS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 33,
+   "Brands": "Alloy",
+   "Letter_sizing": "XXL",
+   "Bust": 45
+ },
+ {
+   "FIELD1": 34,
+   "Brands": "Alloy",
+   "Letter_sizing": "XXXL",
+   "Bust": 49
+ },
+ {
+   "FIELD1": 35,
+   "Brands": "Alloy",
+   "Letter_sizing": "XS",
+   "Bust": 25
+ },
+ {
+   "FIELD1": 36,
+   "Brands": "Alloy",
+   "Letter_sizing": "S",
+   "Bust": 27
+ },
+ {
+   "FIELD1": 37,
+   "Brands": "Alloy",
+   "Letter_sizing": "S",
+   "Bust": 28
+ },
+ {
+   "FIELD1": 38,
+   "Brands": "Alloy",
+   "Letter_sizing": "M",
+   "Bust": 29
+ },
+ {
+   "FIELD1": 39,
+   "Brands": "Alloy",
+   "Letter_sizing": "M",
+   "Bust": 30
+ },
+ {
+   "FIELD1": 40,
+   "Brands": "Alloy",
+   "Letter_sizing": "L",
+   "Bust": 31
+ },
+ {
+   "FIELD1": 41,
+   "Brands": "Alloy",
+   "Letter_sizing": "L",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 42,
+   "Brands": "Alloy",
+   "Letter_sizing": "XL",
+   "Bust": 40
+ },
+ {
+   "FIELD1": 43,
+   "Brands": "Alloy",
+   "Letter_sizing": "XL",
+   "Bust": 40
+ },
+ {
+   "FIELD1": 44,
+   "Brands": "Alloy",
+   "Letter_sizing": "XXL",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 45,
+   "Brands": "American Eagle",
+   "Letter_sizing": "XXS",
+   "Bust": 31
+ },
+ {
+   "FIELD1": 46,
+   "Brands": "American Eagle",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 47,
+   "Brands": "American Eagle",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 48,
+   "Brands": "American Eagle",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 49,
+   "Brands": "American Eagle Outfitters",
+   "Letter_sizing": "XXL",
+   "Bust": 47
+ },
+ {
+   "FIELD1": 50,
+   "Brands": "American Eagle",
+   "Letter_sizing": "L",
+   "Bust": 39.25
+ },
+ {
+   "FIELD1": 51,
+   "Brands": "American Eagle",
+   "Letter_sizing": "XL",
+   "Bust": 42.5
+ },
+ {
+   "FIELD1": 52,
+   "Brands": "American Eagle",
+   "Letter_sizing": "XXL",
+   "Bust": 47
+ },
+ {
+   "FIELD1": 53,
+   "Brands": "Ann Taylor",
+   "Letter_sizing": "XXS",
+   "Bust": 31
+ },
+ {
+   "FIELD1": 54,
+   "Brands": "Ann Taylor",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 55,
+   "Brands": "Ann Taylor",
+   "Letter_sizing": "XXL",
+   "Bust": 45.5
+ },
+ {
+   "FIELD1": 56,
+   "Brands": "Loft",
+   "Letter_sizing": "XXS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 57,
+   "Brands": "Loft",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 58,
+   "Brands": "Loft",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 59,
+   "Brands": "Loft",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 60,
+   "Brands": "Loft",
+   "Letter_sizing": "L",
+   "Bust": 39.75
+ },
+ {
+   "FIELD1": 61,
+   "Brands": "Loft",
+   "Letter_sizing": "XL",
+   "Bust": 42
+ },
+ {
+   "FIELD1": 62,
+   "Brands": "Loft",
+   "Letter_sizing": "XXL",
+   "Bust": 44
+ },
+ {
+   "FIELD1": 63,
+   "Brands": "Anthropologie",
+   "Letter_sizing": "XXS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 64,
+   "Brands": "Anthropologie",
+   "Letter_sizing": "XS",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 65,
+   "Brands": "Anthropologie",
+   "Letter_sizing": "S",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 66,
+   "Brands": "Anthropologie",
+   "Letter_sizing": "M",
+   "Bust": 37.5
+ },
+ {
+   "FIELD1": 67,
+   "Brands": "Anthropologie",
+   "Letter_sizing": "L",
+   "Bust": 40.25
+ },
+ {
+   "FIELD1": 68,
+   "Brands": "Anthropologie",
+   "Letter_sizing": "XL",
+   "Bust": 42.5
+ },
+ {
+   "FIELD1": 69,
+   "Brands": "ASOS",
+   "Letter_sizing": "XS",
+   "Bust": 31
+ },
+ {
+   "FIELD1": 70,
+   "Brands": "ASOS",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 71,
+   "Brands": "ASOS",
+   "Letter_sizing": "S",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 72,
+   "Brands": "ASOS",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 73,
+   "Brands": "ASOS",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 74,
+   "Brands": "ASOS",
+   "Letter_sizing": "M",
+   "Bust": 39
+ },
+ {
+   "FIELD1": 75,
+   "Brands": "ASOS",
+   "Letter_sizing": "L",
+   "Bust": 41
+ },
+ {
+   "FIELD1": 76,
+   "Brands": "ASOS",
+   "Letter_sizing": "L",
+   "Bust": 44
+ },
+ {
+   "FIELD1": 77,
+   "Brands": "ASOS",
+   "Letter_sizing": "XL",
+   "Bust": 45.5
+ },
+ {
+   "FIELD1": 78,
+   "Brands": "Banana Republic",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 79,
+   "Brands": "Banana Republic",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 80,
+   "Brands": "Banana Republic",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 81,
+   "Brands": "Banana Republic",
+   "Letter_sizing": "L",
+   "Bust": 39.25
+ },
+ {
+   "FIELD1": 82,
+   "Brands": "Banana Republic",
+   "Letter_sizing": "XL",
+   "Bust": 41.5
+ },
+ {
+   "FIELD1": 83,
+   "Brands": "Calvin Klein",
+   "Letter_sizing": "XS",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 84,
+   "Brands": "Calvin Klein",
+   "Letter_sizing": "S",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 85,
+   "Brands": "Calvin Klein",
+   "Letter_sizing": "M",
+   "Bust": 37.5
+ },
+ {
+   "FIELD1": 86,
+   "Brands": "Calvin Klein",
+   "Letter_sizing": "L",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 87,
+   "Brands": "Calvin Klein",
+   "Letter_sizing": "XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 88,
+   "Brands": "Carhartt",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 89,
+   "Brands": "Carhartt",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 90,
+   "Brands": "Carhartt",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 91,
+   "Brands": "Carhartt",
+   "Letter_sizing": "L",
+   "Bust": 39.25
+ },
+ {
+   "FIELD1": 92,
+   "Brands": "Carhartt",
+   "Letter_sizing": "XL",
+   "Bust": 42.5
+ },
+ {
+   "FIELD1": 93,
+   "Brands": "Carhartt",
+   "Letter_sizing": "XXL",
+   "Bust": 46
+ },
+ {
+   "FIELD1": 94,
+   "Brands": "Express",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 95,
+   "Brands": "Express",
+   "Letter_sizing": "S",
+   "Bust": 34
+ },
+ {
+   "FIELD1": 96,
+   "Brands": "Express",
+   "Letter_sizing": "M",
+   "Bust": 36.25
+ },
+ {
+   "FIELD1": 97,
+   "Brands": "Express",
+   "Letter_sizing": "L",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 98,
+   "Brands": "Express",
+   "Letter_sizing": "XL",
+   "Bust": 44.25
+ },
+ {
+   "FIELD1": 99,
+   "Brands": "Forever 21",
+   "Letter_sizing": "XXS",
+   "Bust": 31
+ },
+ {
+   "FIELD1": 100,
+   "Brands": "Forever 21",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 101,
+   "Brands": "Forever 21",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 102,
+   "Brands": "Forever 21",
+   "Letter_sizing": "M",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 103,
+   "Brands": "Forever 21",
+   "Letter_sizing": "L",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 104,
+   "Brands": "Forever 21",
+   "Letter_sizing": "XL",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 105,
+   "Brands": "Forever 21",
+   "Letter_sizing": "XXL",
+   "Bust": 43.5
+ },
+ {
+   "FIELD1": 106,
+   "Brands": "francesca's",
+   "Letter_sizing": "XXS",
+   "Bust": 30.5
+ },
+ {
+   "FIELD1": 107,
+   "Brands": "francesca's",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 108,
+   "Brands": "francesca's",
+   "Letter_sizing": "S",
+   "Bust": 34
+ },
+ {
+   "FIELD1": 109,
+   "Brands": "francesca's",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 110,
+   "Brands": "francesca's",
+   "Letter_sizing": "M",
+   "Bust": 36
+ },
+ {
+   "FIELD1": 111,
+   "Brands": "francesca's",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 112,
+   "Brands": "francesca's",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 113,
+   "Brands": "francesca's",
+   "Letter_sizing": "L",
+   "Bust": 39
+ },
+ {
+   "FIELD1": 114,
+   "Brands": "francesca's",
+   "Letter_sizing": "XL",
+   "Bust": 40
+ },
+ {
+   "FIELD1": 115,
+   "Brands": "Free People",
+   "Letter_sizing": "XS",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 116,
+   "Brands": "Free People",
+   "Letter_sizing": "S",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 117,
+   "Brands": "Free People",
+   "Letter_sizing": "M",
+   "Bust": 37.5
+ },
+ {
+   "FIELD1": 118,
+   "Brands": "Free People",
+   "Letter_sizing": "L",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 119,
+   "Brands": "Free People",
+   "Letter_sizing": "XL",
+   "Bust": 41
+ },
+ {
+   "FIELD1": 120,
+   "Brands": "Gap",
+   "Letter_sizing": "XXS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 121,
+   "Brands": "Gap",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 122,
+   "Brands": "Gap",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 123,
+   "Brands": "Gap",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 124,
+   "Brands": "Gap",
+   "Letter_sizing": "L",
+   "Bust": 39.75
+ },
+ {
+   "FIELD1": 125,
+   "Brands": "Gap",
+   "Letter_sizing": "XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 126,
+   "Brands": "Gap",
+   "Letter_sizing": "XXL",
+   "Bust": 46.75
+ },
+ {
+   "FIELD1": 127,
+   "Brands": "Guess",
+   "Letter_sizing": "XS",
+   "Bust": 34.25
+ },
+ {
+   "FIELD1": 128,
+   "Brands": "Guess",
+   "Letter_sizing": "S",
+   "Bust": 36.25
+ },
+ {
+   "FIELD1": 129,
+   "Brands": "Guess",
+   "Letter_sizing": "M",
+   "Bust": 38.25
+ },
+ {
+   "FIELD1": 130,
+   "Brands": "Guess",
+   "Letter_sizing": "L",
+   "Bust": 40.75
+ },
+ {
+   "FIELD1": 131,
+   "Brands": "Guess",
+   "Letter_sizing": "XL",
+   "Bust": 43.5
+ },
+ {
+   "FIELD1": 132,
+   "Brands": "Guess",
+   "Letter_sizing": "XXL",
+   "Bust": 45
+ },
+ {
+   "FIELD1": 133,
+   "Brands": "Hanes",
+   "Letter_sizing": "XS",
+   "Bust": 32.75
+ },
+ {
+   "FIELD1": 134,
+   "Brands": "Hanes",
+   "Letter_sizing": "S",
+   "Bust": 34.75
+ },
+ {
+   "FIELD1": 135,
+   "Brands": "Hanes",
+   "Letter_sizing": "M",
+   "Bust": 36.75
+ },
+ {
+   "FIELD1": 136,
+   "Brands": "Hanes",
+   "Letter_sizing": "L",
+   "Bust": 39.75
+ },
+ {
+   "FIELD1": 137,
+   "Brands": "Hanes",
+   "Letter_sizing": "XL",
+   "Bust": 42.75
+ },
+ {
+   "FIELD1": 138,
+   "Brands": "Hanes",
+   "Letter_sizing": "XS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 139,
+   "Brands": "Hanes",
+   "Letter_sizing": "S",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 140,
+   "Brands": "Hanes",
+   "Letter_sizing": "M",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 141,
+   "Brands": "Hanes",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 142,
+   "Brands": "Hanes",
+   "Letter_sizing": "XL",
+   "Bust": 40.75
+ },
+ {
+   "FIELD1": 143,
+   "Brands": "Hanes",
+   "Letter_sizing": "2XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 144,
+   "Brands": "Hanes",
+   "Letter_sizing": "3XL",
+   "Bust": 45.5
+ },
+ {
+   "FIELD1": 145,
+   "Brands": "H&M",
+   "Letter_sizing": "XS",
+   "Bust": 30.7
+ },
+ {
+   "FIELD1": 146,
+   "Brands": "H&M",
+   "Letter_sizing": "S",
+   "Bust": 33.85
+ },
+ {
+   "FIELD1": 147,
+   "Brands": "H&M",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 148,
+   "Brands": "H&M",
+   "Letter_sizing": "L",
+   "Bust": 40.25
+ },
+ {
+   "FIELD1": 149,
+   "Brands": "H&M",
+   "Letter_sizing": "XL",
+   "Bust": 44.375
+ },
+ {
+   "FIELD1": 150,
+   "Brands": "Hollister",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 151,
+   "Brands": "Hollister",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 152,
+   "Brands": "Hollister",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 153,
+   "Brands": "Hollister",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 154,
+   "Brands": "Hollister",
+   "Letter_sizing": "XL",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 155,
+   "Brands": "Hollister",
+   "Letter_sizing": "XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 156,
+   "Brands": "JCPenney's Liz Claiborne",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 157,
+   "Brands": "JCPenney's Liz Claiborne",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 158,
+   "Brands": "JCPenney's Liz Claiborne",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 159,
+   "Brands": "JCPenney's Liz Claiborne",
+   "Letter_sizing": "L",
+   "Bust": 39.75
+ },
+ {
+   "FIELD1": 160,
+   "Brands": "JCPenney's Liz Claiborne",
+   "Letter_sizing": "XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 161,
+   "Brands": "JCPenney's Liz Claiborne",
+   "Letter_sizing": "XXL",
+   "Bust": 46
+ },
+ {
+   "FIELD1": 162,
+   "Brands": "J.Crew",
+   "Letter_sizing": "XXXS",
+   "Bust": 30.5
+ },
+ {
+   "FIELD1": 163,
+   "Brands": "J.Crew",
+   "Letter_sizing": "XXS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 164,
+   "Brands": "J.Crew",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 165,
+   "Brands": "J.Crew",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 166,
+   "Brands": "J.Crew",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 167,
+   "Brands": "J.Crew",
+   "Letter_sizing": "L",
+   "Bust": 39.75
+ },
+ {
+   "FIELD1": 168,
+   "Brands": "J.Crew",
+   "Letter_sizing": "XL",
+   "Bust": 42
+ },
+ {
+   "FIELD1": 169,
+   "Brands": "J.Crew",
+   "Letter_sizing": "XXL",
+   "Bust": 43.5
+ },
+ {
+   "FIELD1": 170,
+   "Brands": "Jessica Simpson",
+   "Letter_sizing": "XS",
+   "Bust": 34.75
+ },
+ {
+   "FIELD1": 171,
+   "Brands": "Jessica Simpson",
+   "Letter_sizing": "S",
+   "Bust": 36.75
+ },
+ {
+   "FIELD1": 172,
+   "Brands": "Jessica Simpson",
+   "Letter_sizing": "M",
+   "Bust": 38.75
+ },
+ {
+   "FIELD1": 173,
+   "Brands": "Jessica Simpson",
+   "Letter_sizing": "L",
+   "Bust": 41.25
+ },
+ {
+   "FIELD1": 174,
+   "Brands": "Jessica Simpson",
+   "Letter_sizing": "XL",
+   "Bust": 44.25
+ },
+ {
+   "FIELD1": 175,
+   "Brands": "Kohl's Daisy Fuentes",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 176,
+   "Brands": "Kohl's Daisy Fuentes",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 177,
+   "Brands": "Kohl's Daisy Fuentes",
+   "Letter_sizing": "M",
+   "Bust": 37
+ },
+ {
+   "FIELD1": 178,
+   "Brands": "Kohl's Daisy Fuentes",
+   "Letter_sizing": "L",
+   "Bust": 39.75
+ },
+ {
+   "FIELD1": 179,
+   "Brands": "Kohl's Daisy Fuentes",
+   "Letter_sizing": "XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 180,
+   "Brands": "Levi's",
+   "Letter_sizing": "XS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 181,
+   "Brands": "Levi's",
+   "Letter_sizing": "M",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 182,
+   "Brands": "Levi's",
+   "Letter_sizing": "L",
+   "Bust": 38.5
+ },
+ {
+   "FIELD1": 183,
+   "Brands": "Levi's",
+   "Letter_sizing": "XL",
+   "Bust": 42
+ },
+ {
+   "FIELD1": 184,
+   "Brands": "L.L.Bean",
+   "Letter_sizing": "XS",
+   "Bust": 31.5
+ },
+ {
+   "FIELD1": 185,
+   "Brands": "L.L.Bean",
+   "Letter_sizing": "S",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 186,
+   "Brands": "L.L.Bean",
+   "Letter_sizing": "M",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 187,
+   "Brands": "L.L.Bean",
+   "Letter_sizing": "L",
+   "Bust": 37.75
+ },
+ {
+   "FIELD1": 188,
+   "Brands": "L.L.Bean",
+   "Letter_sizing": "XL",
+   "Bust": 40.75
+ },
+ {
+   "FIELD1": 189,
+   "Brands": "Lucky",
+   "Letter_sizing": "XXS",
+   "Bust": 30.75
+ },
+ {
+   "FIELD1": 190,
+   "Brands": "Lucky",
+   "Letter_sizing": "XS",
+   "Bust": 32.75
+ },
+ {
+   "FIELD1": 191,
+   "Brands": "Lucky",
+   "Letter_sizing": "S",
+   "Bust": 34.75
+ },
+ {
+   "FIELD1": 192,
+   "Brands": "Lucky",
+   "Letter_sizing": "M",
+   "Bust": 36.75
+ },
+ {
+   "FIELD1": 193,
+   "Brands": "Lucky",
+   "Letter_sizing": "L",
+   "Bust": 38.75
+ },
+ {
+   "FIELD1": 194,
+   "Brands": "Lucky",
+   "Letter_sizing": "XL",
+   "Bust": 40.75
+ },
+ {
+   "FIELD1": 195,
+   "Brands": "lululemon athletica",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 196,
+   "Brands": "lululemon athletica",
+   "Letter_sizing": "S",
+   "Bust": 34
+ },
+ {
+   "FIELD1": 197,
+   "Brands": "lululemon athletica",
+   "Letter_sizing": "M",
+   "Bust": 36
+ },
+ {
+   "FIELD1": 198,
+   "Brands": "lululemon athletica",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 199,
+   "Brands": "lululemon athletica",
+   "Letter_sizing": "XL",
+   "Bust": 40
+ },
+ {
+   "FIELD1": 200,
+   "Brands": "Macy's Charter Club",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 201,
+   "Brands": "Macy's Charter Club",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 202,
+   "Brands": "Macy's Charter Club",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 203,
+   "Brands": "Macy's Charter Club",
+   "Letter_sizing": "L",
+   "Bust": 39.25
+ },
+ {
+   "FIELD1": 204,
+   "Brands": "Macy's Charter Club",
+   "Letter_sizing": "XL",
+   "Bust": 42.25
+ },
+ {
+   "FIELD1": 205,
+   "Brands": "Nike",
+   "Letter_sizing": "XS",
+   "Bust": 31
+ },
+ {
+   "FIELD1": 206,
+   "Brands": "Nike",
+   "Letter_sizing": "S",
+   "Bust": 34
+ },
+ {
+   "FIELD1": 207,
+   "Brands": "Nike",
+   "Letter_sizing": "M",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 208,
+   "Brands": "Nike",
+   "Letter_sizing": "L",
+   "Bust": 41
+ },
+ {
+   "FIELD1": 209,
+   "Brands": "Nike",
+   "Letter_sizing": "XL",
+   "Bust": 44.5
+ },
+ {
+   "FIELD1": 210,
+   "Brands": "Nike",
+   "Letter_sizing": "XXL",
+   "Bust": 46.5
+ },
+ {
+   "FIELD1": 211,
+   "Brands": "Old Navy",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 212,
+   "Brands": "Old Navy",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 213,
+   "Brands": "Old Navy",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 214,
+   "Brands": "Old Navy",
+   "Letter_sizing": "L",
+   "Bust": 39.5
+ },
+ {
+   "FIELD1": 215,
+   "Brands": "Old Navy",
+   "Letter_sizing": "XL",
+   "Bust": 43.75
+ },
+ {
+   "FIELD1": 216,
+   "Brands": "Pacsun",
+   "Letter_sizing": "XS",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 217,
+   "Brands": "Pacsun",
+   "Letter_sizing": "S",
+   "Bust": 35.5
+ },
+ {
+   "FIELD1": 218,
+   "Brands": "Pacsun",
+   "Letter_sizing": "M",
+   "Bust": 37.5
+ },
+ {
+   "FIELD1": 219,
+   "Brands": "Pacsun",
+   "Letter_sizing": "L",
+   "Bust": 40.25
+ },
+ {
+   "FIELD1": 220,
+   "Brands": "Pacsun",
+   "Letter_sizing": "XL",
+   "Bust": 42.5
+ },
+ {
+   "FIELD1": 221,
+   "Brands": "Puma",
+   "Letter_sizing": "XS",
+   "Bust": 32
+ },
+ {
+   "FIELD1": 222,
+   "Brands": "Puma",
+   "Letter_sizing": "S",
+   "Bust": 34
+ },
+ {
+   "FIELD1": 223,
+   "Brands": "Puma",
+   "Letter_sizing": "M",
+   "Bust": 36
+ },
+ {
+   "FIELD1": 224,
+   "Brands": "Puma",
+   "Letter_sizing": "L",
+   "Bust": 38
+ },
+ {
+   "FIELD1": 225,
+   "Brands": "Puma",
+   "Letter_sizing": "XL",
+   "Bust": 40
+ },
+ {
+   "FIELD1": 226,
+   "Brands": "Ralph Lauren",
+   "Letter_sizing": "XS",
+   "Bust": 33.5
+ },
+ {
+   "FIELD1": 227,
+   "Brands": "Ralph Lauren",
+   "Letter_sizing": "S",
+   "Bust": 36
+ },
+ {
+   "FIELD1": 228,
+   "Brands": "Ralph Lauren",
+   "Letter_sizing": "M",
+   "Bust": 39
+ },
+ {
+   "FIELD1": 229,
+   "Brands": "Ralph Lauren",
+   "Letter_sizing": "L",
+   "Bust": 43.5
+ },
+ {
+   "FIELD1": 230,
+   "Brands": "Ralph Lauren",
+   "Letter_sizing": "XL",
+   "Bust": 47
+ },
+ {
+   "FIELD1": 231,
+   "Brands": "Style & Co.",
+   "Letter_sizing": "XS",
+   "Bust": 33
+ },
+ {
+   "FIELD1": 232,
+   "Brands": "Style & Co.",
+   "Letter_sizing": "S",
+   "Bust": 35
+ },
+ {
+   "FIELD1": 233,
+   "Brands": "Style & Co.",
+   "Letter_sizing": "M",
+   "Bust": 37.25
+ },
+ {
+   "FIELD1": 234,
+   "Brands": "Style & Co.",
+   "Letter_sizing": "L",
+   "Bust": 40.25
+ },
+ {
+   "FIELD1": 235,
+   "Brands": "Style & Co.",
+   "Letter_sizing": "XL",
+   "Bust": 43
+ },
+ {
+   "FIELD1": 236,
+   "Brands": "FashionNova",
+   "Letter_sizing": "XS",
+   "Bust": 32.5
+ },
+ {
+   "FIELD1": 237,
+   "Brands": "FashionNova",
+   "Letter_sizing": "S",
+   "Bust": 34.5
+ },
+ {
+   "FIELD1": 238,
+   "Brands": "FashionNova",
+   "Letter_sizing": "M",
+   "Bust": 36.5
+ },
+ {
+   "FIELD1": 239,
+   "Brands": "FashionNova",
+   "Letter_sizing": "L",
+   "Bust": 39.25
+ },
+ {
+   "FIELD1": 240,
+   "Brands": "FashionNova",
+   "Letter_sizing": "XL",
+   "Bust": 41.5
+ }
+]
