@@ -1,0 +1,52 @@
+General Size,Bust,Waist,Hip,Brand
+XS,32.0,24.0,35.0,Fashion Nova
+XS,33.0,25.0,36.0,Fashion Nova
+S,34.0,26.0,37.0,Fashion Nova
+S,35.0,27.0,38.0,Fashion Nova
+M,36.0,28.0,39.0,Fashion Nova
+M,37.0,29.0,40.0,Fashion Nova
+L,38.5,30.5,41.5,Fashion Nova
+L,40.0,32.0,43.0,Fashion Nova
+XL,41.5,33.5,44.5,Fashion Nova
+XL,41.5,33.5,44.5,Fashion Nova
+XS,31.0,24.0,34.0,Nasty Gal
+XS,33.0,26.0,36.0,Nasty Gal
+S,33.0,26.0,36.0,Nasty Gal
+S,35.0,28.0,38.0,Nasty Gal
+M,35.0,28.0,38.0,Nasty Gal
+M,37.0,30.0,40.0,Nasty Gal
+L,37.0,30.0,40.0,Nasty Gal
+L,39.0,32.0,42.0,Nasty Gal
+XL,39.0,32.0,42.0,Nasty Gal
+XL,41.0,34.0,44.0,Nasty Gal
+XS,32.28,24.41,35.43,Mango
+S,33.86,25.98,37.01,Mango
+M,36.22,28.35,39.37,Mango
+L,38.58,30.71,41.73,Mango
+XL,40.94,33.46,44.09,Mango
+XS,32.0,24.0,34.5,Amazon
+XS,33.0,25.0,35.5,Amazon
+S,34.0,26.0,36.5,Amazon
+S,35.0,27.0,37.5,Amazon
+M,36.0,28.0,38.5,Amazon
+M,37.0,29.0,39.5,Amazon
+L,38.5,30.5,41.0,Amazon
+L,40.0,32.0,42.5,Amazon
+XL,41.5,33.5,44.0,Amazon
+XL,43.0,35.0,45.5,Amazon
+XS,34.0,27.0,36.0,Target
+S,35.0,28.0,37.0,Target
+S,36.0,29.0,38.0,Target
+M,37.0,30.5,39.5,Target
+M,38.5,32.0,41.0,Target
+L,40.0,34.0,42.5,Target
+L,41.5,36.0,44.0,Target
+XL,43.5,38.0,46.0,Target
+XS,33.0,25.5,35.5,Garage
+XS,34.0,26.5,36.5,Garage
+S,35.0,27.5,37.5,Garage
+M,36.0,28.5,38.5,Garage
+M,37.5,30.0,40.0,Garage
+L,39.0,31.5,41.5,Garage
+L,40.5,33.0,43.0,Garage
+XL,42.0,34.5,44.5,Garage
